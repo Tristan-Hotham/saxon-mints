@@ -1,0 +1,2910 @@
+{
+ "counts": {
+  "rows_scraped": 71759,
+  "records_unique": 70995,
+  "duplicates": 764,
+  "mint_values_searched": 353,
+  "scbi": 55164,
+  "emc": 15831,
+  "window_records": 36460,
+  "window_certain_ew": 33609,
+  "window_share_certain": 0.921805,
+  "window_uncertain": 2428,
+  "window_probable": 331,
+  "window_ambiguous": 44,
+  "window_copy": 20,
+  "window_other": 27,
+  "ambiguous_all": 72,
+  "ambiguous_labels": 16,
+  "window_scbi": 29733,
+  "window_emc": 3876,
+  "mints_ew_any": 106,
+  "moneyer_named_share": 0.943438,
+  "records_index_rows": 47649,
+  "wikidata_matched": 105,
+  "wikidata_max_offset_km": 1.34,
+  "mints_placed": 107
+ },
+ "periods": [
+  {
+   "key": "edgar",
+   "label": "Edgar (reform)",
+   "start": 973,
+   "end": 975,
+   "years": 2,
+   "mints": 29,
+   "records": 143,
+   "emc": 48,
+   "moneyers": 85,
+   "mints_with_probable": 29,
+   "mints_3plus_records": 16,
+   "top": [
+    [
+     "York",
+     16,
+     25
+    ],
+    [
+     "Stamford",
+     8,
+     19
+    ],
+    [
+     "Winchester",
+     5,
+     8
+    ],
+    [
+     "Northampton",
+     5,
+     7
+    ],
+    [
+     "London",
+     4,
+     11
+    ]
+   ],
+   "london_share_moneyers": 0.047059,
+   "top4_share_moneyers": 0.4
+  },
+  {
+   "key": "edwardm",
+   "label": "Edward the Martyr",
+   "start": 975,
+   "end": 978,
+   "years": 3,
+   "mints": 29,
+   "records": 188,
+   "emc": 61,
+   "moneyers": 86,
+   "mints_with_probable": 30,
+   "mints_3plus_records": 15,
+   "top": [
+    [
+     "Stamford",
+     14,
+     63
+    ],
+    [
+     "York",
+     12,
+     24
+    ],
+    [
+     "Lincoln",
+     10,
+     27
+    ],
+    [
+     "London",
+     7,
+     11
+    ],
+    [
+     "Bedford",
+     4,
+     6
+    ]
+   ],
+   "london_share_moneyers": 0.081395,
+   "top4_share_moneyers": 0.5
+  },
+  {
+   "key": "aethelred",
+   "label": "Æthelred II",
+   "start": 978,
+   "end": 1016,
+   "years": 38,
+   "mints": 68,
+   "records": 8605,
+   "emc": 559,
+   "moneyers": 863,
+   "mints_with_probable": 68,
+   "mints_3plus_records": 64,
+   "top": [
+    [
+     "London",
+     105,
+     2045
+    ],
+    [
+     "York",
+     69,
+     704
+    ],
+    [
+     "Lincoln",
+     68,
+     990
+    ],
+    [
+     "Winchester",
+     47,
+     632
+    ],
+    [
+     "Stamford",
+     40,
+     338
+    ]
+   ],
+   "london_share_moneyers": 0.121669,
+   "top4_share_moneyers": 0.334878
+  },
+  {
+   "key": "cnut",
+   "label": "Cnut",
+   "start": 1016,
+   "end": 1035,
+   "years": 19,
+   "mints": 71,
+   "records": 8742,
+   "emc": 368,
+   "moneyers": 764,
+   "mints_with_probable": 71,
+   "mints_3plus_records": 67,
+   "top": [
+    [
+     "London",
+     112,
+     2060
+    ],
+    [
+     "Lincoln",
+     58,
+     1022
+    ],
+    [
+     "York",
+     49,
+     1552
+    ],
+    [
+     "Winchester",
+     38,
+     383
+    ],
+    [
+     "Stamford",
+     30,
+     454
+    ]
+   ],
+   "london_share_moneyers": 0.146597,
+   "top4_share_moneyers": 0.336387
+  },
+  {
+   "key": "harold1",
+   "label": "Harold I",
+   "start": 1035,
+   "end": 1040,
+   "years": 5,
+   "mints": 58,
+   "records": 2576,
+   "emc": 132,
+   "moneyers": 321,
+   "mints_with_probable": 58,
+   "mints_3plus_records": 48,
+   "top": [
+    [
+     "London",
+     47,
+     602
+    ],
+    [
+     "Lincoln",
+     32,
+     372
+    ],
+    [
+     "Winchester",
+     23,
+     92
+    ],
+    [
+     "York",
+     19,
+     270
+    ],
+    [
+     "Stamford",
+     17,
+     156
+    ]
+   ],
+   "london_share_moneyers": 0.146417,
+   "top4_share_moneyers": 0.376947
+  },
+  {
+   "key": "harthacnut",
+   "label": "Harthacnut",
+   "start": 1040,
+   "end": 1042,
+   "years": 2,
+   "mints": 56,
+   "records": 998,
+   "emc": 62,
+   "moneyers": 287,
+   "mints_with_probable": 56,
+   "mints_3plus_records": 46,
+   "top": [
+    [
+     "London",
+     36,
+     173
+    ],
+    [
+     "Lincoln",
+     25,
+     107
+    ],
+    [
+     "York",
+     17,
+     73
+    ],
+    [
+     "Winchester",
+     16,
+     72
+    ],
+    [
+     "Stamford",
+     11,
+     52
+    ]
+   ],
+   "london_share_moneyers": 0.125436,
+   "top4_share_moneyers": 0.327526
+  },
+  {
+   "key": "edwardc",
+   "label": "Edward the Confessor",
+   "start": 1042,
+   "end": 1066,
+   "years": 24,
+   "mints": 70,
+   "records": 5888,
+   "emc": 717,
+   "moneyers": 639,
+   "mints_with_probable": 70,
+   "mints_3plus_records": 63,
+   "top": [
+    [
+     "London",
+     87,
+     823
+    ],
+    [
+     "Lincoln",
+     44,
+     684
+    ],
+    [
+     "York",
+     34,
+     1165
+    ],
+    [
+     "Winchester",
+     33,
+     272
+    ],
+    [
+     "Canterbury",
+     24,
+     144
+    ]
+   ],
+   "london_share_moneyers": 0.13615,
+   "top4_share_moneyers": 0.309859
+  },
+  {
+   "key": "harold2",
+   "label": "Harold II",
+   "start": 1066,
+   "end": 1066,
+   "years": 1,
+   "mints": 43,
+   "records": 306,
+   "emc": 62,
+   "moneyers": 115,
+   "mints_with_probable": 43,
+   "mints_3plus_records": 29,
+   "top": [
+    [
+     "York",
+     11,
+     33
+    ],
+    [
+     "London",
+     8,
+     48
+    ],
+    [
+     "Lincoln",
+     7,
+     26
+    ],
+    [
+     "Norwich",
+     6,
+     10
+    ],
+    [
+     "Thetford",
+     5,
+     15
+    ]
+   ],
+   "london_share_moneyers": 0.069565,
+   "top4_share_moneyers": 0.278261
+  },
+  {
+   "key": "william1",
+   "label": "William I",
+   "start": 1066,
+   "end": 1087,
+   "years": 21,
+   "mints": 63,
+   "records": 2428,
+   "emc": 442,
+   "moneyers": 362,
+   "mints_with_probable": 64,
+   "mints_3plus_records": 60,
+   "top": [
+    [
+     "London",
+     30,
+     285
+    ],
+    [
+     "Lincoln",
+     21,
+     201
+    ],
+    [
+     "Thetford",
+     18,
+     109
+    ],
+    [
+     "Norwich",
+     17,
+     91
+    ],
+    [
+     "Winchester",
+     16,
+     216
+    ]
+   ],
+   "london_share_moneyers": 0.082873,
+   "top4_share_moneyers": 0.237569
+  },
+  {
+   "key": "william2",
+   "label": "William II",
+   "start": 1087,
+   "end": 1100,
+   "years": 13,
+   "mints": 55,
+   "records": 556,
+   "emc": 121,
+   "moneyers": 208,
+   "mints_with_probable": 55,
+   "mints_3plus_records": 40,
+   "top": [
+    [
+     "London",
+     23,
+     99
+    ],
+    [
+     "Lincoln",
+     11,
+     46
+    ],
+    [
+     "Canterbury",
+     11,
+     27
+    ],
+    [
+     "Norwich",
+     8,
+     32
+    ],
+    [
+     "Winchester",
+     8,
+     26
+    ]
+   ],
+   "london_share_moneyers": 0.110577,
+   "top4_share_moneyers": 0.254808
+  },
+  {
+   "key": "henry1",
+   "label": "Henry I",
+   "start": 1100,
+   "end": 1135,
+   "years": 35,
+   "mints": 59,
+   "records": 1711,
+   "emc": 629,
+   "moneyers": 389,
+   "mints_with_probable": 59,
+   "mints_3plus_records": 49,
+   "top": [
+    [
+     "London",
+     43,
+     426
+    ],
+    [
+     "Norwich",
+     26,
+     109
+    ],
+    [
+     "Winchester",
+     23,
+     110
+    ],
+    [
+     "York",
+     20,
+     66
+    ],
+    [
+     "Lincoln",
+     19,
+     102
+    ]
+   ],
+   "london_share_moneyers": 0.11054,
+   "top4_share_moneyers": 0.287918
+  },
+  {
+   "key": "stephen",
+   "label": "Stephen",
+   "start": 1135,
+   "end": 1154,
+   "years": 19,
+   "mints": 66,
+   "records": 1468,
+   "emc": 675,
+   "moneyers": 297,
+   "mints_with_probable": 69,
+   "mints_3plus_records": 56,
+   "top": [
+    [
+     "Norwich",
+     31,
+     132
+    ],
+    [
+     "London",
+     28,
+     163
+    ],
+    [
+     "Lincoln",
+     23,
+     150
+    ],
+    [
+     "Winchester",
+     11,
+     25
+    ],
+    [
+     "York",
+     10,
+     161
+    ]
+   ],
+   "london_share_moneyers": 0.094276,
+   "top4_share_moneyers": 0.313131
+  }
+ ],
+ "mints_per_reign": {
+  "edgar": 29,
+  "edwardm": 29,
+  "aethelred": 68,
+  "cnut": 71,
+  "harold1": 58,
+  "harthacnut": 56,
+  "edwardc": 70,
+  "harold2": 43,
+  "william1": 63,
+  "william2": 55,
+  "henry1": 59,
+  "stephen": 66
+ },
+ "peak_period": "cnut",
+ "aethelred_rank": [
+  [
+   "London",
+   105,
+   2045
+  ],
+  [
+   "York",
+   69,
+   704
+  ],
+  [
+   "Lincoln",
+   68,
+   990
+  ],
+  [
+   "Winchester",
+   47,
+   632
+  ],
+  [
+   "Stamford",
+   40,
+   338
+  ],
+  [
+   "Exeter",
+   35,
+   385
+  ],
+  [
+   "Thetford",
+   31,
+   261
+  ],
+  [
+   "Chester",
+   25,
+   247
+  ],
+  [
+   "Norwich",
+   22,
+   242
+  ],
+  [
+   "Cambridge",
+   20,
+   175
+  ],
+  [
+   "Colchester",
+   19,
+   59
+  ],
+  [
+   "Southwark",
+   18,
+   178
+  ],
+  [
+   "Wallingford",
+   18,
+   78
+  ],
+  [
+   "Canterbury",
+   17,
+   320
+  ],
+  [
+   "Ipswich",
+   16,
+   127
+  ],
+  [
+   "Lewes",
+   16,
+   123
+  ],
+  [
+   "Rochester",
+   15,
+   110
+  ],
+  [
+   "Bedford",
+   14,
+   46
+  ],
+  [
+   "Oxford",
+   13,
+   121
+  ],
+  [
+   "Dover",
+   13,
+   67
+  ],
+  [
+   "Shrewsbury",
+   13,
+   40
+  ],
+  [
+   "Northampton",
+   12,
+   70
+  ],
+  [
+   "Totnes",
+   11,
+   102
+  ],
+  [
+   "Shaftesbury",
+   11,
+   72
+  ],
+  [
+   "Chichester",
+   10,
+   50
+  ],
+  [
+   "Hertford",
+   10,
+   38
+  ],
+  [
+   "Huntingdon",
+   9,
+   72
+  ],
+  [
+   "Wilton",
+   9,
+   50
+  ],
+  [
+   "Worcester",
+   9,
+   41
+  ],
+  [
+   "Hereford",
+   9,
+   40
+  ],
+  [
+   "Southampton",
+   9,
+   30
+  ],
+  [
+   "Bath",
+   8,
+   100
+  ],
+  [
+   "Ilchester",
+   7,
+   49
+  ],
+  [
+   "Leicester",
+   7,
+   48
+  ],
+  [
+   "Derby",
+   7,
+   16
+  ],
+  [
+   "Wareham",
+   6,
+   39
+  ],
+  [
+   "Barnstaple",
+   6,
+   36
+  ],
+  [
+   "Cricklade",
+   6,
+   9
+  ],
+  [
+   "Lydford",
+   5,
+   77
+  ],
+  [
+   "Gloucester",
+   5,
+   74
+  ],
+  [
+   "Lympne",
+   5,
+   32
+  ],
+  [
+   "Salisbury",
+   5,
+   25
+  ],
+  [
+   "Warwick",
+   5,
+   20
+  ],
+  [
+   "Maldon",
+   4,
+   30
+  ],
+  [
+   "Malmesbury",
+   4,
+   13
+  ],
+  [
+   "Stafford",
+   4,
+   13
+  ],
+  [
+   "Cadbury",
+   4,
+   12
+  ],
+  [
+   "Romney",
+   4,
+   8
+  ],
+  [
+   "Dorchester",
+   3,
+   25
+  ],
+  [
+   "Hastings",
+   3,
+   18
+  ],
+  [
+   "Guildford",
+   3,
+   8
+  ],
+  [
+   "Tamworth",
+   3,
+   8
+  ],
+  [
+   "Winchcombe",
+   3,
+   8
+  ],
+  [
+   "Watchet",
+   2,
+   24
+  ],
+  [
+   "Cissbury",
+   2,
+   11
+  ],
+  [
+   "Bridport",
+   2,
+   7
+  ],
+  [
+   "Torksey",
+   2,
+   5
+  ],
+  [
+   "Warminster",
+   2,
+   5
+  ],
+  [
+   "Sudbury",
+   2,
+   4
+  ],
+  [
+   "Buckingham",
+   2,
+   3
+  ],
+  [
+   "Taunton",
+   2,
+   3
+  ],
+  [
+   "Nottingham",
+   1,
+   11
+  ],
+  [
+   "Bristol",
+   1,
+   3
+  ],
+  [
+   "Milbourne Port",
+   1,
+   3
+  ],
+  [
+   "Crewkerne",
+   1,
+   2
+  ],
+  [
+   "Bruton",
+   1,
+   1
+  ],
+  [
+   "Caistor",
+   1,
+   1
+  ],
+  [
+   "Horncastle",
+   1,
+   1
+  ]
+ ],
+ "n_mints_aethelred": 68,
+ "london_york_lincoln_share_aethelred": 0.280417,
+ "one_moneyer_mints_aethelred": 7,
+ "circulation": {
+  "all": {
+   "n": 2894,
+   "median_km": 88.505325,
+   "mean_km": 108.45362,
+   "within25": 0.182446,
+   "within50": 0.325847,
+   "beyond100": 0.450933,
+   "beyond200": 0.154112,
+   "nearest_obs": 0.198687,
+   "nearest_exp": 0.032013,
+   "nearest_ratio": 6.206389
+  },
+  "late_as": {
+   "n": 1511,
+   "median_km": 88.394628,
+   "mean_km": 102.844187,
+   "within25": 0.195235,
+   "within50": 0.333554,
+   "beyond100": 0.439444,
+   "beyond200": 0.12773,
+   "nearest_obs": 0.217075,
+   "nearest_exp": 0.030797,
+   "nearest_ratio": 7.048628
+  },
+  "norman": {
+   "n": 1383,
+   "median_km": 88.505325,
+   "mean_km": 114.582219,
+   "within25": 0.168474,
+   "within50": 0.317426,
+   "beyond100": 0.463485,
+   "beyond200": 0.182936,
+   "nearest_obs": 0.178597,
+   "nearest_exp": 0.033342,
+   "nearest_ratio": 5.356455
+  },
+  "by_period": {
+   "edgar": {
+    "n": 41,
+    "median_km": 150.499124,
+    "mean_km": 156.463871,
+    "within25": 0.121951,
+    "within50": 0.170732,
+    "beyond100": 0.682927,
+    "beyond200": 0.268293,
+    "nearest_obs": 0.121951,
+    "nearest_exp": 0.040172,
+    "nearest_ratio": 3.035714
+   },
+   "edwardm": {
+    "n": 47,
+    "median_km": 91.295067,
+    "mean_km": 107.217948,
+    "within25": 0.106383,
+    "within50": 0.212766,
+    "beyond100": 0.446809,
+    "beyond200": 0.06383,
+    "nearest_obs": 0.148936,
+    "nearest_exp": 0.030009,
+    "nearest_ratio": 4.963115
+   },
+   "aethelred": {
+    "n": 420,
+    "median_km": 98.229759,
+    "mean_km": 110.868062,
+    "within25": 0.188095,
+    "within50": 0.283333,
+    "beyond100": 0.490476,
+    "beyond200": 0.154762,
+    "nearest_obs": 0.17619,
+    "nearest_exp": 0.02874,
+    "nearest_ratio": 6.130556
+   },
+   "cnut": {
+    "n": 270,
+    "median_km": 92.642534,
+    "mean_km": 108.609557,
+    "within25": 0.188889,
+    "within50": 0.311111,
+    "beyond100": 0.459259,
+    "beyond200": 0.159259,
+    "nearest_obs": 0.22963,
+    "nearest_exp": 0.031982,
+    "nearest_ratio": 7.180035
+   },
+   "harold1": {
+    "n": 92,
+    "median_km": 84.701775,
+    "mean_km": 102.42275,
+    "within25": 0.097826,
+    "within50": 0.304348,
+    "beyond100": 0.456522,
+    "beyond200": 0.086957,
+    "nearest_obs": 0.163043,
+    "nearest_exp": 0.033775,
+    "nearest_ratio": 4.827327
+   },
+   "harthacnut": {
+    "n": 51,
+    "median_km": 87.59244,
+    "mean_km": 108.338484,
+    "within25": 0.196078,
+    "within50": 0.333333,
+    "beyond100": 0.470588,
+    "beyond200": 0.137255,
+    "nearest_obs": 0.235294,
+    "nearest_exp": 0.031032,
+    "nearest_ratio": 7.582418
+   },
+   "edwardc": {
+    "n": 546,
+    "median_km": 74.575219,
+    "mean_km": 89.044158,
+    "within25": 0.227106,
+    "within50": 0.404762,
+    "beyond100": 0.362637,
+    "beyond200": 0.091575,
+    "nearest_obs": 0.25641,
+    "nearest_exp": 0.029882,
+    "nearest_ratio": 8.580776
+   },
+   "harold2": {
+    "n": 44,
+    "median_km": 82.725649,
+    "mean_km": 101.997101,
+    "within25": 0.272727,
+    "within50": 0.409091,
+    "beyond100": 0.477273,
+    "beyond200": 0.136364,
+    "nearest_obs": 0.295455,
+    "nearest_exp": 0.040119,
+    "nearest_ratio": 7.364532
+   },
+   "william1": {
+    "n": 327,
+    "median_km": 87.459458,
+    "mean_km": 103.974107,
+    "within25": 0.214067,
+    "within50": 0.351682,
+    "beyond100": 0.437309,
+    "beyond200": 0.16208,
+    "nearest_obs": 0.220183,
+    "nearest_exp": 0.034188,
+    "nearest_ratio": 6.440326
+   },
+   "william2": {
+    "n": 86,
+    "median_km": 88.760343,
+    "mean_km": 110.905277,
+    "within25": 0.104651,
+    "within50": 0.255814,
+    "beyond100": 0.476744,
+    "beyond200": 0.139535,
+    "nearest_obs": 0.127907,
+    "nearest_exp": 0.037903,
+    "nearest_ratio": 3.374631
+   },
+   "henry1": {
+    "n": 487,
+    "median_km": 108.074981,
+    "mean_km": 125.329945,
+    "within25": 0.137577,
+    "within50": 0.262834,
+    "beyond100": 0.5154,
+    "beyond200": 0.225873,
+    "nearest_obs": 0.170431,
+    "nearest_exp": 0.034802,
+    "nearest_ratio": 4.897164
+   },
+   "stephen": {
+    "n": 483,
+    "median_km": 80.616649,
+    "mean_km": 111.582068,
+    "within25": 0.180124,
+    "within50": 0.360248,
+    "beyond100": 0.426501,
+    "beyond200": 0.161491,
+    "nearest_obs": 0.167702,
+    "nearest_exp": 0.030486,
+    "nearest_ratio": 5.500912
+   }
+  },
+  "emc_records_in_window": 3876,
+  "emc_placed": 2894,
+  "emc_placed_share": 0.746646,
+  "london": {
+   "n": 576,
+   "median_km": 110.047467,
+   "mean_km": 115.893589,
+   "within25": 0.069444,
+   "within50": 0.144097,
+   "beyond100": 0.553819,
+   "beyond200": 0.09375,
+   "nearest_obs": 0.069444,
+   "nearest_exp": 0.033135,
+   "nearest_ratio": 2.095787
+  },
+  "york": {
+   "n": 273,
+   "median_km": 97.141334,
+   "mean_km": 124.377149,
+   "within25": 0.150183,
+   "within50": 0.322344,
+   "beyond100": 0.465201,
+   "beyond200": 0.282051,
+   "nearest_obs": 0.315018,
+   "nearest_exp": 0.040555,
+   "nearest_ratio": 7.767771
+  },
+  "not_london": {
+   "n": 2318,
+   "median_km": 80.616649,
+   "mean_km": 106.604862,
+   "within25": 0.210526,
+   "within50": 0.371009,
+   "beyond100": 0.425367,
+   "beyond200": 0.169111,
+   "nearest_obs": 0.230802,
+   "nearest_exp": 0.031734,
+   "nearest_ratio": 7.272919
+  },
+  "bands": [
+   {
+    "lo": 0,
+    "hi": 10,
+    "share": 0.081894
+   },
+   {
+    "lo": 10,
+    "hi": 25,
+    "share": 0.100553
+   },
+   {
+    "lo": 25,
+    "hi": 50,
+    "share": 0.1434
+   },
+   {
+    "lo": 50,
+    "hi": 100,
+    "share": 0.22322
+   },
+   {
+    "lo": 100,
+    "hi": 150,
+    "share": 0.173117
+   },
+   {
+    "lo": 150,
+    "hi": 200,
+    "share": 0.123704
+   },
+   {
+    "lo": 200,
+    "hi": 300,
+    "share": 0.121631
+   },
+   {
+    "lo": 300,
+    "hi": 1000,
+    "share": 0.032481
+   }
+  ],
+  "random_mint_median_km": 163.365011,
+  "per_mint": [
+   [
+    "Thetford",
+    157,
+    30.122101,
+    0.66242,
+    0.43949
+   ],
+   [
+    "Bury St Edmunds",
+    21,
+    30.576607,
+    0.761905,
+    0.190476
+   ],
+   [
+    "Norwich",
+    188,
+    41.191066,
+    0.617021,
+    0.356383
+   ],
+   [
+    "Southampton",
+    30,
+    46.872724,
+    0.533333,
+    0.033333
+   ],
+   [
+    "Ipswich",
+    56,
+    48.181102,
+    0.517857,
+    0.267857
+   ],
+   [
+    "Salisbury",
+    26,
+    53.361422,
+    0.5,
+    0.230769
+   ],
+   [
+    "Lincoln",
+    287,
+    63.941689,
+    0.480836,
+    0.365854
+   ],
+   [
+    "Cambridge",
+    46,
+    65.584743,
+    0.391304,
+    0.217391
+   ],
+   [
+    "Oxford",
+    51,
+    66.715526,
+    0.411765,
+    0.196078
+   ],
+   [
+    "Wallingford",
+    47,
+    69.701557,
+    0.425532,
+    0.234043
+   ],
+   [
+    "Lewes",
+    21,
+    71.180094,
+    0.428571,
+    0.333333
+   ],
+   [
+    "Huntingdon",
+    30,
+    81.814799,
+    0.366667,
+    0.266667
+   ],
+   [
+    "Bedford",
+    25,
+    82.499877,
+    0.16,
+    0.08
+   ],
+   [
+    "Colchester",
+    36,
+    82.566238,
+    0.25,
+    0.111111
+   ],
+   [
+    "Stamford",
+    82,
+    84.267566,
+    0.134146,
+    0.060976
+   ],
+   [
+    "Winchester",
+    122,
+    86.852833,
+    0.303279,
+    0.196721
+   ],
+   [
+    "York",
+    273,
+    97.141334,
+    0.322344,
+    0.315018
+   ],
+   [
+    "Gloucester",
+    30,
+    98.928917,
+    0.433333,
+    0.233333
+   ],
+   [
+    "Southwark",
+    39,
+    101.137131,
+    0.051282,
+    0.0
+   ],
+   [
+    "Northampton",
+    23,
+    102.583739,
+    0.26087,
+    0.130435
+   ],
+   [
+    "Dover",
+    31,
+    108.347992,
+    0.387097,
+    0.129032
+   ],
+   [
+    "London",
+    576,
+    110.047467,
+    0.144097,
+    0.069444
+   ],
+   [
+    "Leicester",
+    20,
+    115.726223,
+    0.25,
+    0.1
+   ],
+   [
+    "Canterbury",
+    119,
+    115.882534,
+    0.260504,
+    0.109244
+   ],
+   [
+    "Nottingham",
+    20,
+    134.424243,
+    0.0,
+    0.0
+   ],
+   [
+    "Worcester",
+    22,
+    145.157547,
+    0.363636,
+    0.227273
+   ],
+   [
+    "Carlisle",
+    20,
+    146.287861,
+    0.1,
+    0.1
+   ],
+   [
+    "Wilton",
+    31,
+    149.665908,
+    0.258065,
+    0.0
+   ],
+   [
+    "Sandwich",
+    21,
+    160.448397,
+    0.285714,
+    0.190476
+   ],
+   [
+    "Chester",
+    35,
+    163.10704,
+    0.285714,
+    0.371429
+   ],
+   [
+    "Bristol",
+    24,
+    164.452128,
+    0.208333,
+    0.166667
+   ],
+   [
+    "Chichester",
+    20,
+    172.600906,
+    0.15,
+    0.1
+   ],
+   [
+    "Hastings",
+    20,
+    177.914896,
+    0.1,
+    0.0
+   ],
+   [
+    "Exeter",
+    36,
+    183.071621,
+    0.083333,
+    0.027778
+   ]
+  ],
+  "method_counts": {
+   "OS Open Names, unique name, at": 1789,
+   "OS Open Names, unique name, near": 693,
+   "OS Open Names, the only city or town of that name, near": 206,
+   "OS Open Names, the only city or town of that name, at": 194,
+   "OS Open Names, nearest match to the place named after 'near', near": 8,
+   "OS Open Names, all matches within 15 km, at": 2,
+   "OS Open Names, all matches within 15 km, near": 2
+  },
+  "placed_findspots": 1450
+ },
+ "destiny": {
+  "n_towns": 106,
+  "n_aethelred": 68,
+  "n_with_pop2021": 104,
+  "spearman_aethelred_2021": 0.438376,
+  "p_aethelred_2021": 0.000207,
+  "n_aethelred_2021": 67,
+  "spearman_lateas_2021": 0.447022,
+  "p_lateas_2021": 2e-06,
+  "n_lateas_2021": 104,
+  "spearman_aethelred_1377": 0.454072,
+  "p_aethelred_1377": 0.000101,
+  "spearman_aethelred_1801": 0.226036,
+  "p_aethelred_1801": 0.063818,
+  "top10": [
+   {
+    "mint": "London",
+    "moneyers": 105,
+    "rank1377": 1.0,
+    "rank1801": 1.0,
+    "pop2021": 8799728.0,
+    "rank2021": 1.0,
+    "rank2021_england": 1.0
+   },
+   {
+    "mint": "York",
+    "moneyers": 69,
+    "rank1377": 2.0,
+    "rank1801": 18.0,
+    "pop2021": 142114.0,
+    "rank2021": 18.0,
+    "rank2021_england": 42.0
+   },
+   {
+    "mint": "Lincoln",
+    "moneyers": 68,
+    "rank1377": 7.0,
+    "rank1801": null,
+    "pop2021": 103809.0,
+    "rank2021": 22.0,
+    "rank2021_england": 64.0
+   },
+   {
+    "mint": "Winchester",
+    "moneyers": 47,
+    "rank1377": 30.0,
+    "rank1801": null,
+    "pop2021": 49967.0,
+    "rank2021": 38.0,
+    "rank2021_england": 169.0
+   },
+   {
+    "mint": "Stamford",
+    "moneyers": 40,
+    "rank1377": 32.0,
+    "rank1801": null,
+    "pop2021": 20751.0,
+    "rank2021": 57.0,
+    "rank2021_england": 431.0
+   },
+   {
+    "mint": "Exeter",
+    "moneyers": 35,
+    "rank1377": 24.0,
+    "rank1801": 16.0,
+    "pop2021": 125371.0,
+    "rank2021": 20.0,
+    "rank2021_england": 46.0
+   },
+   {
+    "mint": "Thetford",
+    "moneyers": 31,
+    "rank1377": null,
+    "rank1801": null,
+    "pop2021": 25256.0,
+    "rank2021": 52.0,
+    "rank2021_england": 354.0
+   },
+   {
+    "mint": "Chester",
+    "moneyers": 25,
+    "rank1377": null,
+    "rank1801": 21.0,
+    "pop2021": 88994.0,
+    "rank2021": 27.0,
+    "rank2021_england": 82.0
+   },
+   {
+    "mint": "Norwich",
+    "moneyers": 22,
+    "rank1377": 6.0,
+    "rank1801": 8.0,
+    "pop2021": 198213.0,
+    "rank2021": 12.0,
+    "rank2021_england": 24.0
+   },
+   {
+    "mint": "Cambridge",
+    "moneyers": 20,
+    "rank1377": 22.0,
+    "rank1801": null,
+    "pop2021": 149510.0,
+    "rank2021": 17.0,
+    "rank2021_england": 40.0
+   }
+  ],
+  "top10_in1377": 8,
+  "top10_in1801": 5,
+  "top10_over100k_2021": 6,
+  "top20_in1377": 12,
+  "top20_in1801": 6,
+  "top20_over100k_2021": 10,
+  "list1377_n": 41,
+  "list1377_mints": 27,
+  "list1377_not_mints": [
+   "Plymouth",
+   "Coventry",
+   "King's Lynn",
+   "Boston",
+   "Beverley",
+   "Great Yarmouth",
+   "Ely",
+   "Hull",
+   "Scarborough",
+   "Ludlow",
+   "Pontefract",
+   "Lichfield",
+   "Newbury",
+   "Wells"
+  ],
+  "list1801_n": 30,
+  "list1801_mints": 12,
+  "list1801_not_mints": [
+   "Manchester",
+   "Liverpool",
+   "Birmingham",
+   "Leeds",
+   "Plymouth",
+   "Portsmouth",
+   "Sheffield",
+   "Kingston upon Hull",
+   "Stoke-upon-Trent",
+   "Coventry",
+   "Ashton-under-Lyne",
+   "Great Yarmouth",
+   "Stockport",
+   "Wolverhampton",
+   "Bolton",
+   "Sunderland",
+   "Oldham",
+   "Blackburn"
+  ],
+  "list1086_n": 35,
+  "list1086_mints": 35,
+  "top30_2021": [
+   [
+    "London",
+    8799728
+   ],
+   [
+    "Birmingham",
+    1111347
+   ],
+   [
+    "Leeds",
+    532756
+   ],
+   [
+    "Liverpool",
+    503714
+   ],
+   [
+    "Sheffield",
+    495771
+   ],
+   [
+    "Manchester",
+    469193
+   ],
+   [
+    "Bristol",
+    426501
+   ],
+   [
+    "Leicester",
+    401652
+   ],
+   [
+    "Coventry",
+    340496
+   ],
+   [
+    "Bradford",
+    331757
+   ],
+   [
+    "Nottingham",
+    298588
+   ],
+   [
+    "Newcastle upon Tyne",
+    284471
+   ],
+   [
+    "Brighton and Hove",
+    274120
+   ],
+   [
+    "Derby",
+    273946
+   ],
+   [
+    "Kingston upon Hull",
+    269895
+   ],
+   [
+    "Plymouth",
+    265977
+   ],
+   [
+    "Stoke-on-Trent",
+    256898
+   ],
+   [
+    "Southampton",
+    248921
+   ],
+   [
+    "Northampton",
+    239244
+   ],
+   [
+    "Wolverhampton",
+    235339
+   ],
+   [
+    "Luton",
+    234589
+   ],
+   [
+    "Portsmouth",
+    223317
+   ],
+   [
+    "Reading",
+    203842
+   ],
+   [
+    "Norwich",
+    198213
+   ],
+   [
+    "Bournemouth",
+    196597
+   ],
+   [
+    "Peterborough",
+    191905
+   ],
+   [
+    "Bolton",
+    184302
+   ],
+   [
+    "Milton Keynes",
+    183498
+   ],
+   [
+    "Swindon",
+    182836
+   ],
+   [
+    "Southend-on-Sea",
+    180687
+   ]
+  ],
+  "top30_2021_mints": 11,
+  "top30_2021_not_mints": [
+   "Birmingham",
+   "Leeds",
+   "Liverpool",
+   "Sheffield",
+   "Manchester",
+   "Coventry",
+   "Bradford",
+   "Brighton and Hove",
+   "Kingston upon Hull",
+   "Plymouth",
+   "Stoke-on-Trent",
+   "Wolverhampton",
+   "Luton",
+   "Portsmouth",
+   "Bournemouth",
+   "Bolton",
+   "Milton Keynes",
+   "Swindon",
+   "Southend-on-Sea"
+  ],
+  "vanished": [
+   {
+    "mint": "Wilton",
+    "moneyers_peak": 13,
+    "moneyers_late_as": 25,
+    "records": 246,
+    "last": "Stephen",
+    "first": "Edgar (reform)",
+    "pop2021": 3515.0,
+    "src": "Census 2021, built-up area Wilton (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Ilchester",
+    "moneyers_peak": 11,
+    "moneyers_late_as": 18,
+    "records": 177,
+    "last": "Henry I",
+    "first": "Æthelred II",
+    "pop2021": 1240.0,
+    "src": "Census 2021, built-up area Ilchester (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Dunwich",
+    "moneyers_peak": 6,
+    "moneyers_late_as": 0,
+    "records": 18,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 116.0,
+    "src": "Census 2021, civil parish of Dunwich (no built-up area)",
+    "households1086": 262.0,
+    "burgesses1086": 236.0
+   },
+   {
+    "mint": "Sandwich",
+    "moneyers_peak": 6,
+    "moneyers_late_as": 2,
+    "records": 86,
+    "last": "Stephen",
+    "first": "Edward the Confessor",
+    "pop2021": 3411.0,
+    "src": "Census 2021, built-up area Sandwich (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Langport",
+    "moneyers_peak": 5,
+    "moneyers_late_as": 7,
+    "records": 20,
+    "last": "Edward the Confessor",
+    "first": "Cnut",
+    "pop2021": 3370.0,
+    "src": "Census 2021, built-up area Langport (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Lydford",
+    "moneyers_peak": 5,
+    "moneyers_late_as": 9,
+    "records": 103,
+    "last": "Edward the Confessor",
+    "first": "Æthelred II",
+    "pop2021": 370.0,
+    "src": "Census 2021, civil parish of Lydford (no built-up area)",
+    "households1086": 28.0,
+    "burgesses1086": 28.0
+   },
+   {
+    "mint": "Lympne",
+    "moneyers_peak": 5,
+    "moneyers_late_as": 11,
+    "records": 50,
+    "last": "Cnut",
+    "first": "Edgar (reform)",
+    "pop2021": 1889.0,
+    "src": "Census 2021, built-up area Lympne (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Romney",
+    "moneyers_peak": 5,
+    "moneyers_late_as": 11,
+    "records": 103,
+    "last": "Henry I",
+    "first": "Æthelred II",
+    "pop2021": 3868.0,
+    "src": "Census 2021, built-up area New Romney (LSOA best fit)",
+    "households1086": 50.0,
+    "burgesses1086": 50.0
+   },
+   {
+    "mint": "Steyning",
+    "moneyers_peak": 4,
+    "moneyers_late_as": 5,
+    "records": 113,
+    "last": "Henry I",
+    "first": "Cnut",
+    "pop2021": 4687.0,
+    "src": "Census 2021, built-up area Steyning (LSOA best fit)",
+    "households1086": 328.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Cadbury",
+    "moneyers_peak": 4,
+    "moneyers_late_as": 5,
+    "records": 13,
+    "last": "Cnut",
+    "first": "Æthelred II",
+    "pop2021": 326.0,
+    "src": "Census 2021, civil parish of South Cadbury and Sutton Montis (no built-up area)",
+    "households1086": 11.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Pevensey",
+    "moneyers_peak": 3,
+    "moneyers_late_as": 0,
+    "records": 14,
+    "last": "Stephen",
+    "first": "William I",
+    "pop2021": 3307.0,
+    "src": "Census 2021, civil parish of Pevensey (no built-up area)",
+    "households1086": 129.0,
+    "burgesses1086": 129.0
+   },
+   {
+    "mint": "Axbridge",
+    "moneyers_peak": 3,
+    "moneyers_late_as": 5,
+    "records": 12,
+    "last": "Harthacnut",
+    "first": "Edgar (reform)",
+    "pop2021": 1999.0,
+    "src": "Census 2021, built-up area Axbridge (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Bruton",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 3,
+    "records": 32,
+    "last": "Edward the Confessor",
+    "first": "Æthelred II",
+    "pop2021": 2874.0,
+    "src": "Census 2021, built-up area Bruton (LSOA best fit)",
+    "households1086": 67.0,
+    "burgesses1086": 5.0
+   },
+   {
+    "mint": "Rye",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 0,
+    "records": 17,
+    "last": "Stephen",
+    "first": "Henry I",
+    "pop2021": 4141.0,
+    "src": "Census 2021, built-up area Rye (LSOA best fit)",
+    "households1086": 190.0,
+    "burgesses1086": 68.0
+   },
+   {
+    "mint": "Torksey",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 2,
+    "records": 12,
+    "last": "Cnut",
+    "first": "Edward the Martyr",
+    "pop2021": 777.0,
+    "src": "Census 2021, civil parish of Torksey (no built-up area)",
+    "households1086": 264.0,
+    "burgesses1086": 264.0
+   },
+   {
+    "mint": "Newport",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 2,
+    "records": 2,
+    "last": "Edward the Confessor",
+    "first": "Edward the Confessor",
+    "pop2021": null,
+    "src": "",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Eye",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 0,
+    "records": 4,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 2210.0,
+    "src": "Census 2021, built-up area Eye (Mid Suffolk) (LSOA best fit)",
+    "households1086": 159.0,
+    "burgesses1086": 25.0
+   },
+   {
+    "mint": "Castle Rising",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 0,
+    "records": 21,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 203.0,
+    "src": "Census 2021, civil parish of Castle Rising (no built-up area)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Bramber",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 0,
+    "records": 5,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 1416.0,
+    "src": "Census 2021, built-up area Bramber (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Cissbury",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 2,
+    "records": 11,
+    "last": "Æthelred II",
+    "first": "Æthelred II",
+    "pop2021": null,
+    "src": "hillfort, no settlement",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Corbridge",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 0,
+    "records": 12,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 3095.0,
+    "src": "Census 2021, built-up area Corbridge (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Watchet",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 4,
+    "records": 57,
+    "last": "William II",
+    "first": "Æthelred II",
+    "pop2021": 2859.0,
+    "src": "Census 2021, built-up area Watchet (LSOA best fit)",
+    "households1086": 2.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Milbourne Port",
+    "moneyers_peak": 2,
+    "moneyers_late_as": 3,
+    "records": 6,
+    "last": "Cnut",
+    "first": "Æthelred II",
+    "pop2021": 3208.0,
+    "src": "Census 2021, built-up area Milborne Port (LSOA best fit)",
+    "households1086": 265.0,
+    "burgesses1086": 168.0
+   },
+   {
+    "mint": "Berkeley",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 1,
+    "records": 3,
+    "last": "Edward the Confessor",
+    "first": "Edward the Confessor",
+    "pop2021": 2929.0,
+    "src": "Census 2021, built-up area Berkeley (LSOA best fit)",
+    "households1086": 579.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Bedwyn",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 1,
+    "records": 8,
+    "last": "Edward the Confessor",
+    "first": "Edward the Confessor",
+    "pop2021": 1790.0,
+    "src": "Census 2021, built-up area Great Bedwyn (LSOA best fit)",
+    "households1086": 183.0,
+    "burgesses1086": 25.0
+   },
+   {
+    "mint": "Caistor",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 1,
+    "records": 3,
+    "last": "Cnut",
+    "first": "Edward the Martyr",
+    "pop2021": 3618.0,
+    "src": "Census 2021, built-up area Caistor (LSOA best fit)",
+    "households1086": 53.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Petherton",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 1,
+    "records": 3,
+    "last": "Edward the Confessor",
+    "first": "Edward the Confessor",
+    "pop2021": 4444.0,
+    "src": "Census 2021, built-up area North Petherton (LSOA best fit)",
+    "households1086": 45.0,
+    "burgesses1086": null
+   },
+   {
+    "mint": "Rhuddlan",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 0,
+    "records": 1,
+    "last": "William I",
+    "first": "William I",
+    "pop2021": 2998.0,
+    "src": "Census 2021, built-up area Rhuddlan (LSOA best fit)",
+    "households1086": 41.0,
+    "burgesses1086": 31.0
+   },
+   {
+    "mint": "Tutbury",
+    "moneyers_peak": 1,
+    "moneyers_late_as": 0,
+    "records": 1,
+    "last": "Stephen",
+    "first": "Stephen",
+    "pop2021": 3674.0,
+    "src": "Census 2021, built-up area Tutbury (LSOA best fit)",
+    "households1086": null,
+    "burgesses1086": null
+   }
+  ],
+  "n_vanished": 29,
+  "n_grew": 4,
+  "grew": [
+   {
+    "mint": "Newcastle",
+    "moneyers_peak": 2,
+    "pop2021": 284471,
+    "first": "Stephen"
+   },
+   {
+    "mint": "Reading",
+    "moneyers_peak": 1,
+    "pop2021": 203842,
+    "first": "Edward the Confessor"
+   },
+   {
+    "mint": "Peterborough",
+    "moneyers_peak": 1,
+    "pop2021": 191905,
+    "first": "Cnut"
+   },
+   {
+    "mint": "Swansea",
+    "moneyers_peak": 1,
+    "pop2021": 170012,
+    "first": "Stephen"
+   }
+  ],
+  "london_pop2021": 8799728,
+  "england_median_msoa_income": 53635.5,
+  "domesday_matched": 95,
+  "burgesses_recorded": 38,
+  "income_by_class": {
+   "small": {
+    "n": 38,
+    "median_income": 51235.0,
+    "median_pop": 8022.5
+   },
+   "middling": {
+    "n": 20,
+    "median_income": 53573.58741,
+    "median_pop": 8297.0
+   },
+   "large": {
+    "n": 48,
+    "median_income": 54095.010085,
+    "median_pop": 63727.0
+   }
+  },
+  "size_class_rule": "late Anglo-Saxon moneyers (973 to 1066): small 0 to 2, middling 3 to 9, large 10 or more",
+  "spearman_lateas_income": 0.258331,
+  "p_lateas_income": 0.007797
+ },
+ "towns": {
+  "London": {
+   "moneyers_aethelred": 105,
+   "moneyers_peak": 112,
+   "moneyers_late_as": 190,
+   "records_total": 6746,
+   "emc_total": 773,
+   "pop2021": 8799728.0,
+   "rank1377": 1.0,
+   "pop1377": 34971.0,
+   "rank1801": 1.0,
+   "pop1801": 864845.0,
+   "pop1086_russell": 17850.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 75061.4445,
+   "periods_active": 12,
+   "rank_aethelred": 1.0,
+   "pop2021_source": "Census 2021, London region (Greater London)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "York": {
+   "moneyers_aethelred": 69,
+   "moneyers_peak": 69,
+   "moneyers_late_as": 126,
+   "records_total": 4283,
+   "emc_total": 360,
+   "pop2021": 142114.0,
+   "rank1377": 2.0,
+   "pop1377": 10872.0,
+   "rank1801": 18.0,
+   "pop1801": 16145.0,
+   "pop1086_russell": 4134.0,
+   "households1086": 16.0,
+   "burgesses1086": null,
+   "income_fye2023": 50376.7061,
+   "periods_active": 12,
+   "rank_aethelred": 2.0,
+   "pop2021_source": "Census 2021, built-up area York (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Lincoln": {
+   "moneyers_aethelred": 68,
+   "moneyers_peak": 68,
+   "moneyers_late_as": 117,
+   "records_total": 3735,
+   "emc_total": 377,
+   "pop2021": 103809.0,
+   "rank1377": 7.0,
+   "pop1377": 5354.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 3560.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 44796.0628,
+   "periods_active": 12,
+   "rank_aethelred": 3.0,
+   "pop2021_source": "Census 2021, built-up area Lincoln (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Winchester": {
+   "moneyers_aethelred": 47,
+   "moneyers_peak": 47,
+   "moneyers_late_as": 87,
+   "records_total": 1849,
+   "emc_total": 158,
+   "pop2021": 49967.0,
+   "rank1377": 30.0,
+   "pop1377": 2160.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 6000.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 71419.7263,
+   "periods_active": 12,
+   "rank_aethelred": 4.0,
+   "pop2021_source": "Census 2021, built-up area Winchester (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Stamford": {
+   "moneyers_aethelred": 40,
+   "moneyers_peak": 40,
+   "moneyers_late_as": 73,
+   "records_total": 1443,
+   "emc_total": 110,
+   "pop2021": 20751.0,
+   "rank1377": 32.0,
+   "pop1377": 1827.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1424.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 54247.0148,
+   "periods_active": 12,
+   "rank_aethelred": 5.0,
+   "pop2021_source": "Census 2021, built-up area Stamford (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Thetford": {
+   "moneyers_aethelred": 31,
+   "moneyers_peak": 31,
+   "moneyers_late_as": 61,
+   "records_total": 1050,
+   "emc_total": 206,
+   "pop2021": 25256.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 2681.0,
+   "households1086": 1671.0,
+   "burgesses1086": 1665.0,
+   "income_fye2023": 48605.6965,
+   "periods_active": 12,
+   "rank_aethelred": 7.0,
+   "pop2021_source": "Census 2021, built-up area Thetford (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Chester": {
+   "moneyers_aethelred": 25,
+   "moneyers_peak": 30,
+   "moneyers_late_as": 59,
+   "records_total": 1055,
+   "emc_total": 47,
+   "pop2021": 88994.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": 21.0,
+   "pop1801": 15052.0,
+   "pop1086_russell": 1960.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 49404.7508,
+   "periods_active": 12,
+   "rank_aethelred": 8.0,
+   "pop2021_source": "Census 2021, built-up area Chester (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Norwich": {
+   "moneyers_aethelred": 22,
+   "moneyers_peak": 31,
+   "moneyers_late_as": 44,
+   "records_total": 1052,
+   "emc_total": 253,
+   "pop2021": 198213.0,
+   "rank1377": 6.0,
+   "pop1377": 5928.0,
+   "rank1801": 8.0,
+   "pop1801": 36832.0,
+   "pop1086_russell": 4445.0,
+   "households1086": 1829.0,
+   "burgesses1086": 1349.0,
+   "income_fye2023": 49959.7533,
+   "periods_active": 12,
+   "rank_aethelred": 9.0,
+   "pop2021_source": "Census 2021, built-up area Norwich (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Exeter": {
+   "moneyers_aethelred": 35,
+   "moneyers_peak": 35,
+   "moneyers_late_as": 63,
+   "records_total": 776,
+   "emc_total": 52,
+   "pop2021": 125371.0,
+   "rank1377": 24.0,
+   "pop1377": 2340.0,
+   "rank1801": 16.0,
+   "pop1801": 16827.0,
+   "pop1086_russell": 1438.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 53943.0054,
+   "periods_active": 12,
+   "rank_aethelred": 6.0,
+   "pop2021_source": "Census 2021, built-up area Exeter (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Canterbury": {
+   "moneyers_aethelred": 17,
+   "moneyers_peak": 24,
+   "moneyers_late_as": 48,
+   "records_total": 916,
+   "emc_total": 166,
+   "pop2021": 55421.0,
+   "rank1377": 14.0,
+   "pop1377": 3861.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1610.0,
+   "households1086": 309.0,
+   "burgesses1086": 294.0,
+   "income_fye2023": 57735.5055,
+   "periods_active": 12,
+   "rank_aethelred": 14.0,
+   "pop2021_source": "Census 2021, built-up area Canterbury (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Lydford": {
+   "moneyers_aethelred": 5,
+   "moneyers_peak": 5,
+   "moneyers_late_as": 9,
+   "records_total": 103,
+   "emc_total": 4,
+   "pop2021": 370.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 28.0,
+   "burgesses1086": 28.0,
+   "income_fye2023": 51401.0,
+   "periods_active": 5,
+   "rank_aethelred": 39.0,
+   "pop2021_source": "Census 2021, civil parish of Lydford (no built-up area)",
+   "first": "Æthelred II",
+   "last": "Edward the Confessor"
+  },
+  "Cadbury": {
+   "moneyers_aethelred": 4,
+   "moneyers_peak": 4,
+   "moneyers_late_as": 5,
+   "records_total": 13,
+   "emc_total": 1,
+   "pop2021": 326.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 11.0,
+   "burgesses1086": null,
+   "income_fye2023": 56379.0,
+   "periods_active": 2,
+   "rank_aethelred": 44.0,
+   "pop2021_source": "Census 2021, civil parish of South Cadbury and Sutton Montis (no built-up area)",
+   "first": "Æthelred II",
+   "last": "Cnut"
+  },
+  "Bedwyn": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 1,
+   "moneyers_late_as": 1,
+   "records_total": 8,
+   "emc_total": 1,
+   "pop2021": 1790.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 183.0,
+   "burgesses1086": 25.0,
+   "income_fye2023": 59789.0,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Great Bedwyn (LSOA best fit)",
+   "first": "Edward the Confessor",
+   "last": "Edward the Confessor"
+  },
+  "Ilchester": {
+   "moneyers_aethelred": 7,
+   "moneyers_peak": 11,
+   "moneyers_late_as": 18,
+   "records_total": 177,
+   "emc_total": 9,
+   "pop2021": 1240.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 61090.0,
+   "periods_active": 9,
+   "rank_aethelred": 33.0,
+   "pop2021_source": "Census 2021, built-up area Ilchester (LSOA best fit)",
+   "first": "Æthelred II",
+   "last": "Henry I"
+  },
+  "Wilton": {
+   "moneyers_aethelred": 9,
+   "moneyers_peak": 13,
+   "moneyers_late_as": 25,
+   "records_total": 246,
+   "emc_total": 43,
+   "pop2021": 3515.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1446.0,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 56930.0,
+   "periods_active": 12,
+   "rank_aethelred": 27.0,
+   "pop2021_source": "Census 2021, built-up area Wilton (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Torksey": {
+   "moneyers_aethelred": 2,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 2,
+   "records_total": 12,
+   "emc_total": 3,
+   "pop2021": 777.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 264.0,
+   "burgesses1086": 264.0,
+   "income_fye2023": 47567.0,
+   "periods_active": 3,
+   "rank_aethelred": 54.0,
+   "pop2021_source": "Census 2021, civil parish of Torksey (no built-up area)",
+   "first": "Edward the Martyr",
+   "last": "Cnut"
+  },
+  "Dunwich": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 6,
+   "moneyers_late_as": 0,
+   "records_total": 18,
+   "emc_total": 14,
+   "pop2021": 116.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1596.0,
+   "households1086": 262.0,
+   "burgesses1086": 236.0,
+   "income_fye2023": 51235.0,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, civil parish of Dunwich (no built-up area)",
+   "first": "Stephen",
+   "last": "Stephen"
+  },
+  "Cricklade": {
+   "moneyers_aethelred": 6,
+   "moneyers_peak": 7,
+   "moneyers_late_as": 14,
+   "records_total": 77,
+   "emc_total": 7,
+   "pop2021": 5036.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 64131.0,
+   "periods_active": 9,
+   "rank_aethelred": 36.0,
+   "pop2021_source": "Census 2021, built-up area Cricklade (LSOA best fit)",
+   "first": "Æthelred II",
+   "last": "Henry I"
+  },
+  "Bristol": {
+   "moneyers_aethelred": 1,
+   "moneyers_peak": 10,
+   "moneyers_late_as": 16,
+   "records_total": 304,
+   "emc_total": 35,
+   "pop2021": 426501.0,
+   "rank1377": 3.0,
+   "pop1377": 9518.0,
+   "rank1801": 5.0,
+   "pop1801": 63645.0,
+   "pop1086_russell": 2310.0,
+   "households1086": 105.0,
+   "burgesses1086": null,
+   "income_fye2023": 56747.5579,
+   "periods_active": 10,
+   "rank_aethelred": 62.0,
+   "pop2021_source": "Census 2021, built-up area Bristol (LSOA best fit)",
+   "first": "Æthelred II",
+   "last": "Stephen"
+  },
+  "Reading": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 1,
+   "moneyers_late_as": 1,
+   "records_total": 2,
+   "emc_total": 0,
+   "pop2021": 203842.0,
+   "rank1377": 37.0,
+   "pop1377": 1575.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 102.0,
+   "burgesses1086": null,
+   "income_fye2023": 63044.9082,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Reading (LSOA best fit)",
+   "first": "Edward the Confessor",
+   "last": "Edward the Confessor"
+  },
+  "Cissbury": {
+   "moneyers_aethelred": 2,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 2,
+   "records_total": 11,
+   "emc_total": 0,
+   "pop2021": null,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 54163.0,
+   "periods_active": 1,
+   "rank_aethelred": 54.0,
+   "pop2021_source": "hillfort, no settlement",
+   "first": "Æthelred II",
+   "last": "Æthelred II"
+  },
+  "Southampton": {
+   "moneyers_aethelred": 9,
+   "moneyers_peak": 9,
+   "moneyers_late_as": 15,
+   "records_total": 88,
+   "emc_total": 35,
+   "pop2021": 248921.0,
+   "rank1377": 35.0,
+   "pop1377": 1728.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 96.0,
+   "burgesses1086": null,
+   "income_fye2023": 52345.0795,
+   "periods_active": 4,
+   "rank_aethelred": 27.0,
+   "pop2021_source": "Census 2021, built-up area Southampton (LSOA best fit)",
+   "first": "Edward the Martyr",
+   "last": "Stephen"
+  },
+  "Newcastle": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 0,
+   "records_total": 22,
+   "emc_total": 16,
+   "pop2021": 284471.0,
+   "rank1377": 13.0,
+   "pop1377": 3970.0,
+   "rank1801": 14.0,
+   "pop1801": 28366.0,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 46869.6871,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Newcastle upon Tyne (LSOA best fit)",
+   "first": "Stephen",
+   "last": "Stephen"
+  },
+  "Wallingford": {
+   "moneyers_aethelred": 18,
+   "moneyers_peak": 18,
+   "moneyers_late_as": 32,
+   "records_total": 424,
+   "emc_total": 59,
+   "pop2021": 8456.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1718.0,
+   "households1086": 22.0,
+   "burgesses1086": null,
+   "income_fye2023": 66348.0,
+   "periods_active": 11,
+   "rank_aethelred": 12.0,
+   "pop2021_source": "Census 2021, built-up area Wallingford (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Oxford": {
+   "moneyers_aethelred": 13,
+   "moneyers_peak": 20,
+   "moneyers_late_as": 36,
+   "records_total": 665,
+   "emc_total": 69,
+   "pop2021": 166279.0,
+   "rank1377": 16.0,
+   "pop1377": 3536.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 1431.0,
+   "households1086": 18.0,
+   "burgesses1086": null,
+   "income_fye2023": 64868.7513,
+   "periods_active": 12,
+   "rank_aethelred": 19.0,
+   "pop2021_source": "Census 2021, built-up area Oxford (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Ipswich": {
+   "moneyers_aethelred": 16,
+   "moneyers_peak": 16,
+   "moneyers_late_as": 29,
+   "records_total": 443,
+   "emc_total": 76,
+   "pop2021": 150235.0,
+   "rank1377": 27.0,
+   "pop1377": 2260.0,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": 980.0,
+   "households1086": 110.0,
+   "burgesses1086": 68.0,
+   "income_fye2023": 53806.7167,
+   "periods_active": 12,
+   "rank_aethelred": 15.0,
+   "pop2021_source": "Census 2021, built-up area Ipswich (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Stephen"
+  },
+  "Watchet": {
+   "moneyers_aethelred": 2,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 4,
+   "records_total": 57,
+   "emc_total": 2,
+   "pop2021": 2859.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 2.0,
+   "burgesses1086": null,
+   "income_fye2023": 39837.0,
+   "periods_active": 7,
+   "rank_aethelred": 54.0,
+   "pop2021_source": "Census 2021, built-up area Watchet (LSOA best fit)",
+   "first": "Æthelred II",
+   "last": "William II"
+  },
+  "Axbridge": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 3,
+   "moneyers_late_as": 5,
+   "records_total": 12,
+   "emc_total": 1,
+   "pop2021": 1999.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 58348.0,
+   "periods_active": 3,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Axbridge (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Harthacnut"
+  },
+  "Milbourne Port": {
+   "moneyers_aethelred": 1,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 3,
+   "records_total": 6,
+   "emc_total": 0,
+   "pop2021": 3208.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 265.0,
+   "burgesses1086": 168.0,
+   "income_fye2023": 53609.0,
+   "periods_active": 2,
+   "rank_aethelred": 62.0,
+   "pop2021_source": "Census 2021, built-up area Milborne Port (LSOA best fit)",
+   "first": "Æthelred II",
+   "last": "Cnut"
+  },
+  "Langport": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 5,
+   "moneyers_late_as": 7,
+   "records_total": 20,
+   "emc_total": 0,
+   "pop2021": 3370.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 54308.0,
+   "periods_active": 4,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Langport (LSOA best fit)",
+   "first": "Cnut",
+   "last": "Edward the Confessor"
+  },
+  "Lympne": {
+   "moneyers_aethelred": 5,
+   "moneyers_peak": 5,
+   "moneyers_late_as": 11,
+   "records_total": 50,
+   "emc_total": 8,
+   "pop2021": 1889.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 57508.0,
+   "periods_active": 4,
+   "rank_aethelred": 39.0,
+   "pop2021_source": "Census 2021, built-up area Lympne (LSOA best fit)",
+   "first": "Edgar (reform)",
+   "last": "Cnut"
+  },
+  "Castle Rising": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 0,
+   "records_total": 21,
+   "emc_total": 13,
+   "pop2021": 203.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 67101.0,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, civil parish of Castle Rising (no built-up area)",
+   "first": "Stephen",
+   "last": "Stephen"
+  },
+  "Peterborough": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 1,
+   "moneyers_late_as": 1,
+   "records_total": 1,
+   "emc_total": 0,
+   "pop2021": 191905.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 52.0,
+   "burgesses1086": null,
+   "income_fye2023": 51180.0163,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Peterborough (LSOA best fit)",
+   "first": "Cnut",
+   "last": "Cnut"
+  },
+  "Cardiff": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 4,
+   "moneyers_late_as": 0,
+   "records_total": 8,
+   "emc_total": 0,
+   "pop2021": 342871.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 49961.191,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Cardiff (LSOA best fit)",
+   "first": "Stephen",
+   "last": "Stephen"
+  },
+  "Swansea": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 1,
+   "moneyers_late_as": 0,
+   "records_total": 2,
+   "emc_total": 1,
+   "pop2021": 170012.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 43517.4379,
+   "periods_active": 1,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Swansea (LSOA best fit)",
+   "first": "Stephen",
+   "last": "Stephen"
+  },
+  "Durham": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 2,
+   "moneyers_late_as": 0,
+   "records_total": 15,
+   "emc_total": 7,
+   "pop2021": 48738.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": null,
+   "burgesses1086": null,
+   "income_fye2023": 54591.7947,
+   "periods_active": 3,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, built-up area Durham (LSOA best fit)",
+   "first": "William I",
+   "last": "Stephen"
+  },
+  "Pevensey": {
+   "moneyers_aethelred": 0,
+   "moneyers_peak": 3,
+   "moneyers_late_as": 0,
+   "records_total": 14,
+   "emc_total": 4,
+   "pop2021": 3307.0,
+   "rank1377": null,
+   "pop1377": null,
+   "rank1801": null,
+   "pop1801": null,
+   "pop1086_russell": null,
+   "households1086": 129.0,
+   "burgesses1086": 129.0,
+   "income_fye2023": 54835.0,
+   "periods_active": 4,
+   "rank_aethelred": null,
+   "pop2021_source": "Census 2021, civil parish of Pevensey (no built-up area)",
+   "first": "William I",
+   "last": "Stephen"
+  }
+ },
+ "horndon": {
+  "records": 0,
+  "place": "Horndon on the Hill",
+  "note": "known from one coin of Edward the Confessor (Wikipedia, Horndon mint)"
+ },
+ "wiki_context": {
+  "reform_mints_about": 40,
+  "harold2_mints": 48,
+  "places_active_about": 70
+ },
+ "coverage": {
+  "emc_findspot_placed_all": 0.746904
+ },
+ "probable_window_by_mint_top": {
+  "London": 64,
+  "Lincoln": 34,
+  "Norwich": 31,
+  "York": 25,
+  "Winchester": 23
+ }
+}

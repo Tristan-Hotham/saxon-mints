@@ -1,0 +1,668 @@
+mint,period,period_label,records,scbi,emc,moneyers
+York,edgar,Edgar (reform),25,12,13,16
+Stamford,edgar,Edgar (reform),19,16,3,8
+Winchester,edgar,Edgar (reform),8,6,2,5
+Northampton,edgar,Edgar (reform),7,5,2,5
+London,edgar,Edgar (reform),11,4,7,4
+Canterbury,edgar,Edgar (reform),8,5,3,4
+Lincoln,edgar,Edgar (reform),8,5,3,4
+Lympne,edgar,Edgar (reform),6,2,4,4
+Norwich,edgar,Edgar (reform),4,2,2,4
+Wilton,edgar,Edgar (reform),4,3,1,4
+Oxford,edgar,Edgar (reform),8,8,0,3
+Shrewsbury,edgar,Edgar (reform),4,4,0,3
+Chester,edgar,Edgar (reform),4,3,1,2
+Lewes,edgar,Edgar (reform),3,3,0,2
+Gloucester,edgar,Edgar (reform),2,2,0,2
+Leicester,edgar,Edgar (reform),2,2,0,2
+Ipswich,edgar,Edgar (reform),4,2,2,1
+Rochester,edgar,Edgar (reform),4,1,3,1
+Thetford,edgar,Edgar (reform),2,2,0,1
+Axbridge,edgar,Edgar (reform),1,0,1,1
+Bedford,edgar,Edgar (reform),1,1,0,1
+Chichester,edgar,Edgar (reform),1,1,0,1
+Exeter,edgar,Edgar (reform),1,1,0,1
+Maldon,edgar,Edgar (reform),1,1,0,1
+Malmesbury,edgar,Edgar (reform),1,1,0,1
+Stafford,edgar,Edgar (reform),1,1,0,1
+Tamworth,edgar,Edgar (reform),1,0,1,1
+Wallingford,edgar,Edgar (reform),1,1,0,1
+Winchcombe,edgar,Edgar (reform),1,1,0,1
+Stamford,edwardm,Edward the Martyr,63,53,10,14
+York,edwardm,Edward the Martyr,24,13,11,12
+Lincoln,edwardm,Edward the Martyr,27,23,4,10
+London,edwardm,Edward the Martyr,11,5,6,7
+Bedford,edwardm,Edward the Martyr,6,2,4,4
+Winchester,edwardm,Edward the Martyr,5,4,1,4
+Lympne,edwardm,Edward the Martyr,4,3,1,4
+Ipswich,edwardm,Edward the Martyr,7,0,7,3
+Canterbury,edwardm,Edward the Martyr,4,0,4,3
+Northampton,edwardm,Edward the Martyr,4,4,0,3
+Chester,edwardm,Edward the Martyr,3,3,0,3
+Southampton,edwardm,Edward the Martyr,5,0,5,2
+Lewes,edwardm,Edward the Martyr,3,3,0,2
+Oxford,edwardm,Edward the Martyr,3,2,1,1
+Thetford,edwardm,Edward the Martyr,3,2,1,1
+Gloucester,edwardm,Edward the Martyr,2,2,0,1
+Torksey,edwardm,Edward the Martyr,2,1,1,1
+Buckingham,edwardm,Edward the Martyr,1,0,1,1
+Caistor,edwardm,Edward the Martyr,1,1,0,1
+Cambridge,edwardm,Edward the Martyr,1,1,0,1
+Derby,edwardm,Edward the Martyr,1,0,1,1
+Exeter,edwardm,Edward the Martyr,1,1,0,1
+Horncastle,edwardm,Edward the Martyr,1,1,0,1
+Norwich,edwardm,Edward the Martyr,1,1,0,1
+Shaftesbury,edwardm,Edward the Martyr,1,1,0,1
+Tamworth,edwardm,Edward the Martyr,1,1,0,1
+Wilton,edwardm,Edward the Martyr,1,0,1,1
+Worcester,edwardm,Edward the Martyr,1,0,1,1
+Warwick,edwardm,Edward the Martyr,1,0,1,0
+London,aethelred,Æthelred II,2045,1903,142,105
+York,aethelred,Æthelred II,704,635,69,69
+Lincoln,aethelred,Æthelred II,990,921,69,68
+Winchester,aethelred,Æthelred II,632,601,31,47
+Stamford,aethelred,Æthelred II,338,320,18,40
+Exeter,aethelred,Æthelred II,385,373,12,35
+Thetford,aethelred,Æthelred II,261,233,28,31
+Chester,aethelred,Æthelred II,247,243,4,25
+Norwich,aethelred,Æthelred II,242,220,22,22
+Cambridge,aethelred,Æthelred II,175,159,16,20
+Colchester,aethelred,Æthelred II,59,57,2,19
+Southwark,aethelred,Æthelred II,178,172,6,18
+Wallingford,aethelred,Æthelred II,78,75,3,18
+Canterbury,aethelred,Æthelred II,320,293,27,17
+Ipswich,aethelred,Æthelred II,127,118,9,16
+Lewes,aethelred,Æthelred II,123,118,5,16
+Rochester,aethelred,Æthelred II,110,102,8,15
+Bedford,aethelred,Æthelred II,46,43,3,14
+Oxford,aethelred,Æthelred II,121,112,9,13
+Dover,aethelred,Æthelred II,67,62,5,13
+Shrewsbury,aethelred,Æthelred II,40,38,2,13
+Northampton,aethelred,Æthelred II,70,67,3,12
+Totnes,aethelred,Æthelred II,102,98,4,11
+Shaftesbury,aethelred,Æthelred II,72,69,3,11
+Chichester,aethelred,Æthelred II,50,46,4,10
+Hertford,aethelred,Æthelred II,38,35,3,10
+Huntingdon,aethelred,Æthelred II,72,68,4,9
+Wilton,aethelred,Æthelred II,50,49,1,9
+Worcester,aethelred,Æthelred II,41,39,2,9
+Hereford,aethelred,Æthelred II,40,39,1,9
+Southampton,aethelred,Æthelred II,30,27,3,9
+Bath,aethelred,Æthelred II,100,98,2,8
+Ilchester,aethelred,Æthelred II,49,47,2,7
+Leicester,aethelred,Æthelred II,48,46,2,7
+Derby,aethelred,Æthelred II,16,14,2,7
+Wareham,aethelred,Æthelred II,39,38,1,6
+Barnstaple,aethelred,Æthelred II,36,34,2,6
+Cricklade,aethelred,Æthelred II,9,8,1,6
+Lydford,aethelred,Æthelred II,77,73,4,5
+Gloucester,aethelred,Æthelred II,74,69,5,5
+Lympne,aethelred,Æthelred II,32,29,3,5
+Salisbury,aethelred,Æthelred II,25,23,2,5
+Warwick,aethelred,Æthelred II,20,20,0,5
+Maldon,aethelred,Æthelred II,30,28,2,4
+Malmesbury,aethelred,Æthelred II,13,11,2,4
+Stafford,aethelred,Æthelred II,13,11,2,4
+Cadbury,aethelred,Æthelred II,12,12,0,4
+Romney,aethelred,Æthelred II,8,8,0,4
+Dorchester,aethelred,Æthelred II,25,24,1,3
+Hastings,aethelred,Æthelred II,18,18,0,3
+Guildford,aethelred,Æthelred II,8,8,0,3
+Tamworth,aethelred,Æthelred II,8,8,0,3
+Winchcombe,aethelred,Æthelred II,8,8,0,3
+Watchet,aethelred,Æthelred II,24,23,1,2
+Cissbury,aethelred,Æthelred II,11,11,0,2
+Bridport,aethelred,Æthelred II,7,5,2,2
+Torksey,aethelred,Æthelred II,5,3,2,2
+Warminster,aethelred,Æthelred II,5,4,1,2
+Sudbury,aethelred,Æthelred II,4,4,0,2
+Buckingham,aethelred,Æthelred II,3,3,0,2
+Taunton,aethelred,Æthelred II,3,3,0,2
+Nottingham,aethelred,Æthelred II,11,11,0,1
+Bristol,aethelred,Æthelred II,3,3,0,1
+Milbourne Port,aethelred,Æthelred II,3,3,0,1
+Crewkerne,aethelred,Æthelred II,2,2,0,1
+Bruton,aethelred,Æthelred II,1,1,0,1
+Caistor,aethelred,Æthelred II,1,0,1,1
+Horncastle,aethelred,Æthelred II,1,0,1,1
+London,cnut,Cnut,2060,1977,83,112
+Lincoln,cnut,Cnut,1022,953,69,58
+York,cnut,Cnut,1552,1501,51,49
+Winchester,cnut,Cnut,383,367,16,38
+Stamford,cnut,Cnut,454,437,17,30
+Chester,cnut,Cnut,357,346,11,30
+Exeter,cnut,Cnut,151,149,2,30
+Thetford,cnut,Cnut,211,196,15,29
+Southwark,cnut,Cnut,96,91,5,25
+Norwich,cnut,Cnut,174,161,13,21
+Oxford,cnut,Cnut,162,156,6,20
+Canterbury,cnut,Cnut,154,149,5,17
+Dover,cnut,Cnut,154,143,11,14
+Shrewsbury,cnut,Cnut,81,79,2,13
+Lewes,cnut,Cnut,62,57,5,13
+Cambridge,cnut,Cnut,106,102,4,12
+Huntingdon,cnut,Cnut,65,62,3,12
+Ilchester,cnut,Cnut,85,82,3,11
+Ipswich,cnut,Cnut,64,63,1,11
+Wallingford,cnut,Cnut,50,47,3,11
+Worcester,cnut,Cnut,46,45,1,11
+Gloucester,cnut,Cnut,106,104,2,9
+Salisbury,cnut,Cnut,74,72,2,9
+Hastings,cnut,Cnut,71,70,1,8
+Bedford,cnut,Cnut,34,33,1,8
+Bristol,cnut,Cnut,58,57,1,7
+Chichester,cnut,Cnut,39,38,1,7
+Cricklade,cnut,Cnut,29,28,1,7
+Warwick,cnut,Cnut,25,23,2,7
+Bath,cnut,Cnut,85,85,0,6
+Colchester,cnut,Cnut,68,62,6,6
+Shaftesbury,cnut,Cnut,49,47,2,6
+Hereford,cnut,Cnut,48,47,1,6
+Hertford,cnut,Cnut,48,45,3,6
+Leicester,cnut,Cnut,48,47,1,6
+Maldon,cnut,Cnut,34,33,1,6
+Southampton,cnut,Cnut,23,23,0,5
+Romney,cnut,Cnut,21,21,0,5
+Langport,cnut,Cnut,11,11,0,5
+Sudbury,cnut,Cnut,11,10,1,5
+Northampton,cnut,Cnut,53,51,2,4
+Rochester,cnut,Cnut,26,24,2,4
+Totnes,cnut,Cnut,24,22,2,4
+Taunton,cnut,Cnut,23,23,0,4
+Lydford,cnut,Cnut,15,15,0,4
+Malmesbury,cnut,Cnut,12,10,2,4
+Nottingham,cnut,Cnut,30,30,0,3
+Guildford,cnut,Cnut,17,13,4,3
+Barnstaple,cnut,Cnut,14,14,0,3
+Wilton,cnut,Cnut,12,12,0,3
+Lympne,cnut,Cnut,8,8,0,3
+Axbridge,cnut,Cnut,5,5,0,3
+Aylesbury,cnut,Cnut,3,3,0,3
+Bruton,cnut,Cnut,26,26,0,2
+Watchet,cnut,Cnut,16,15,1,2
+Winchcombe,cnut,Cnut,12,12,0,2
+Crewkerne,cnut,Cnut,10,10,0,2
+Dorchester,cnut,Cnut,9,8,1,2
+Steyning,cnut,Cnut,9,9,0,2
+Bridport,cnut,Cnut,3,3,0,2
+Milbourne Port,cnut,Cnut,3,3,0,2
+Stafford,cnut,Cnut,3,3,0,2
+Warminster,cnut,Cnut,3,2,1,2
+Wareham,cnut,Cnut,2,2,0,2
+Newark,cnut,Cnut,12,12,0,1
+Derby,cnut,Cnut,9,9,0,1
+Torksey,cnut,Cnut,5,5,0,1
+Buckingham,cnut,Cnut,4,4,0,1
+Cadbury,cnut,Cnut,1,0,1,1
+Peterborough,cnut,Cnut,1,1,0,1
+Caistor,cnut,Cnut,1,1,0,0
+London,harold1,Harold I,602,571,31,47
+Lincoln,harold1,Harold I,372,352,20,32
+Winchester,harold1,Harold I,92,90,2,23
+York,harold1,Harold I,270,259,11,19
+Stamford,harold1,Harold I,156,146,10,17
+Canterbury,harold1,Harold I,59,55,4,14
+Chester,harold1,Harold I,75,74,1,12
+Oxford,harold1,Harold I,52,50,2,10
+Exeter,harold1,Harold I,37,36,1,8
+Norwich,harold1,Harold I,87,78,9,7
+Wallingford,harold1,Harold I,28,27,1,7
+Thetford,harold1,Harold I,87,80,7,6
+Bristol,harold1,Harold I,54,53,1,6
+Gloucester,harold1,Harold I,25,23,2,6
+Dover,harold1,Harold I,44,41,3,5
+Cambridge,harold1,Harold I,36,32,4,5
+Hereford,harold1,Harold I,36,36,0,5
+Shrewsbury,harold1,Harold I,25,24,1,5
+Hastings,harold1,Harold I,16,16,0,5
+Derby,harold1,Harold I,37,35,2,4
+Salisbury,harold1,Harold I,32,31,1,4
+Northampton,harold1,Harold I,27,25,2,4
+Bedford,harold1,Harold I,13,12,1,4
+Chichester,harold1,Harold I,11,11,0,4
+Ipswich,harold1,Harold I,28,26,2,3
+Leicester,harold1,Harold I,24,24,0,3
+Bath,harold1,Harold I,23,23,0,3
+Hertford,harold1,Harold I,22,22,0,3
+Worcester,harold1,Harold I,22,21,1,3
+Lewes,harold1,Harold I,15,15,0,3
+Dorchester,harold1,Harold I,12,12,0,3
+Wilton,harold1,Harold I,10,9,1,3
+Colchester,harold1,Harold I,24,20,4,2
+Nottingham,harold1,Harold I,23,19,4,2
+Huntingdon,harold1,Harold I,14,12,2,2
+Warwick,harold1,Harold I,11,11,0,2
+Shaftesbury,harold1,Harold I,10,9,1,2
+Southwark,harold1,Harold I,9,9,0,2
+Romney,harold1,Harold I,7,7,0,2
+Ilchester,harold1,Harold I,5,5,0,2
+Cricklade,harold1,Harold I,4,4,0,2
+Buckingham,harold1,Harold I,3,3,0,2
+Lydford,harold1,Harold I,3,3,0,2
+Langport,harold1,Harold I,2,2,0,2
+Taunton,harold1,Harold I,2,2,0,2
+Steyning,harold1,Harold I,6,5,1,1
+Stafford,harold1,Harold I,4,4,0,1
+Malmesbury,harold1,Harold I,3,3,0,1
+Warminster,harold1,Harold I,3,3,0,1
+Watchet,harold1,Harold I,3,3,0,1
+Totnes,harold1,Harold I,2,2,0,1
+Wareham,harold1,Harold I,2,2,0,1
+Barnstaple,harold1,Harold I,1,1,0,1
+Crewkerne,harold1,Harold I,1,1,0,1
+Guildford,harold1,Harold I,1,1,0,1
+Maldon,harold1,Harold I,1,1,0,1
+Rochester,harold1,Harold I,1,1,0,1
+Tamworth,harold1,Harold I,2,2,0,0
+London,harthacnut,Harthacnut,173,164,9,36
+Lincoln,harthacnut,Harthacnut,107,102,5,25
+York,harthacnut,Harthacnut,73,71,2,17
+Winchester,harthacnut,Harthacnut,72,70,2,16
+Stamford,harthacnut,Harthacnut,52,46,6,11
+Exeter,harthacnut,Harthacnut,40,37,3,11
+Wallingford,harthacnut,Harthacnut,18,17,1,11
+Oxford,harthacnut,Harthacnut,36,35,1,10
+Chester,harthacnut,Harthacnut,21,19,2,10
+Gloucester,harthacnut,Harthacnut,30,28,2,9
+Canterbury,harthacnut,Harthacnut,17,15,2,9
+Thetford,harthacnut,Harthacnut,33,30,3,7
+Norwich,harthacnut,Harthacnut,22,21,1,6
+Cambridge,harthacnut,Harthacnut,18,16,2,6
+Dover,harthacnut,Harthacnut,20,19,1,5
+Southwark,harthacnut,Harthacnut,16,14,2,5
+Salisbury,harthacnut,Harthacnut,14,12,2,5
+Shrewsbury,harthacnut,Harthacnut,11,11,0,5
+Warwick,harthacnut,Harthacnut,11,10,1,5
+Nottingham,harthacnut,Harthacnut,8,7,1,5
+Bristol,harthacnut,Harthacnut,21,21,0,4
+Hereford,harthacnut,Harthacnut,12,12,0,4
+Leicester,harthacnut,Harthacnut,10,9,1,4
+Huntingdon,harthacnut,Harthacnut,8,7,1,4
+Hastings,harthacnut,Harthacnut,6,6,0,4
+Lewes,harthacnut,Harthacnut,15,14,1,3
+Bath,harthacnut,Harthacnut,12,11,1,3
+Derby,harthacnut,Harthacnut,10,10,0,3
+Ilchester,harthacnut,Harthacnut,10,8,2,3
+Ipswich,harthacnut,Harthacnut,7,7,0,3
+Dorchester,harthacnut,Harthacnut,5,5,0,3
+Shaftesbury,harthacnut,Harthacnut,8,7,1,2
+Axbridge,harthacnut,Harthacnut,6,6,0,2
+Northampton,harthacnut,Harthacnut,6,6,0,2
+Langport,harthacnut,Harthacnut,5,5,0,2
+Taunton,harthacnut,Harthacnut,5,5,0,2
+Worcester,harthacnut,Harthacnut,5,5,0,2
+Colchester,harthacnut,Harthacnut,4,3,1,2
+Chichester,harthacnut,Harthacnut,3,3,0,2
+Hertford,harthacnut,Harthacnut,2,2,0,2
+Rochester,harthacnut,Harthacnut,2,2,0,2
+Romney,harthacnut,Harthacnut,2,2,0,2
+Malmesbury,harthacnut,Harthacnut,6,6,0,1
+Bedford,harthacnut,Harthacnut,5,3,2,1
+Wilton,harthacnut,Harthacnut,5,5,0,1
+Cricklade,harthacnut,Harthacnut,4,3,1,1
+Guildford,harthacnut,Harthacnut,4,2,2,1
+Bruton,harthacnut,Harthacnut,3,2,1,1
+Winchcombe,harthacnut,Harthacnut,3,3,0,1
+Bridport,harthacnut,Harthacnut,2,2,0,1
+Lydford,harthacnut,Harthacnut,2,2,0,1
+Totnes,harthacnut,Harthacnut,2,2,0,1
+Wareham,harthacnut,Harthacnut,2,2,0,1
+Watchet,harthacnut,Harthacnut,2,2,0,1
+Steyning,harthacnut,Harthacnut,1,1,0,1
+Buckingham,harthacnut,Harthacnut,1,1,0,0
+London,edwardc,Edward the Confessor,823,694,129,87
+Lincoln,edwardc,Edward the Confessor,684,597,87,44
+York,edwardc,Edward the Confessor,1165,1107,58,34
+Winchester,edwardc,Edward the Confessor,272,234,38,33
+Canterbury,edwardc,Edward the Confessor,144,112,32,24
+Chester,edwardc,Edward the Confessor,240,226,14,23
+Thetford,edwardc,Edward the Confessor,206,163,43,23
+Stamford,edwardc,Edward the Confessor,234,205,29,20
+Norwich,edwardc,Edward the Confessor,148,116,32,18
+Exeter,edwardc,Edward the Confessor,79,69,10,17
+Gloucester,edwardc,Edward the Confessor,77,66,11,17
+Oxford,edwardc,Edward the Confessor,137,130,7,15
+Lewes,edwardc,Edward the Confessor,87,86,1,14
+Wilton,edwardc,Edward the Confessor,63,55,8,13
+Bedford,edwardc,Edward the Confessor,66,58,8,12
+Worcester,edwardc,Edward the Confessor,31,24,7,12
+Shrewsbury,edwardc,Edward the Confessor,61,56,5,11
+Leicester,edwardc,Edward the Confessor,52,42,10,11
+Hereford,edwardc,Edward the Confessor,37,31,6,11
+Wallingford,edwardc,Edward the Confessor,103,87,16,10
+Bristol,edwardc,Edward the Confessor,38,37,1,10
+Ipswich,edwardc,Edward the Confessor,86,72,14,9
+Cambridge,edwardc,Edward the Confessor,71,49,22,9
+Colchester,edwardc,Edward the Confessor,53,43,10,9
+Hertford,edwardc,Edward the Confessor,43,37,6,9
+Dover,edwardc,Edward the Confessor,37,29,8,9
+Warwick,edwardc,Edward the Confessor,40,34,6,8
+Salisbury,edwardc,Edward the Confessor,33,29,4,8
+Southwark,edwardc,Edward the Confessor,26,23,3,8
+Northampton,edwardc,Edward the Confessor,52,47,5,7
+Derby,edwardc,Edward the Confessor,32,25,7,7
+Hastings,edwardc,Edward the Confessor,137,131,6,6
+Huntingdon,edwardc,Edward the Confessor,48,36,12,6
+Nottingham,edwardc,Edward the Confessor,32,24,8,6
+Chichester,edwardc,Edward the Confessor,80,74,6,5
+Bath,edwardc,Edward the Confessor,35,33,2,5
+Steyning,edwardc,Edward the Confessor,66,65,1,4
+Malmesbury,edwardc,Edward the Confessor,16,11,5,4
+Maldon,edwardc,Edward the Confessor,12,9,3,4
+Cricklade,edwardc,Edward the Confessor,10,10,0,4
+Wareham,edwardc,Edward the Confessor,8,7,1,4
+Tamworth,edwardc,Edward the Confessor,18,13,5,3
+Guildford,edwardc,Edward the Confessor,12,11,1,3
+Rochester,edwardc,Edward the Confessor,10,7,3,3
+Buckingham,edwardc,Edward the Confessor,8,8,0,3
+Dorchester,edwardc,Edward the Confessor,6,4,2,3
+Ilchester,edwardc,Edward the Confessor,6,6,0,3
+Shaftesbury,edwardc,Edward the Confessor,20,18,2,2
+Sandwich,edwardc,Edward the Confessor,19,15,4,2
+Romney,edwardc,Edward the Confessor,16,13,3,2
+Stafford,edwardc,Edward the Confessor,16,16,0,2
+Taunton,edwardc,Edward the Confessor,13,12,1,2
+Winchcombe,edwardc,Edward the Confessor,8,6,2,2
+Barnstaple,edwardc,Edward the Confessor,6,5,1,2
+Newport,edwardc,Edward the Confessor,2,1,1,2
+Bury St Edmunds,edwardc,Edward the Confessor,13,8,5,1
+Bedwyn,edwardc,Edward the Confessor,8,7,1,1
+Sudbury,edwardc,Edward the Confessor,7,4,3,1
+Aylesbury,edwardc,Edward the Confessor,6,6,0,1
+Lydford,edwardc,Edward the Confessor,6,6,0,1
+Watchet,edwardc,Edward the Confessor,6,6,0,1
+Berkeley,edwardc,Edward the Confessor,3,3,0,1
+Frome,edwardc,Edward the Confessor,3,2,1,1
+Petherton,edwardc,Edward the Confessor,3,3,0,1
+Bruton,edwardc,Edward the Confessor,2,2,0,1
+Langport,edwardc,Edward the Confessor,2,2,0,1
+Reading,edwardc,Edward the Confessor,2,2,0,1
+Bridport,edwardc,Edward the Confessor,1,0,1,1
+Hythe,edwardc,Edward the Confessor,1,1,0,1
+Warminster,edwardc,Edward the Confessor,1,1,0,1
+York,harold2,Harold II,33,29,4,11
+London,harold2,Harold II,48,33,15,8
+Lincoln,harold2,Harold II,26,23,3,7
+Norwich,harold2,Harold II,10,5,5,6
+Thetford,harold2,Harold II,15,6,9,5
+Exeter,harold2,Harold II,9,8,1,4
+Stamford,harold2,Harold II,9,7,2,4
+Oxford,harold2,Harold II,8,6,2,4
+Canterbury,harold2,Harold II,6,6,0,4
+Chester,harold2,Harold II,5,4,1,4
+Wilton,harold2,Harold II,18,17,1,3
+Winchester,harold2,Harold II,8,8,0,3
+Wallingford,harold2,Harold II,7,5,2,3
+Bedford,harold2,Harold II,5,2,3,3
+Dover,harold2,Harold II,4,3,1,3
+Cambridge,harold2,Harold II,3,1,2,3
+Gloucester,harold2,Harold II,3,3,0,3
+Warwick,harold2,Harold II,3,3,0,3
+Lewes,harold2,Harold II,17,16,1,2
+Bristol,harold2,Harold II,10,8,2,2
+Ipswich,harold2,Harold II,5,5,0,2
+Colchester,harold2,Harold II,4,4,0,2
+Chichester,harold2,Harold II,3,3,0,2
+Worcester,harold2,Harold II,3,2,1,2
+Droitwich,harold2,Harold II,2,1,1,2
+Hereford,harold2,Harold II,2,1,1,2
+Huntingdon,harold2,Harold II,2,1,1,2
+Steyning,harold2,Harold II,11,11,0,1
+Nottingham,harold2,Harold II,4,4,0,1
+Ilchester,harold2,Harold II,3,3,0,1
+Romney,harold2,Harold II,3,3,0,1
+Southwark,harold2,Harold II,3,2,1,1
+Leicester,harold2,Harold II,2,1,1,1
+Malmesbury,harold2,Harold II,2,2,0,1
+Shrewsbury,harold2,Harold II,2,2,0,1
+Cricklade,harold2,Harold II,1,1,0,1
+Dorchester,harold2,Harold II,1,0,1,1
+Guildford,harold2,Harold II,1,0,1,1
+Hastings,harold2,Harold II,1,1,0,1
+Northampton,harold2,Harold II,1,1,0,1
+Shaftesbury,harold2,Harold II,1,1,0,1
+Taunton,harold2,Harold II,1,1,0,1
+Winchcombe,harold2,Harold II,1,1,0,1
+London,william1,William I,285,207,78,30
+Lincoln,william1,William I,201,163,38,21
+Thetford,william1,William I,109,67,42,18
+Norwich,william1,William I,91,61,30,17
+Winchester,william1,William I,216,202,14,16
+York,william1,William I,201,182,19,14
+Canterbury,william1,William I,72,51,21,13
+Ipswich,william1,William I,42,28,14,12
+Worcester,william1,William I,26,21,5,11
+Oxford,william1,William I,66,53,13,10
+Stamford,william1,William I,49,46,3,9
+Exeter,william1,William I,37,32,5,9
+Hereford,william1,William I,31,28,3,9
+Dover,william1,William I,28,19,9,9
+Chester,william1,William I,33,30,3,8
+Southwark,william1,William I,58,53,5,7
+Bristol,william1,William I,55,47,8,7
+Wallingford,william1,William I,94,77,17,6
+Wilton,william1,William I,36,24,12,6
+Wareham,william1,William I,35,27,8,6
+Colchester,william1,William I,18,14,4,6
+Shaftesbury,william1,William I,40,29,11,5
+Hastings,william1,William I,37,34,3,5
+Gloucester,william1,William I,33,29,4,5
+Warwick,william1,William I,33,30,3,5
+Cambridge,william1,William I,21,14,7,5
+Leicester,william1,William I,15,13,2,5
+Shrewsbury,william1,William I,14,11,3,5
+Chichester,william1,William I,53,51,2,4
+Romney,william1,William I,36,32,4,4
+Northampton,william1,William I,31,27,4,4
+Salisbury,william1,William I,28,28,0,4
+Huntingdon,william1,William I,15,8,7,4
+Ilchester,william1,William I,9,9,0,4
+Bridport,william1,William I,6,6,0,4
+Nottingham,william1,William I,22,17,5,3
+Taunton,william1,William I,22,21,1,3
+Stafford,william1,William I,20,19,1,3
+Cricklade,william1,William I,17,15,2,3
+Lewes,william1,William I,17,16,1,3
+Sandwich,william1,William I,17,11,6,3
+Dorchester,william1,William I,16,14,2,3
+Derby,william1,William I,13,10,3,3
+Malmesbury,william1,William I,9,7,2,3
+Sudbury,william1,William I,9,6,3,3
+Bath,william1,William I,13,11,2,2
+Winchcombe,william1,William I,10,8,2,2
+Bedford,william1,William I,9,7,2,2
+Tamworth,william1,William I,9,9,0,2
+Hertford,william1,William I,8,5,3,2
+Rochester,william1,William I,8,8,0,2
+Maldon,william1,William I,7,6,1,2
+Steyning,william1,William I,14,13,1,1
+Hythe,william1,William I,8,5,3,1
+Watchet,william1,William I,5,5,0,1
+Durham,william1,William I,4,4,0,1
+Launceston,william1,William I,4,4,0,1
+Marlborough,william1,William I,4,4,0,1
+Barnstaple,william1,William I,3,3,0,1
+Pevensey,william1,William I,3,3,0,1
+Christchurch,william1,William I,1,0,1,1
+Guildford,william1,William I,1,1,0,1
+Rhuddlan,william1,William I,1,1,0,1
+London,william2,William II,99,85,14,23
+Lincoln,william2,William II,46,33,13,11
+Canterbury,william2,William II,27,18,9,11
+Norwich,william2,William II,32,17,15,8
+Winchester,william2,William II,26,23,3,8
+Thetford,william2,William II,19,9,10,8
+Southwark,william2,William II,22,16,6,7
+Chester,william2,William II,17,15,2,7
+Oxford,william2,William II,13,11,2,6
+Gloucester,william2,William II,8,7,1,6
+Bristol,william2,William II,11,7,4,5
+Dover,william2,William II,10,8,2,5
+Colchester,william2,William II,9,3,6,5
+Stamford,william2,William II,9,6,3,5
+Hereford,william2,William II,6,6,0,5
+Hastings,william2,William II,13,12,1,4
+Wallingford,william2,William II,13,12,1,4
+Ipswich,william2,William II,10,8,2,4
+Lewes,william2,William II,7,6,1,4
+Shrewsbury,william2,William II,5,5,0,4
+Chichester,william2,William II,10,9,1,3
+Wilton,william2,William II,9,8,1,3
+York,william2,William II,9,9,0,3
+Exeter,william2,William II,7,5,2,3
+Warwick,william2,William II,7,7,0,3
+Ilchester,william2,William II,6,5,1,3
+Nottingham,william2,William II,6,4,2,3
+Worcester,william2,William II,6,6,0,3
+Dorchester,william2,William II,5,4,1,3
+Leicester,william2,William II,5,4,1,3
+Maldon,william2,William II,4,3,1,3
+Tamworth,william2,William II,17,16,1,2
+Rochester,william2,William II,6,4,2,2
+Derby,william2,William II,5,4,1,2
+Salisbury,william2,William II,4,3,1,2
+Steyning,william2,William II,4,2,2,2
+Cambridge,william2,William II,3,3,0,2
+Durham,william2,William II,2,0,2,2
+Hertford,william2,William II,2,2,0,2
+Launceston,william2,William II,2,2,0,2
+Romney,william2,William II,2,1,1,2
+Sandwich,william2,William II,2,1,1,2
+Bedford,william2,William II,7,6,1,1
+Sudbury,william2,William II,5,4,1,1
+Stafford,william2,William II,4,4,0,1
+Cricklade,william2,William II,2,1,1,1
+Hythe,william2,William II,2,2,0,1
+Northampton,william2,William II,2,0,2,1
+Taunton,william2,William II,2,2,0,1
+Totnes,william2,William II,2,2,0,1
+Huntingdon,william2,William II,1,1,0,1
+Malmesbury,william2,William II,1,1,0,1
+Pevensey,william2,William II,1,1,0,1
+Shaftesbury,william2,William II,1,1,0,1
+Watchet,william2,William II,1,1,0,1
+London,henry1,Henry I,426,254,172,43
+Norwich,henry1,Henry I,109,58,51,26
+Winchester,henry1,Henry I,110,70,40,23
+York,henry1,Henry I,66,46,20,20
+Lincoln,henry1,Henry I,102,79,23,19
+Thetford,henry1,Henry I,69,36,33,17
+Canterbury,henry1,Henry I,61,22,39,16
+Northampton,henry1,Henry I,121,116,5,13
+Gloucester,henry1,Henry I,27,16,11,12
+Bristol,henry1,Henry I,29,16,13,10
+Ipswich,henry1,Henry I,26,17,9,10
+Chester,henry1,Henry I,19,14,5,10
+Oxford,henry1,Henry I,29,18,11,9
+Southwark,henry1,Henry I,70,48,22,8
+Hereford,henry1,Henry I,16,10,6,8
+Worcester,henry1,Henry I,12,5,7,8
+Stamford,henry1,Henry I,27,20,7,7
+Hastings,henry1,Henry I,19,11,8,7
+Lewes,henry1,Henry I,19,13,6,7
+Shaftesbury,henry1,Henry I,13,10,3,7
+Sandwich,henry1,Henry I,38,26,12,6
+Wallingford,henry1,Henry I,28,16,12,6
+Colchester,henry1,Henry I,15,5,10,6
+Exeter,henry1,Henry I,15,6,9,6
+Warwick,henry1,Henry I,10,7,3,6
+Leicester,henry1,Henry I,21,13,8,5
+Salisbury,henry1,Henry I,19,7,12,5
+Wilton,henry1,Henry I,16,8,8,5
+Huntingdon,henry1,Henry I,13,7,6,5
+Chichester,henry1,Henry I,21,12,9,3
+Bury St Edmunds,henry1,Henry I,14,10,4,3
+Dover,henry1,Henry I,10,5,5,3
+Barnstaple,henry1,Henry I,8,7,1,3
+Christchurch,henry1,Henry I,8,6,2,3
+Dorchester,henry1,Henry I,8,5,3,3
+Romney,henry1,Henry I,8,4,4,3
+Rochester,henry1,Henry I,6,4,2,3
+Sudbury,henry1,Henry I,6,3,3,3
+Wareham,henry1,Henry I,6,6,0,3
+Tamworth,henry1,Henry I,5,3,2,3
+Shrewsbury,henry1,Henry I,4,2,2,3
+Totnes,henry1,Henry I,5,3,2,2
+Bath,henry1,Henry I,4,3,1,2
+Ilchester,henry1,Henry I,4,3,1,2
+Rye,henry1,Henry I,4,1,3,2
+Derby,henry1,Henry I,2,1,1,2
+Nottingham,henry1,Henry I,9,7,2,1
+Pembroke,henry1,Henry I,8,6,2,1
+Bedford,henry1,Henry I,7,5,2,1
+Carlisle,henry1,Henry I,5,2,3,1
+Cambridge,henry1,Henry I,2,1,1,1
+Launceston,henry1,Henry I,2,2,0,1
+Pevensey,henry1,Henry I,2,2,0,1
+Steyning,henry1,Henry I,2,2,0,1
+Taunton,henry1,Henry I,2,2,0,1
+Cricklade,henry1,Henry I,1,0,1,1
+Hertford,henry1,Henry I,1,0,1,1
+Hythe,henry1,Henry I,1,1,0,1
+Malmesbury,henry1,Henry I,1,0,1,1
+Norwich,stephen,Stephen,132,59,73,31
+London,stephen,Stephen,163,76,87,28
+Lincoln,stephen,Stephen,150,107,43,23
+Winchester,stephen,Stephen,25,16,9,11
+York,stephen,Stephen,161,59,102,10
+Canterbury,stephen,Stephen,44,24,20,10
+Gloucester,stephen,Stephen,22,17,5,9
+Ipswich,stephen,Stephen,37,21,16,8
+Hereford,stephen,Stephen,25,18,7,8
+Thetford,stephen,Stephen,35,20,15,7
+Stamford,stephen,Stephen,33,31,2,7
+Oxford,stephen,Stephen,30,15,15,7
+Bristol,stephen,Stephen,25,20,5,7
+Colchester,stephen,Stephen,19,7,12,6
+Dunwich,stephen,Stephen,18,4,14,6
+Exeter,stephen,Stephen,14,7,7,6
+Chester,stephen,Stephen,34,31,3,5
+Carlisle,stephen,Stephen,33,7,26,5
+Wilton,stephen,Stephen,22,13,9,5
+Southwark,stephen,Stephen,20,13,7,5
+Salisbury,stephen,Stephen,19,8,11,5
+Bury St Edmunds,stephen,Stephen,29,8,21,4
+Warwick,stephen,Stephen,18,12,6,4
+Lewes,stephen,Stephen,10,5,5,4
+Sudbury,stephen,Stephen,10,7,3,4
+Cardiff,stephen,Stephen,8,8,0,4
+Shrewsbury,stephen,Stephen,8,7,1,4
+Hastings,stephen,Stephen,20,11,9,3
+Leicester,stephen,Stephen,16,15,1,3
+Shaftesbury,stephen,Stephen,11,8,3,3
+Pevensey,stephen,Stephen,8,4,4,3
+Bedford,stephen,Stephen,7,1,6,3
+Wallingford,stephen,Stephen,4,1,3,3
+Nottingham,stephen,Stephen,45,42,3,2
+Southampton,stephen,Stephen,30,3,27,2
+Newcastle,stephen,Stephen,22,6,16,2
+Castle Rising,stephen,Stephen,21,8,13,2
+Northampton,stephen,Stephen,13,7,6,2
+Rye,stephen,Stephen,13,7,6,2
+Corbridge,stephen,Stephen,12,2,10,2
+Worcester,stephen,Stephen,10,8,2,2
+Durham,stephen,Stephen,9,4,5,2
+Chichester,stephen,Stephen,7,5,2,2
+Bramber,stephen,Stephen,5,3,2,2
+Cambridge,stephen,Stephen,5,1,4,2
+Derby,stephen,Stephen,4,4,0,2
+Eye,stephen,Stephen,4,2,2,2
+Cirencester,stephen,Stephen,2,2,0,2
+Sandwich,stephen,Stephen,10,5,5,1
+Taunton,stephen,Stephen,7,4,3,1
+Wareham,stephen,Stephen,6,2,4,1
+Launceston,stephen,Stephen,5,3,2,1
+Hedon,stephen,Stephen,4,1,3,1
+Stafford,stephen,Stephen,4,4,0,1
+Buckingham,stephen,Stephen,3,1,2,1
+Pembroke,stephen,Stephen,3,2,1,1
+Richmond,stephen,Stephen,3,2,1,1
+Huntingdon,stephen,Stephen,2,0,2,1
+Swansea,stephen,Stephen,2,1,1,1
+Caerphilly,stephen,Stephen,1,1,0,1
+Dover,stephen,Stephen,1,0,1,1
+Hertford,stephen,Stephen,1,0,1,1
+Malmesbury,stephen,Stephen,1,1,0,1
+Tutbury,stephen,Stephen,1,0,1,1
+Dorchester,stephen,Stephen,1,1,0,0
+Newark,stephen,Stephen,1,1,0,0

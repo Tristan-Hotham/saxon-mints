@@ -1,0 +1,355 @@
+label,records,in_window,emc,class,mint,candidates,country,treatment
+Bath or Barnstaple,2,2,0,ambiguous,,Bath / Barnstaple,,not counted (the catalogue gives two or more possible mints)
+Bristol or Bridgenor,1,1,0,ambiguous,,Bristol / Bridgnorth,,not counted (the catalogue gives two or more possible mints)
+Ca- (Canterbury / Carlisle),2,0,1,ambiguous,,Canterbury / Carlisle,,not counted (the catalogue gives two or more possible mints)
+Carlisle or Newcastle,17,0,17,ambiguous,,Carlisle / Newcastle,,not counted (the catalogue gives two or more possible mints)
+Chester or Leicester,3,3,1,ambiguous,,Chester / Leicester,,not counted (the catalogue gives two or more possible mints)
+Derby or Dorchester,3,3,0,ambiguous,,Derby / Dorchester,,not counted (the catalogue gives two or more possible mints)
+L- (London / Lincoln / Lewes),4,4,0,ambiguous,,London / Lincoln / Lewes,,not counted (the catalogue gives two or more possible mints)
+Lincoln or London?,2,1,2,ambiguous,,Lincoln / London,,not counted (the catalogue gives two or more possible mints)
+Lincoln or Stamford,4,3,2,ambiguous,,Lincoln / Stamford,,not counted (the catalogue gives two or more possible mints)
+N or Southampton,4,1,0,ambiguous,,Northampton / Southampton,,not counted (the catalogue gives two or more possible mints)
+Nor- (Norwich / Northampton),9,5,5,ambiguous,,Norwich / Northampton,,not counted (the catalogue gives two or more possible mints)
+S- (Salisbury / Southwark / Stafford),4,4,1,ambiguous,,Salisbury / Southwark / Stafford,,not counted (the catalogue gives two or more possible mints)
+Shaftesbury or Shrew,2,2,0,ambiguous,,Shaftesbury / Shrewsbury,,not counted (the catalogue gives two or more possible mints)
+Southwark or Sudbury,12,12,3,ambiguous,,Southwark / Sudbury,,not counted (the catalogue gives two or more possible mints)
+Southwark? Langport?,1,1,0,ambiguous,,Southwark / Langport,,not counted (the catalogue gives two or more possible mints)
+Wa- (Wareham / Warwick / ? Wallingford),2,2,1,ambiguous,,Wareham / Warwick / Wallingford,,not counted (the catalogue gives two or more possible mints)
+Aberdeen,17,0,1,certain,Aberdeen,,Scotland,counted for this mint
+Axbridge,12,12,1,certain,Axbridge,,England,counted for this mint
+Aylesbury,9,9,0,certain,Aylesbury,,England,counted for this mint
+Ayr,2,0,0,certain,Ayr,,Scotland,counted for this mint
+Barnstaple,70,68,5,certain,Barnstaple,,England,counted for this mint
+Bath,284,272,9,certain,Bath,,England,counted for this mint
+Bedford,224,206,33,certain,Bedford,,England,counted for this mint
+Bedwyn,8,8,1,certain,Bedwyn,,England,counted for this mint
+Berkeley,3,3,0,certain,Berkeley,,England,counted for this mint
+Berwick,34,0,0,certain,Berwick,,Scotland,counted for this mint
+Bramber,5,5,2,certain,Bramber,,England,counted for this mint
+Bridport,19,19,3,certain,Bridport,,England,counted for this mint
+Bristol,334,304,37,certain,Bristol,,England,counted for this mint
+Bruton,32,32,1,certain,Bruton,,England,counted for this mint
+Buckingham,25,23,3,certain,Buckingham,,England,counted for this mint
+Bury St Edmunds,169,56,46,certain,Bury St Edmunds,,England,counted for this mint
+Cadbury,13,13,1,certain,Cadbury,,England,counted for this mint
+Caerphilly,1,1,0,certain,Caerphilly,,Wales,counted for this mint
+Caistor,3,3,1,certain,Caistor,,England,counted for this mint
+Cambridge,442,441,62,certain,Cambridge,,England,counted for this mint
+Canterbury,3198,916,998,certain,Canterbury,,England,counted for this mint
+Cardiff,8,8,0,certain,Cardiff,,Wales,counted for this mint
+Carlisle,100,38,69,certain,Carlisle,,England,counted for this mint
+Carrickfergus,2,0,0,certain,Carrickfergus,,Ireland,counted for this mint
+Castle Rising,21,21,13,certain,Castle Rising,,England,counted for this mint
+Chester,1358,1055,56,certain,Chester,,England,counted for this mint
+Chichester,299,278,26,certain,Chichester,,England,counted for this mint
+Christchurch,9,9,3,certain,Christchurch,,England,counted for this mint
+Cirencester,2,2,0,certain,Cirencester,,England,counted for this mint
+Cissbury,11,11,0,certain,Cissbury,,England,counted for this mint
+Colchester,282,273,61,certain,Colchester,,England,counted for this mint
+Corbridge,20,12,18,certain,Corbridge,,England,counted for this mint
+Crewkerne,13,13,0,certain,Crewkerne,,England,counted for this mint
+Cricklade,78,77,8,certain,Cricklade,,England,counted for this mint
+Derby,158,129,18,certain,Derby,,England,counted for this mint
+Dorchester,88,88,11,certain,Dorchester,,England,counted for this mint
+Dover,376,375,46,certain,Dover,,England,counted for this mint
+Downpatrick,1,0,0,certain,Downpatrick,,Ireland,counted for this mint
+Droitwich,2,2,1,certain,Droitwich,,England,counted for this mint
+Dublin,511,1,16,certain,Dublin,,Ireland,counted for this mint
+Dunwich,18,18,14,certain,Dunwich,,England,counted for this mint
+Durham,42,15,8,certain,Durham,,England,counted for this mint
+Edinburgh,34,0,15,certain,Edinburgh,,Scotland,counted for this mint
+Exeter,824,776,59,certain,Exeter,,England,counted for this mint
+Eye,4,4,2,certain,Eye,,England,counted for this mint
+Forfar,2,0,0,certain,Forfar,,Scotland,counted for this mint
+Frome,3,3,1,certain,Frome,,England,counted for this mint
+Glasgow,11,0,0,certain,Glasgow,,Scotland,counted for this mint
+Gloucester,457,409,43,certain,Gloucester,,England,counted for this mint
+Guildford,45,44,8,certain,Guildford,,England,counted for this mint
+Hastings,338,338,28,certain,Hastings,,England,counted for this mint
+Hedon,4,4,3,certain,Hedon,,England,counted for this mint
+Hereford,267,253,26,certain,Hereford,,England,counted for this mint
+Hertford,170,165,17,certain,Hertford,,England,counted for this mint
+Horncastle,2,2,1,certain,Horncastle,,England,counted for this mint
+Huntingdon,244,240,38,certain,Huntingdon,,England,counted for this mint
+Hythe,12,12,3,certain,Hythe,,England,counted for this mint
+Ilchester,182,177,11,certain,Ilchester,,England,counted for this mint
+Inverness,1,0,0,certain,Inverness,,Scotland,counted for this mint
+Ipswich,549,443,122,certain,Ipswich,,England,counted for this mint
+Kilkenny,7,0,0,certain,Kilkenny,,Ireland,counted for this mint
+Kinghorn,2,0,0,certain,Kinghorn,,Scotland,counted for this mint
+Lanark,1,0,0,certain,Lanark,,Scotland,counted for this mint
+Langport,23,20,0,certain,Langport,,England,counted for this mint
+Launceston,15,13,4,certain,Launceston,,England,counted for this mint
+Leicester,252,243,30,certain,Leicester,,England,counted for this mint
+Lewes,381,378,27,certain,Lewes,,England,counted for this mint
+Limerick,22,0,0,certain,Limerick,,Ireland,counted for this mint
+Lincoln,3900,3735,397,certain,Lincoln,,England,counted for this mint
+London,8767,6746,1174,certain,London,,England,counted for this mint
+Lydford,104,103,5,certain,Lydford,,England,counted for this mint
+Lympne,52,50,8,certain,Lympne,,England,counted for this mint
+Lynn,10,0,0,certain,Lynn,,England,counted for this mint
+Maldon,90,89,8,certain,Maldon,,England,counted for this mint
+Malmesbury,65,65,12,certain,Malmesbury,,England,counted for this mint
+Marlborough,4,4,0,certain,Marlborough,,England,counted for this mint
+Milbourne Port,6,6,0,certain,Milbourne Port,,England,counted for this mint
+Montrose,1,0,0,certain,Montrose,,Scotland,counted for this mint
+Newark,14,13,0,certain,Newark,,England,counted for this mint
+Newcastle,80,22,43,certain,Newcastle,,England,counted for this mint
+Newport,7,2,1,certain,Newport,,England,counted for this mint
+Northampton,463,387,38,certain,Northampton,,England,counted for this mint
+Norwich,1232,1052,288,certain,Norwich,,England,counted for this mint
+Nottingham,196,190,25,certain,Nottingham,,England,counted for this mint
+Oxford,797,665,74,certain,Oxford,,England,counted for this mint
+Pembroke,11,11,3,certain,Pembroke,,Wales,counted for this mint
+Perth,23,0,1,certain,Perth,,Scotland,counted for this mint
+Peterborough,1,1,0,certain,Peterborough,,England,counted for this mint
+Petherton,3,3,0,certain,Petherton,,England,counted for this mint
+Pevensey,14,14,4,certain,Pevensey,,England,counted for this mint
+Reading,2,2,0,certain,Reading,,England,counted for this mint
+Renfrew,3,0,0,certain,Renfrew,,Scotland,counted for this mint
+Rhuddlan,9,1,0,certain,Rhuddlan,,Wales,counted for this mint
+Richmond,3,3,1,certain,Richmond,,England,counted for this mint
+Rochester,389,173,92,certain,Rochester,,England,counted for this mint
+Romney,103,103,12,certain,Romney,,England,counted for this mint
+Roxburgh,52,0,12,certain,Roxburgh,,Scotland,counted for this mint
+Rye,17,17,9,certain,Rye,,England,counted for this mint
+Salisbury,253,248,38,certain,Salisbury,,England,counted for this mint
+Sandwich,86,86,28,certain,Sandwich,,England,counted for this mint
+Shaftesbury,229,226,27,certain,Shaftesbury,,England,counted for this mint
+Shrewsbury,281,255,16,certain,Shrewsbury,,England,counted for this mint
+Southampton,99,88,44,certain,Southampton,,England,counted for this mint
+Southwark,499,498,57,certain,Southwark,,England,counted for this mint
+St Andrews,2,0,0,certain,St Andrews,,Scotland,counted for this mint
+Stafford,75,65,6,certain,Stafford,,England,counted for this mint
+Stamford,1446,1443,112,certain,Stamford,,England,counted for this mint
+Steyning,113,113,5,certain,Steyning,,England,counted for this mint
+Stirling,2,0,0,certain,Stirling,,Scotland,counted for this mint
+Sudbury,52,52,14,certain,Sudbury,,England,counted for this mint
+Swansea,2,2,1,certain,Swansea,,Wales,counted for this mint
+Tamworth,80,61,9,certain,Tamworth,,England,counted for this mint
+Taunton,80,80,5,certain,Taunton,,England,counted for this mint
+Thetford,1089,1050,224,certain,Thetford,,England,counted for this mint
+Torksey,16,12,3,certain,Torksey,,England,counted for this mint
+Totnes,139,137,8,certain,Totnes,,England,counted for this mint
+Tutbury,1,1,1,certain,Tutbury,,England,counted for this mint
+Wallingford,443,424,61,certain,Wallingford,,England,counted for this mint
+Wareham,103,100,14,certain,Wareham,,England,counted for this mint
+Warminster,12,12,2,certain,Warminster,,England,counted for this mint
+Warwick,180,179,22,certain,Warwick,,England,counted for this mint
+Watchet,57,57,2,certain,Watchet,,England,counted for this mint
+Waterford,74,0,0,certain,Waterford,,Ireland,counted for this mint
+Wilton,266,246,49,certain,Wilton,,England,counted for this mint
+Winchcombe,43,43,4,certain,Winchcombe,,England,counted for this mint
+Winchester,2022,1849,202,certain,Winchester,,England,counted for this mint
+Worcester,205,203,27,certain,Worcester,,England,counted for this mint
+York,8403,4283,1977,certain,York,,England,counted for this mint
+Bath (copy?),5,0,0,copy,Bath,,England,"not counted (copy or imitation, not struck at the mint)"
+Cambridge (copy?),5,2,0,copy,Cambridge,,England,"not counted (copy or imitation, not struck at the mint)"
+Canterbury (copy?),15,0,2,copy,Canterbury,,England,"not counted (copy or imitation, not struck at the mint)"
+Chester (copy?),11,0,0,copy,Chester,,England,"not counted (copy or imitation, not struck at the mint)"
+Cricklade (copy?),5,0,0,copy,Cricklade,,England,"not counted (copy or imitation, not struck at the mint)"
+Derby (copy),4,0,0,copy,Derby,,England,"not counted (copy or imitation, not struck at the mint)"
+Exeter (copy?),25,1,0,copy,Exeter,,England,"not counted (copy or imitation, not struck at the mint)"
+Gothaburh (copy?),7,7,0,copy,Gothaburh,,foreign,"not counted (copy or imitation, not struck at the mint)"
+Huntingdon (copy?),3,0,0,copy,Huntingdon,,England,"not counted (copy or imitation, not struck at the mint)"
+Leicester (copy?),2,0,0,copy,Leicester,,England,"not counted (copy or imitation, not struck at the mint)"
+Lincoln (copy?),27,2,0,copy,Lincoln,,England,"not counted (copy or imitation, not struck at the mint)"
+London (copy?),75,3,2,copy,London,,England,"not counted (copy or imitation, not struck at the mint)"
+Maastricht (derivative),2,0,2,copy,Maastricht,,foreign,"not counted (copy or imitation, not struck at the mint)"
+Norwich (copy?),5,0,0,copy,Norwich,,England,"not counted (copy or imitation, not struck at the mint)"
+Oxford (copy?),3,0,0,copy,Oxford,,England,"not counted (copy or imitation, not struck at the mint)"
+Shrewsbury (copy?),7,0,0,copy,Shrewsbury,,England,"not counted (copy or imitation, not struck at the mint)"
+Southampton (copy?),2,1,1,copy,Southampton,,England,"not counted (copy or imitation, not struck at the mint)"
+Southwark (copy?),3,0,0,copy,Southwark,,England,"not counted (copy or imitation, not struck at the mint)"
+Stamford (copy?),10,2,0,copy,Stamford,,England,"not counted (copy or imitation, not struck at the mint)"
+Thetford (copy?),3,0,0,copy,Thetford,,England,"not counted (copy or imitation, not struck at the mint)"
+Totnes (copy?),1,0,0,copy,Totnes,,England,"not counted (copy or imitation, not struck at the mint)"
+Wallingford (copy?),2,0,0,copy,Wallingford,,England,"not counted (copy or imitation, not struck at the mint)"
+Watchet (copy?),2,0,0,copy,Watchet,,England,"not counted (copy or imitation, not struck at the mint)"
+Wilton (copy?),4,0,0,copy,Wilton,,England,"not counted (copy or imitation, not struck at the mint)"
+Winchester (copy?),14,1,0,copy,Winchester,,England,"not counted (copy or imitation, not struck at the mint)"
+York (copy?),49,1,5,copy,York,,England,"not counted (copy or imitation, not struck at the mint)"
+Al-Muhammadiya,1,0,1,foreign,Al-Muhammadiya,,foreign,not counted (outside Britain and Ireland)
+Alexandria,1,0,1,foreign,Alexandria,,foreign,not counted (outside Britain and Ireland)
+Alsace-Strassburg,1,0,0,foreign,Alsace-Strassburg,,foreign,not counted (outside Britain and Ireland)
+Angers,2,0,1,foreign,Angers,,foreign,not counted (outside Britain and Ireland)
+Anjou,1,0,1,foreign,Anjou,,foreign,not counted (outside Britain and Ireland)
+Annapes,1,0,1,foreign,Annapes,,foreign,not counted (outside Britain and Ireland)
+Antioch,1,0,1,foreign,Antioch,,foreign,not counted (outside Britain and Ireland)
+Aquitaine-Bourges,1,0,0,foreign,Aquitaine-Bourges,,foreign,not counted (outside Britain and Ireland)
+Arles,3,0,3,foreign,Arles,,foreign,not counted (outside Britain and Ireland)
+Arras,2,0,2,foreign,Arras,,foreign,not counted (outside Britain and Ireland)
+Arvernus,1,0,1,foreign,Arvernus,,foreign,not counted (outside Britain and Ireland)
+Baghdad,3,0,1,foreign,Baghdad,,foreign,not counted (outside Britain and Ireland)
+Balkh,1,0,1,foreign,Balkh,,foreign,not counted (outside Britain and Ireland)
+Banassac,2,0,2,foreign,Banassac,,foreign,not counted (outside Britain and Ireland)
+Bardha’ah,1,0,1,foreign,Bardha’ah,,foreign,not counted (outside Britain and Ireland)
+Bayeux,1,0,1,foreign,Bayeux,,foreign,not counted (outside Britain and Ireland)
+Beaumont,3,0,3,foreign,Beaumont,,foreign,not counted (outside Britain and Ireland)
+Beauvais,1,0,1,foreign,Beauvais,,foreign,not counted (outside Britain and Ireland)
+Blangy-sur-Ternoise,1,0,1,foreign,Blangy-sur-Ternoise,,foreign,not counted (outside Britain and Ireland)
+Blois,1,0,1,foreign,Blois,,foreign,not counted (outside Britain and Ireland)
+Bordeaux,1,0,1,foreign,Bordeaux,,foreign,not counted (outside Britain and Ireland)
+Bourges,2,0,2,foreign,Bourges,,foreign,not counted (outside Britain and Ireland)
+Brieulles-sur-Meuse,1,0,1,foreign,Brieulles-sur-Meuse,,foreign,not counted (outside Britain and Ireland)
+Brioux,1,0,1,foreign,Brioux,,foreign,not counted (outside Britain and Ireland)
+Brive-la-Gaillard,1,0,1,foreign,Brive-la-Gaillard,,foreign,not counted (outside Britain and Ireland)
+Cambrai,1,0,1,foreign,Cambrai,,foreign,not counted (outside Britain and Ireland)
+Campbon,1,0,1,foreign,Campbon,,foreign,not counted (outside Britain and Ireland)
+Cannac,1,0,1,foreign,Cannac,,foreign,not counted (outside Britain and Ireland)
+Carthage,1,0,1,foreign,Carthage,,foreign,not counted (outside Britain and Ireland)
+Catania,1,0,1,foreign,Catania,,foreign,not counted (outside Britain and Ireland)
+Chalons-sur-Saone,6,0,6,foreign,Chalons-sur-Saone,,foreign,not counted (outside Britain and Ireland)
+Chappes,1,0,1,foreign,Chappes,,foreign,not counted (outside Britain and Ireland)
+Clermont-Ferrand,4,0,3,foreign,Clermont-Ferrand,,foreign,not counted (outside Britain and Ireland)
+Clucy,1,0,1,foreign,Clucy,,foreign,not counted (outside Britain and Ireland)
+Cologne,8,0,6,foreign,Cologne,,foreign,not counted (outside Britain and Ireland)
+Constantinople,13,0,13,foreign,Constantinople,,foreign,not counted (outside Britain and Ireland)
+Cormes,1,0,1,foreign,Cormes,,foreign,not counted (outside Britain and Ireland)
+Coutances,1,0,1,foreign,Coutances,,foreign,not counted (outside Britain and Ireland)
+Cyzicus,1,0,1,foreign,Cyzicus,,foreign,not counted (outside Britain and Ireland)
+Dokkum,1,0,1,foreign,Dokkum,,foreign,not counted (outside Britain and Ireland)
+Dorestad,22,1,22,foreign,Dorestad,,foreign,not counted (outside Britain and Ireland)
+Dreux,3,0,3,foreign,Dreux,,foreign,not counted (outside Britain and Ireland)
+Frénois,1,0,1,foreign,Frénois,,foreign,not counted (outside Britain and Ireland)
+Gittelde,1,0,1,foreign,Gittelde,,foreign,not counted (outside Britain and Ireland)
+Goslar,2,0,2,foreign,Goslar,,foreign,not counted (outside Britain and Ireland)
+Guincamp,1,0,1,foreign,Guincamp,,foreign,not counted (outside Britain and Ireland)
+Harunabad,1,0,1,foreign,Harunabad,,foreign,not counted (outside Britain and Ireland)
+Hoei,1,0,1,foreign,Hoei,,foreign,not counted (outside Britain and Ireland)
+Huy,4,0,4,foreign,Huy,,foreign,not counted (outside Britain and Ireland)
+Ifirqiya,1,0,1,foreign,Ifirqiya,,foreign,not counted (outside Britain and Ireland)
+Javols,2,0,2,foreign,Javols,,foreign,not counted (outside Britain and Ireland)
+Jublains,1,0,1,foreign,Jublains,,foreign,not counted (outside Britain and Ireland)
+Le Mans,4,0,1,foreign,Le Mans,,foreign,not counted (outside Britain and Ireland)
+Lieusaint,4,0,4,foreign,Lieusaint,,foreign,not counted (outside Britain and Ireland)
+Limoges,10,0,1,foreign,Limoges,,foreign,not counted (outside Britain and Ireland)
+Lucca,4,0,4,foreign,Lucca,,foreign,not counted (outside Britain and Ireland)
+Lund,6,1,3,foreign,Lund,,foreign,not counted (outside Britain and Ireland)
+Lyon,2,0,2,foreign,Lyon,,foreign,not counted (outside Britain and Ireland)
+Maastricht,6,0,6,foreign,Maastricht,,foreign,not counted (outside Britain and Ireland)
+Madinat al-Salam,2,0,1,foreign,Madinat al-Salam,,foreign,not counted (outside Britain and Ireland)
+Mainz,2,0,2,foreign,Mainz,,foreign,not counted (outside Britain and Ireland)
+Mallo Campione,1,0,1,foreign,Mallo Campione,,foreign,not counted (outside Britain and Ireland)
+Marcilly-en-Gault,2,0,2,foreign,Marcilly-en-Gault,,foreign,not counted (outside Britain and Ireland)
+Marrakesh,1,0,1,foreign,Marrakesh,,foreign,not counted (outside Britain and Ireland)
+Marsal,3,0,3,foreign,Marsal,,foreign,not counted (outside Britain and Ireland)
+Marseille,16,0,16,foreign,Marseille,,foreign,not counted (outside Britain and Ireland)
+Ma’dan,2,0,2,foreign,Ma’dan,,foreign,not counted (outside Britain and Ireland)
+Melle,56,0,14,foreign,Melle,,foreign,not counted (outside Britain and Ireland)
+Messina,1,0,1,foreign,Messina,,foreign,not counted (outside Britain and Ireland)
+Metz,7,0,7,foreign,Metz,,foreign,not counted (outside Britain and Ireland)
+Milan,2,0,2,foreign,Milan,,foreign,not counted (outside Britain and Ireland)
+Moussy,1,0,1,foreign,Moussy,,foreign,not counted (outside Britain and Ireland)
+Moutiers-en-Tarentaise,1,0,1,foreign,Moutiers-en-Tarentaise,,foreign,not counted (outside Britain and Ireland)
+Mouzon,1,0,1,foreign,Mouzon,,foreign,not counted (outside Britain and Ireland)
+Nantes,2,0,2,foreign,Nantes,,foreign,not counted (outside Britain and Ireland)
+Orléans,8,0,7,foreign,Orléans,,foreign,not counted (outside Britain and Ireland)
+Palaiseau,2,0,2,foreign,Palaiseau,,foreign,not counted (outside Britain and Ireland)
+Paris,6,0,6,foreign,Paris,,foreign,not counted (outside Britain and Ireland)
+Pavia,5,0,5,foreign,Pavia,,foreign,not counted (outside Britain and Ireland)
+Pierrefitte,1,0,1,foreign,Pierrefitte,,foreign,not counted (outside Britain and Ireland)
+Plailly,1,0,1,foreign,Plailly,,foreign,not counted (outside Britain and Ireland)
+Poitiers,5,0,5,foreign,Poitiers,,foreign,not counted (outside Britain and Ireland)
+Quentovic,34,0,34,foreign,Quentovic,,foreign,not counted (outside Britain and Ireland)
+Ravenna,1,0,1,foreign,Ravenna,,foreign,not counted (outside Britain and Ireland)
+Rennes,2,0,2,foreign,Rennes,,foreign,not counted (outside Britain and Ireland)
+Rheims,2,0,2,foreign,Rheims,,foreign,not counted (outside Britain and Ireland)
+Rodez,4,0,4,foreign,Rodez,,foreign,not counted (outside Britain and Ireland)
+Rome,3,0,3,foreign,Rome,,foreign,not counted (outside Britain and Ireland)
+Rouen,19,0,9,foreign,Rouen,,foreign,not counted (outside Britain and Ireland)
+Sacierges-Saint-Martin,2,0,2,foreign,Sacierges-Saint-Martin,,foreign,not counted (outside Britain and Ireland)
+Samarkand,9,0,2,foreign,Samarkand,,foreign,not counted (outside Britain and Ireland)
+Sigtuna,21,9,0,foreign,Sigtuna,,foreign,not counted (outside Britain and Ireland)
+Sion,1,0,1,foreign,Sion,,foreign,not counted (outside Britain and Ireland)
+Siscia,1,0,1,foreign,Siscia,,foreign,not counted (outside Britain and Ireland)
+Soissons,1,0,1,foreign,Soissons,,foreign,not counted (outside Britain and Ireland)
+Souesmes,1,0,1,foreign,Souesmes,,foreign,not counted (outside Britain and Ireland)
+St Denis,3,0,3,foreign,St Denis,,foreign,not counted (outside Britain and Ireland)
+St Melaine,1,0,1,foreign,St Melaine,,foreign,not counted (outside Britain and Ireland)
+Strasbourg,2,0,2,foreign,Strasbourg,,foreign,not counted (outside Britain and Ireland)
+Thiré,1,0,1,foreign,Thiré,,foreign,not counted (outside Britain and Ireland)
+Tiel,1,0,1,foreign,Tiel,,foreign,not counted (outside Britain and Ireland)
+Toulouse,1,0,1,foreign,Toulouse,,foreign,not counted (outside Britain and Ireland)
+Tours,4,0,4,foreign,Tours,,foreign,not counted (outside Britain and Ireland)
+Treveri,2,0,2,foreign,Treveri,,foreign,not counted (outside Britain and Ireland)
+Troyes,2,0,2,foreign,Troyes,,foreign,not counted (outside Britain and Ireland)
+Utrecht,1,0,1,foreign,Utrecht,,foreign,not counted (outside Britain and Ireland)
+Verdun,4,0,4,foreign,Verdun,,foreign,not counted (outside Britain and Ireland)
+Vienne,2,0,2,foreign,Vienne,,foreign,not counted (outside Britain and Ireland)
+Viviers,1,0,1,foreign,Viviers,,foreign,not counted (outside Britain and Ireland)
+Vrillé,1,0,1,foreign,Vrillé,,foreign,not counted (outside Britain and Ireland)
+Wasit,1,0,1,foreign,Wasit,,foreign,not counted (outside Britain and Ireland)
+al-Andalus,2,0,1,foreign,al-Andalus,,foreign,not counted (outside Britain and Ireland)
+al-Basra,1,0,1,foreign,al-Basra,,foreign,not counted (outside Britain and Ireland)
+al-Shash,19,0,7,foreign,al-Shash,,foreign,not counted (outside Britain and Ireland)
+Bamburgh?,25,17,15,probable,Bamburgh,,England,not counted (attribution queried); reported as a sensitivity
+Bedford?,3,3,2,probable,Bedford,,England,not counted (attribution queried); reported as a sensitivity
+Bruton?,2,2,0,probable,Bruton,,England,not counted (attribution queried); reported as a sensitivity
+Cardiff?,1,1,0,probable,Cardiff,,Wales,not counted (attribution queried); reported as a sensitivity
+Chester?,26,10,6,probable,Chester,,England,not counted (attribution queried); reported as a sensitivity
+Chichester?,7,5,4,probable,Chichester,,England,not counted (attribution queried); reported as a sensitivity
+Cricklade?,6,5,2,probable,Cricklade,,England,not counted (attribution queried); reported as a sensitivity
+Derby?,13,1,1,probable,Derby,,England,not counted (attribution queried); reported as a sensitivity
+Dumfries?,3,0,0,probable,Dumfries,,Scotland,not counted (attribution queried); reported as a sensitivity
+Durham?,1,1,0,probable,Durham,,England,not counted (attribution queried); reported as a sensitivity
+Hastings ?,8,8,3,probable,Hastings,,England,not counted (attribution queried); reported as a sensitivity
+Ilchester?,3,2,0,probable,Ilchester,,England,not counted (attribution queried); reported as a sensitivity
+Ipswich?,322,7,49,probable,Ipswich,,England,not counted (attribution queried); reported as a sensitivity
+Leicester?,3,2,0,probable,Leicester,,England,not counted (attribution queried); reported as a sensitivity
+Lincoln?,41,34,14,probable,Lincoln,,England,not counted (attribution queried); reported as a sensitivity
+London?,107,64,35,probable,London,,England,not counted (attribution queried); reported as a sensitivity
+Malmesbury?,5,5,2,probable,Malmesbury,,England,not counted (attribution queried); reported as a sensitivity
+Northampton?,18,7,1,probable,Northampton,,England,not counted (attribution queried); reported as a sensitivity
+Norwich?,38,31,19,probable,Norwich,,England,not counted (attribution queried); reported as a sensitivity
+Oxford?,12,8,6,probable,Oxford,,England,not counted (attribution queried); reported as a sensitivity
+Rennes?,1,0,1,probable,Rennes,,foreign,not counted (attribution queried); reported as a sensitivity
+Samarkand?,2,0,0,probable,Samarkand,,foreign,not counted (attribution queried); reported as a sensitivity
+Shaftesbury?,6,5,2,probable,Shaftesbury,,England,not counted (attribution queried); reported as a sensitivity
+Shrewsbury?,14,11,5,probable,Shrewsbury,,England,not counted (attribution queried); reported as a sensitivity
+Southampton?,17,4,12,probable,Southampton,,England,not counted (attribution queried); reported as a sensitivity
+Southwark?,10,10,3,probable,Southwark,,England,not counted (attribution queried); reported as a sensitivity
+Steyning?,1,1,0,probable,Steyning,,England,not counted (attribution queried); reported as a sensitivity
+Strasbourg?,1,0,1,probable,Strasbourg,,foreign,not counted (attribution queried); reported as a sensitivity
+Tamworth?,3,1,1,probable,Tamworth,,England,not counted (attribution queried); reported as a sensitivity
+Thetford?,19,16,6,probable,Thetford,,England,not counted (attribution queried); reported as a sensitivity
+Wareham?,11,8,5,probable,Wareham,,England,not counted (attribution queried); reported as a sensitivity
+Warwick?,8,8,0,probable,Warwick,,England,not counted (attribution queried); reported as a sensitivity
+Wilton?,6,6,1,probable,Wilton,,England,not counted (attribution queried); reported as a sensitivity
+Winchester?,51,23,19,probable,Winchester,,England,not counted (attribution queried); reported as a sensitivity
+York?,221,25,90,probable,York,,England,not counted (attribution queried); reported as a sensitivity
+al-Shash?,3,0,0,probable,al-Shash,,foreign,not counted (attribution queried); reported as a sensitivity
+East Anglian (uncertain),728,1,493,regional,,,,not counted (region only)
+Five Boroughs (uncertain),11,0,3,regional,,,,not counted (region only)
+West Midlands (uncertain),12,0,1,regional,,,,not counted (region only)
+Ate (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Cesth (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Cuer (uncertain),3,2,0,uncertain,,,,not counted (mint unknown)
+Darent (uncertain),1,0,0,uncertain,,,,not counted (mint unknown)
+Denm (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Devitun (uncertain),5,5,1,uncertain,,,,not counted (mint unknown)
+Dri (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Dun (uncertain),4,0,0,uncertain,,,,not counted (mint unknown)
+Dyr (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Eanburg (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Grombes (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Ieit (uncertain),4,0,0,uncertain,,,,not counted (mint unknown)
+Lagii (uncertain),2,0,0,uncertain,,,,not counted (mint unknown)
+Landc (uncertain),2,2,0,uncertain,,,,not counted (mint unknown)
+Maint (uncertain),4,4,0,uncertain,,,,not counted (mint unknown)
+Meonre (uncertain),1,0,0,uncertain,,,,not counted (mint unknown)
+Niwan (uncertain),2,2,0,uncertain,,,,not counted (mint unknown)
+Oco (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Rocce (uncertain),1,1,0,uncertain,,,,not counted (mint unknown)
+Roiseng (uncertain),1,0,0,uncertain,,,,not counted (mint unknown)
+Sceldfor (uncertain),1,0,0,uncertain,,,,not counted (mint unknown)
+Smrie (uncertain),2,0,0,uncertain,,,,not counted (mint unknown)
+Stes (uncertain),2,2,0,uncertain,,,,not counted (mint unknown)
+Weardburh (uncertain),4,0,0,uncertain,,,,not counted (mint unknown)
+un (uncertain),6,3,3,uncertain,,,,not counted (mint unknown)
+uncertain,23395,2398,7474,uncertain,,,,not counted (mint unknown)
+Ðric (uncertain; copy),1,1,0,uncertain,,,,not counted (mint unknown)
+Gothaburh,15,15,0,unidentified,,,,not counted (mint name not identified with a place)
+Orsnaforda,17,0,0,unidentified,,,,not counted (mint name not identified with a place)
+Palace (unidentified),3,0,3,unidentified,,,,not counted (mint name not identified with a place)
+West Saxon mint,23,0,15,unidentified,,,,not counted (mint name not identified with a place)
