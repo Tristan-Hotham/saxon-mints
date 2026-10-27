@@ -1,0 +1,209 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Minted: The Anglo-Saxon and Norman Mint Towns of England and What Became of Them},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Minted: The Anglo-Saxon and Norman Mint Towns\\[2pt] of England and What Became of Them\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23689962}{https://doi.org/10.5281/zenodo.23689962}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+From Edgar's reform of about 973 until the twelfth century, every English penny named the town where it was struck. That makes the coinage an unusually precise record of which places were thought fit to hold a mint, and a natural starting point for asking whether urban importance persists. I assemble {{counts.records_unique|int}} unique coin records from the Fitzwilliam Museum's public database of the Corpus of Early Medieval Coin Finds (EMC) and the Sylloge of Coins of the British Isles (SCBI), keep the {{counts.window_certain_ew|int}} records of the kings from Edgar to Stephen whose mint is a single, certain place in England or Wales, and count mints and distinct moneyers reign by reign. Surviving coins come from {{mints_per_reign.aethelred|int}} mints under Æthelred II and a peak of {{mints_per_reign.cnut|int}} under Cnut. London, York and Lincoln account for {{london_york_lincoln_share_aethelred|pct0}} of moneyers in Æthelred's reign. Among {{circulation.emc_placed|int}} single finds placed at a findspot, the median coin was lost {{circulation.all.median_km|f1}} km from its mint, against {{circulation.random_mint_median_km|int}} km if mints were drawn at random from national output, and {{circulation.all.nearest_ratio|f1}} times as many finds as expected come from the nearest working mint. Eight of the ten largest mints of about 1000 were among the largest English towns in the 1377 poll tax, and moneyer numbers then correlate with Census 2021 population (Spearman {{destiny.spearman_aethelred_2021|f2}}). The correlation with the 1801 census is weaker ({{destiny.spearman_aethelred_1801|f2}}): only {{destiny.list1801_mints|int}} of the 30 largest towns of 1801 had been mint towns. Small mints such as Lydford, Cadbury, Torksey and Dunwich are villages or less today. The mint network marks a durable medieval urban hierarchy that industrialisation overlaid rather than replaced.
+
+\textbf{Keywords:} Anglo-Saxon coinage; mints; moneyers; urban history; single finds; Domesday; poll tax 1377; Census 2021
+\end{quote}
+
+\section{Introduction}
+
+After King Edgar's reform of the coinage, which the written sources place in or after 973, a single standard type was struck across England, carrying the king's portrait and title on one side and the names of the moneyer and the mint on the other (Wikipedia contributors 2026a). The design was changed every few years, old coins were withdrawn, and new mints were opened as needed, so that some forty mints were working soon after the reform and around seventy places in England, and in Wales under the Normans, struck coins at some point before the reign of Henry II (Wikipedia contributors 2026a). The largest were London, York and Lincoln; at the other end were places that are now villages or empty hillforts, such as Milborne Port and Cadbury Castle (Wikipedia contributors 2026a).
+
+Because every coin names its town, the late Anglo-Saxon and Norman coinage is, in effect, a list of the places that mattered enough to hold a mint, with a rough measure of how much each one struck: the number of moneyers. This note uses that list as a ``before'' picture and asks three questions. First, how did the network of mints change from Edgar's reform to the death of Stephen in 1154? Second, how far did coins travel from the mints that struck them? Third, and most simply, were the towns that struck coins around the year 1000 still the important towns in 1377, in 1801 and today?
+
+The note is a companion to two earlier open-data studies: Domesday Destiny, which compares every place in Domesday Book with its 2021 population (Hotham 2026a), and Silver and Names, on Viking hoards and Norse place names (Hotham 2026b). An interactive version, with a map that steps through the reigns, is at \url{https://tristan-hotham.github.io/saxon-mints/}.
+
+\section{Data}
+
+\subsection{Coins}
+
+The coin records come from the Fitzwilliam Museum's public online search of two linked corpora: the Corpus of Early Medieval Coin Finds (EMC), which records single finds of coins with their findspots, and the Sylloge of Coins of the British Isles (SCBI), which publishes coins in museum collections, many of them from hoards (Fitzwilliam Museum 2026). I searched the advanced search by each of its {{counts.mint_values_searched|int}} mint values on 27 October 2026, which returned {{counts.rows_scraped|int}} rows. Each row gives the record number, ruler, type, mint, the mint name as written on the coin, moneyer, findspot and a link to the full record. Because one coin can be returned by more than one search, I removed {{counts.duplicates|int}} duplicates by record number, leaving {{counts.records_unique|int}} unique records.
+
+The two corpora are told apart by the record number. SCBI numbers begin with a volume or collection code (10xx, 1200, 1201 or 1300); EMC numbers begin with a year. This rule is inferred from the numbers, but it is supported by the findspots: almost all SCBI records give the findspot as uncertain or blank, and almost all EMC records give a place. The rule gives {{counts.scbi|int}} SCBI and {{counts.emc|int}} EMC records.
+
+The licence of the database is not stated in a form I could confirm. I therefore treat the records as factual entries in a public catalogue, cite the database in full, and publish only derived counts by mint and reign, record numbers with links to the full records, and derived findspot coordinates; I do not republish the catalogue's descriptive text or any images.
+
+\subsection{Reigns and mints}
+
+Reign periods are taken from the ruler field: Edgar's coins of the Reform type only (from about 973 to his death in 975), then each king from Edward the Martyr to Stephen. Coins of Scottish and Northumbrian rulers with the same names, and Scandinavian imitations, are excluded. This gives {{counts.window_records|int}} records in the period.
+
+Mint labels need care. I counted a record for a mint only when its mint is a single, certain place in England or Wales. In the period, {{counts.window_uncertain|int}} records have no mint, {{counts.window_probable|int}} have a queried attribution (for example ``York?''), {{counts.window_ambiguous|int}} give two or more possible mints (for example ``Bath or Barnstaple'' or ``Southwark or Sudbury''; {{counts.ambiguous_all|int}} records under {{counts.ambiguous_labels|int}} such labels across all periods), {{counts.window_copy|int}} are marked as copies or imitations, and {{counts.window_other|int}} are regional, unidentified or foreign. All of these are left out of the counts and listed in the data. The remaining {{counts.window_certain_ew|int}} records ({{counts.window_share_certain|pct0}} of the period) come from {{counts.mints_ew_any|int}} named mints. Of these records, {{counts.window_scbi|int}} are SCBI and {{counts.window_emc|int}} are EMC single finds.
+
+The size of a mint in a reign is measured, as is usual, by the number of distinct moneyers named on its coins. Names are compared after removing brackets and question marks and ignoring case; spelling variants of one name can therefore count twice.
+
+\subsection{Places}
+
+Each mint is placed at the point given in Ordnance Survey's OS Open Names gazetteer for the town or village that carries its name today (Ordnance Survey 2026). A short manual table handles names that need a decision: Bedwyn at Great Bedwyn; Cadbury at South Cadbury, beside the hillfort of Cadbury Castle where the mint stood (Wikipedia contributors 2026a); Cissbury at Cissbury Ring; Lynn at King's Lynn; Romney at New Romney; Petherton at North Petherton; Milbourne Port at Milborne Port. Salisbury is placed at the modern city, although the medieval town stood at Old Sarum, about 3 km to the north. Newport is not placed, because several places of that name are possible. Horndon, known as a mint from one coin of Edward the Confessor (Wikipedia contributors 2026b), is not in the search output. Each mint was cross-checked against the nearest Wikidata settlement with the same label (Wikidata contributors 2026); the {{counts.wikidata_matched|int}} mints with such a match lie at most {{counts.wikidata_max_offset_km|f1}} km from it.
+
+EMC findspots were matched to OS Open Names populated places after cleaning (``Lincoln, near'' to Lincoln; parenthetical detail removed; county-only findspots rejected). A findspot is accepted only if the name is unique in Great Britain, all places with that name lie within 15 km of each other, it is the only city or town of that name, or a ``near X'' qualifier picks one of several. Of the {{circulation.emc_records_in_window|int}} single finds from certain English and Welsh mints in the period, {{circulation.emc_placed|int}} ({{circulation.emc_placed_share|pct0}}) were placed, at {{circulation.placed_findspots|int}} distinct findspots.
+
+\subsection{Later sizes}
+
+For 1086, 1377 and 1801 I use the tables in Wikipedia's \textit{List of towns and cities in England by historical population} (Wikipedia contributors 2026c): Russell's estimates for {{destiny.list1086_n|int}} boroughs in 1086, the 1377 poll tax ({{destiny.list1377_n|int}} rows, with one tied rank) and the 1801 census (the 30 largest towns). A town absent from these lists is smaller than the list's last entry, not zero. Domesday burgesses and households come from the parsed Hull Domesday Project data used in Domesday Destiny (Hull Domesday Project; Hotham 2026a), matched by name within 4 km of the mint; they are missing for many county towns, whose boroughs Domesday describes separately.
+
+For 2021 I summed Census 2021 usual residents (Office for National Statistics 2022) over the Lower Layer Super Output Areas whose best-fit 2022 built-up area has the mint's name and lies within 8 km. London is the London region. Villages too small to form a built-up area take the population of their civil parish from Domesday Destiny. Income is the ONS estimate of mean total annual household income for the financial year ending 2023 by Middle Layer Super Output Area (Office for National Statistics 2025), weighted by population, over the areas assigned to the town's built-up area, or the nearest area for villages.
+
+\section{Methods}
+
+For each reign I count the mints with at least one certain record and the distinct moneyers per mint. These counts are floors: they depend on how many coins survive and have been catalogued, which differs greatly between reigns.
+
+For circulation I use only EMC single finds, which are a better guide to coins in everyday use than hoards. For each placed find I measure the straight-line distance from its mint to its findspot. I compare the median with a baseline in which each find keeps its findspot but is given a mint drawn at random from the mints working in that reign, weighted by their moneyers (200 runs). I also ask whether the find's mint is the nearest mint working in that reign, and compare the share of finds for which this is true with the share expected if each find were such a random draw.
+
+For destiny, I compare moneyers under Æthelred II (978 to 1016), the reign that spans the year 1000, with each later measure by Spearman rank correlation. Towns not in the 1377 or 1801 lists are tied at the bottom. I also count how many of the ten largest mints of Æthelred's reign appear in each later list, how many towns in each list had been mints, and which mint towns have fewer than 5,000 residents today.
+
+\section{Results}
+
+\subsection{The mint network, reign by reign}
+
+Figure~\ref{fig:reigns} and Figure~\ref{fig:smallmult} show the network. Edgar's reform coinage survives from {{mints_per_reign.edgar|int}} mints, from only {{periods.0.records|int}} records of a type struck for about two years. Under Æthelred II the count is {{mints_per_reign.aethelred|int}}, under Cnut {{mints_per_reign.cnut|int}} and under Edward the Confessor {{mints_per_reign.edwardc|int}}. Harold II, who reigned for nine months, has coins from {{mints_per_reign.harold2|int}} mints in the database; Wikipedia's history of the penny gives {{wiki_context.harold2_mints|int}} (Wikipedia contributors 2026a), a reminder that these counts are floors. After the Conquest the count is {{mints_per_reign.william1|int}} under William I, {{mints_per_reign.william2|int}} under William II and {{mints_per_reign.henry1|int}} under Henry I, rising to {{mints_per_reign.stephen|int}} under Stephen, when several mints appear for the first time, among them Castle Rising, Dunwich, Cardiff, Swansea and Newcastle.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.85\textwidth]{f_mints_per_reign.png}
+\caption{Mints with at least one certain surviving record, by reign. Darker bars are the seven reigns highlighted in the text.}\label{fig:reigns}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_reigns_map.png}
+\caption{Mints with surviving coins in seven reigns, sized by distinct moneyers. Open grey circles are mints active in another reign of the period.}\label{fig:smallmult}
+\end{figure}
+
+The network was very unequal (Figure~\ref{fig:rank}). Under Æthelred II London coins name {{towns.London.moneyers_aethelred|int}} moneyers, York {{towns.York.moneyers_aethelred|int}}, Lincoln {{towns.Lincoln.moneyers_aethelred|int}}, Winchester {{towns.Winchester.moneyers_aethelred|int}} and Stamford {{towns.Stamford.moneyers_aethelred|int}}. London, York and Lincoln together hold {{london_york_lincoln_share_aethelred|pct0}} of the {{periods.2.moneyers|int}} moneyer names recorded in that reign across {{n_mints_aethelred|int}} mints, while {{one_moneyer_mints_aethelred|words}} mints have one named moneyer or none. London's share of moneyers is {{periods.2.london_share_moneyers|pct0}} under Æthelred and {{periods.3.london_share_moneyers|pct0}} under Cnut.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.75\textwidth]{f_rank.png}
+\caption{The twenty mints with most distinct moneyers under Æthelred II. Red: fewer than 10,000 residents in 2021.}\label{fig:rank}
+\end{figure}
+
+\subsection{Circulation}
+
+The placed single finds are spread across England, densest in East Anglia and Lincolnshire (Figure~\ref{fig:map}). The median find lies {{circulation.all.median_km|f1}} km from its mint (Figure~\ref{fig:dist}). {{circulation.all.within25|pct0}} lie within 25 km and {{circulation.all.within50|pct0}} within 50 km, while {{circulation.all.beyond100|pct0}} lie more than 100 km away and {{circulation.all.beyond200|pct0}} more than 200 km. Coins clearly travelled. But they did not travel at random: if each find had been struck at a mint drawn from that reign's national output, the median distance would be about {{circulation.random_mint_median_km|int}} km. Of the placed finds, {{circulation.all.nearest_obs|pct1}} come from the nearest working mint, against {{circulation.all.nearest_exp|pct1}} expected, a ratio of {{circulation.all.nearest_ratio|f1}}.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.72\textwidth]{f_map.png}
+\caption{Mints of Æthelred II, sized by distinct moneyers, with every placed single find of the period 973 to 1154 (blue). Red labels: mint towns with fewer than 5,000 residents today.}\label{fig:map}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.85\textwidth]{f_distance.png}
+\caption{Distance from mint to findspot for {{circulation.emc_placed|int}} placed single finds. Gold line: observed median. Dashed: median when each find is given a random mint from that reign's output.}\label{fig:dist}
+\end{figure}
+
+The pattern is stable across the Conquest (Table~\ref{tab:circ}): the median distance is {{circulation.late_as.median_km|f1}} km under the Anglo-Saxon kings and {{circulation.norman.median_km|f1}} km under the Normans. Of the four largest mints, London's coins are the most widely spread: only {{circulation.london.within50|pct0}} of London single finds lie within 50 km of the city (median {{circulation.london.median_km|f1}} km), compared with {{circulation.york.within50|pct0}} for York. East Anglian mints such as Thetford and Norwich have the shortest median distances, which may partly reflect how many finds are reported from Norfolk and Suffolk.
+
+{{TABLE_CIRC}}
+
+\subsection{Destiny}
+
+Table~\ref{tab:top10} follows the ten largest mints of Æthelred's reign forward. {{destiny.top10_in1377|Words}} of the ten are among the largest towns in the 1377 poll tax, {{destiny.top10_in1801|words}} among the 30 largest in 1801, and {{destiny.top10_over100k_2021|words}} have more than 100,000 residents today. London is first in 1086, 1377, 1801 and 2021. Across the {{destiny.n_aethelred_2021|int}} mint towns of Æthelred's reign with a 2021 population, the rank correlation between moneyers and residents is {{destiny.spearman_aethelred_2021|f2}} ({{destiny.p_aethelred_2021|p}}); with the 1377 list it is {{destiny.spearman_aethelred_1377|f2}} ({{destiny.p_aethelred_1377|p}}), and with the 1801 list only {{destiny.spearman_aethelred_1801|f2}} ({{destiny.p_aethelred_1801|p}}). Using all moneyers from 973 to 1066 across all {{destiny.n_lateas_2021|int}} mint towns with a 2021 population gives {{destiny.spearman_lateas_2021|f2}} (Figure~\ref{fig:scatter}).
+
+{{TABLE_TOP10}}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=0.8\textwidth]{f_scatter.png}
+\caption{Distinct moneyers 973 to 1066 against Census 2021 population, for every mint town with a population. Gold ring: in the 1377 list. Red: fewer than 5,000 residents.}\label{fig:scatter}
+\end{figure}
+
+The lists show where the old hierarchy was overtaken. Of the {{destiny.list1377_n|int}} towns in the 1377 list, {{destiny.list1377_mints|int}} had been mint towns in this period; those that had not include Plymouth, Coventry, Boston, Beverley, Hull and Great Yarmouth. Of the 30 largest towns in 1801, only {{destiny.list1801_mints|int}} had been mints; Manchester, Liverpool, Birmingham, Leeds and Sheffield had not. Of England's 30 largest built-up areas in 2021 (with London counted once), {{destiny.top30_2021_mints|int}} were mint towns.
+
+Within the old network there are clear losers. Winchester, fourth among the mints of Æthelred's reign, is {{towns.Winchester.rank1377|int}}th in 1377 and has {{towns.Winchester.pop2021|int}} residents today. Stamford, fifth, is {{towns.Stamford.rank1377|int}}nd in 1377 and has {{towns.Stamford.pop2021|int}}. Thetford, seventh, with {{towns.Thetford.burgesses1086|int}} burgesses in the parsed Domesday entries, is absent from the 1377 list and has {{towns.Thetford.pop2021|int}} residents. Wallingford, twelfth with {{towns.Wallingford.moneyers_aethelred|int}} moneyers, has {{towns.Wallingford.pop2021|int}}. Bristol went the other way: {{towns.Bristol.moneyers_aethelred|words}} moneyer under Æthelred, third in 1377 and fifth in 1801.
+
+{{destiny.n_vanished|int}} mint towns have fewer than 5,000 residents today (Table~\ref{tab:vanished}). Among them are Wilton ({{towns.Wilton.moneyers_late_as|int}} moneyers before 1066; {{towns.Wilton.pop2021|int}} residents), Ilchester ({{towns.Ilchester.moneyers_late_as|int}}; {{towns.Ilchester.pop2021|int}}), Lydford ({{towns.Lydford.moneyers_late_as|int}}; a parish of {{towns.Lydford.pop2021|int}}), Cadbury ({{towns.Cadbury.moneyers_late_as|int}}; a parish of {{towns.Cadbury.pop2021|int}}), Torksey ({{towns.Torksey.burgesses1086|int}} burgesses in 1086; a parish of {{towns.Torksey.pop2021|int}}) and Dunwich (Russell's 1086 estimate {{towns.Dunwich.pop1086_russell|int}}; a parish of {{towns.Dunwich.pop2021|int}}). Only {{destiny.n_grew|words}} mint towns that never had more than three moneyers in a reign have more than 100,000 residents today: Newcastle, Reading, Peterborough and Swansea, all late or marginal mints.
+
+{{TABLE_VANISHED}}
+
+Average household income today is only weakly related to the old hierarchy. Towns with ten or more moneyers before 1066 have a median income of £{{destiny.income_by_class.large.median_income|int}}, towns with two or fewer £{{destiny.income_by_class.small.median_income|int}}, and the rank correlation between moneyers and income is {{destiny.spearman_lateas_income|f2}}.
+
+\section{Discussion}
+
+The late Anglo-Saxon mint network was not a random scatter of royal workshops. Its biggest members, London, York, Lincoln, Norwich and Exeter, were still among England's largest towns three and a half centuries later, and most remain cities today. In that sense the mints confirm what the Domesday comparison suggested for villages (Hotham 2026a): medieval rank is sticky. The correlation of {{destiny.spearman_aethelred_2021|f2}} between moneyers around 1000 and residents in 2021 is moderate, but it holds across a thousand years.
+
+The weakest link is 1801. The industrial towns of the north and Midlands that dominate the 1801 list had no part in the medieval mint network, and the correlation with the old ranking is weak and not significant at that date. By 2021 it is moderate again, as most old county towns of the mint network are substantial places today; this note does not test why. The losers form recognisable groups on the map: small mints of Somerset and Devon (Lydford, Cadbury, Ilchester, Langport, Axbridge, Watchet), Wilton in Wiltshire, and eastern river and coastal towns (Torksey, Dunwich, Romney). Explaining their decline would need sources beyond these data.
+
+The circulation results fit the picture of a managed coinage. Coins travelled far, but a single find is several times more likely than chance to have come from the nearest mint. That is consistent with local mints serving local markets, while London's output moved through the whole kingdom.
+
+\section{Limitations}
+
+The database is what has been catalogued, not a census of coins. Collections that are heavily published, and reigns that are well represented in them, look bigger: Æthelred's and Cnut's coins number {{periods.2.records|int}} and {{periods.3.records|int}} records. Counts of mints and moneyers are therefore floors. Moneyer names are counted as written, so spelling variants inflate counts. The SCBI and EMC split is inferred from record numbers. Mint identifications follow the database, and a few placements rest on a judgement. Findspot matching by name can misplace a find, and finds near the named place are put at that place; straight-line distances ignore roads and rivers. Single finds reflect where people search and report, as well as where coins were lost. The 1377 and 1801 rankings cover only the largest towns. Built-up area populations summed from small areas by best fit are crude for small places, and some villages use parish populations instead. Domesday burgess counts are incomplete for county towns. Finally, the database search output was gathered in one session; the database may change.
+
+\section{Conclusion}
+
+The towns that made England's money around the year 1000 were mostly still the important towns in 1377, and many are cities today. The great exceptions are the small mints of Somerset and Devon, Wilton, and the eastern river and coastal towns that fell away, and, on the other side, the industrial cities that grew up outside the medieval network altogether. A penny struck in 1000 named a town that, more often than not, still mattered a thousand years later.
+
+\section*{Data and code availability}
+
+Derived data (mint table with placements, records and moneyers by mint and reign, mint-town table with later sizes, the handling of every mint label, a record index with record numbers and links but no descriptive text) and all reported numbers (\texttt{results.json}) are at \url{https://github.com/Tristan-Hotham/saxon-mints}, with the analysis code, and in the Zenodo record for this paper (\url{https://doi.org/10.5281/zenodo.23689962}). The interactive version is at \url{https://tristan-hotham.github.io/saxon-mints/}. Because the derived data include Hull Domesday Project figures (CC BY-NC-SA), they and the text are released under CC BY-NC-SA 4.0; code is MIT. Coin records: Fitzwilliam Museum, EMC/SCBI database. Contains OS data \textcopyright{} Crown copyright and database right 2026, and ONS data, used under the Open Government Licence v3.0.
+
+\section*{Funding and competing interests}
+
+This work received no funding. The author declares no competing interests.
+
+\section*{Use of AI}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+\small
+\setlength{\parskip}{0.35em}
+\hangindent=1.5em Fitzwilliam Museum (2026). Corpus of Early Medieval Coin Finds (EMC) and Sylloge of Coins of the British Isles (SCBI), online database. Searched 27 October 2026. \url{https://emc.fitzmuseum.cam.ac.uk/}
+
+\hangindent=1.5em Hotham, T. (2026a). Is Domesday Destiny? Interactive study and data. \url{https://tristan-hotham.github.io/domesday-destiny/}
+
+\hangindent=1.5em Hotham, T. (2026b). Silver and Names: Viking Hoards and Norse Place Names in Britain. Zenodo. \url{https://doi.org/10.5281/zenodo.23677169}
+
+\hangindent=1.5em Hull Domesday Project. Professor J.J.N. Palmer, George Slater and the University of Hull. CC BY-NC-SA. \url{https://digitalcollections.hull.ac.uk/collections/3t945r28b}
+
+\hangindent=1.5em Office for National Statistics (2022). Census 2021: TS001 Number of usual residents in households and communal establishments. Open Government Licence v3.0. \url{https://www.nomisweb.co.uk}
+
+\hangindent=1.5em Office for National Statistics (2025). Income estimates for small areas, England and Wales: financial year ending 2023. Open Government Licence v3.0. \url{https://www.ons.gov.uk}
+
+\hangindent=1.5em Ordnance Survey (2026). OS Open Names. Dataset, Open Government Licence v3.0. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}
+
+\hangindent=1.5em Russell, J. C. (1948). \textit{British Medieval Population}. Albuquerque: University of New Mexico Press.
+
+\hangindent=1.5em Spearman, C. (1904). The proof and measurement of association between two things. \textit{American Journal of Psychology} 15(1), 72 to 101.
+
+\hangindent=1.5em Wikidata contributors (2026). Wikidata. CC0. \url{https://www.wikidata.org}
+
+\hangindent=1.5em Wikipedia contributors (2026a). History of the English penny (c. 600 to 1066). CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/History_of_the_English_penny_(c._600_\%E2\%80\%93_1066)}
+
+\hangindent=1.5em Wikipedia contributors (2026b). Horndon mint. CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/Horndon_mint}
+
+\hangindent=1.5em Wikipedia contributors (2026c). List of towns and cities in England by historical population. CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/List_of_towns_and_cities_in_England_by_historical_population}
+
+\end{document}

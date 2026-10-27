@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Minted</title>
+<meta name="description" content="The Anglo-Saxon and Norman mint towns of England, 973 to 1154, from {{counts.records_unique|int}} coin records. Were the towns that struck coins around 1000 still the important towns in 1377, 1801 and today?">
+<meta property="og:title" content="Minted: were England's mint towns of 1000 still the big towns in 1377, 1801 and today?">
+<meta property="og:description" content="{{mints_per_reign.cnut|int}} mints struck coins for Cnut. Eight of the ten biggest around 1000 were still among England's largest towns in 1377. Some, like Lydford and Cadbury, all but vanished.">
+<meta property="og:image" content="https://tristan-hotham.github.io/saxon-mints/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Silver-grey parchment. Old gold = mints and moneyers. Deep blue = single finds and today. Madder = vanished. */
+:root{
+  --bg:#ECEBE6; --panel:#E2E1DA; --fg:#1A1F2B; --muted:#5D6270; --rule:#CFCDC4; --card:#F6F5F1; --border:#BDBBB2;
+  --gold:#A27718; --goldl:#D9B65B; --blue:#1F3B70; --bluel:#5E7DB5; --madder:#A33A2A; --sea:#E3E2DC; --dot:#8D919A;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161B24; --panel:#1E2430; --fg:#E9E7E0; --muted:#A1A6B1; --rule:#2E3644; --card:#1B212B; --border:#3B4453;
+  --gold:#E0B755; --goldl:#F0D48C; --blue:#8FAEE6; --bluel:#6F8FCB; --madder:#E07A63; --sea:#141921; --dot:#737A86; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161B24; --panel:#1E2430; --fg:#E9E7E0; --muted:#A1A6B1; --rule:#2E3644; --card:#1B212B; --border:#3B4453;
+  --gold:#E0B755; --goldl:#F0D48C; --blue:#8FAEE6; --bluel:#6F8FCB; --madder:#E07A63; --sea:#141921; --dot:#737A86; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--gold);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--blue);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(60px,15vw,124px)/.86 var(--display);letter-spacing:-.02em;margin:0;font-variation-settings:"SOFT" 50;color:var(--fg)}
+h1 em{font-style:normal;color:var(--gold)}
+.mark{width:clamp(92px,21vw,170px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:46ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--gold);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.g{color:var(--gold)}.stats b.b{color:var(--blue)}.stats b.r{color:var(--madder)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.slider{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center;margin:0 0 8px}
+.slider input{width:100%;accent-color:var(--gold)}
+.reign{font:800 26px/1.1 var(--display);margin:2px 0 2px}
+.reign small{font:400 13px/1.3 var(--mono);color:var(--muted);display:block;margin-top:4px}
+.ticks{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));font:400 10px/1.2 var(--mono);color:var(--muted);margin:0 0 12px;margin-left:46px}
+.ticks span{text-align:center;overflow:hidden;white-space:nowrap}
+.ticks span.k{color:var(--fg);font-weight:500}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:820px){.mapgrid{grid-template-columns:1fr}.ticks{display:none}}
+#map{height:clamp(440px,74vh,660px);border:1px solid var(--border);background:var(--sea);border-radius:2px;z-index:0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.side{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gold);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.empty{border-left-color:var(--border);color:var(--muted)}
+.card b.t{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:6px 0 8px}
+.card dt{color:var(--muted)}.card dd{margin:0;overflow-wrap:anywhere}
+.card svg{display:block;width:100%;height:auto;margin:6px 0 2px}
+.toplist{list-style:none;margin:0;padding:0;font:400 12.5px/1.3 var(--mono);max-height:330px;overflow:auto;border:1px solid var(--rule);background:var(--card)}
+.toplist li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:8px;padding:7px 10px;border-bottom:1px solid var(--rule);cursor:pointer;align-items:center}
+.toplist li:hover,.toplist li:focus-visible{background:var(--panel);outline:none}
+.toplist .v{color:var(--muted)}
+.toplist .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toplist .rk{color:var(--muted)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--gold);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;vertical-align:bottom}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+table.t td.z{color:var(--madder)}
+table.t td.g{color:var(--gold);font-weight:500}
+.tablewrap{overflow-x:auto}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--blue);border-color:var(--blue);color:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px;padding:0;list-style:none}
+.chips li{font:400 12.5px/1.3 var(--mono);border:1px solid var(--border);background:var(--card);padding:7px 9px;border-radius:14px}
+.chips li b{color:var(--madder);font-weight:500}
+.chips.up li b{color:var(--blue)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1001}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font:400 12.5px/1.45 var(--mono)}
+.leaflet-popup-content b{font:600 15px/1.2 var(--display);display:block;margin-bottom:4px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Coins × towns</span><span>England, 973 to 1154</span></div>
+<header class="hero">
+  <h1><em>Minted</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Around the year 1000, silver pennies were struck in {{mints_per_reign.aethelred|int}} English towns, each coin naming its moneyer and its mint. Were the towns that made England's money still the important towns in 1377, in 1801, and today?</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Fitzwilliam Museum EMC/SCBI database, Wikipedia, ONS Census 2021, OS Open Names</div>
+
+<div class="stats">
+  <div><b class="g">{{mints_per_reign.cnut|int}}</b><span>mints with surviving coins of Cnut, the most of any reign</span></div>
+  <div><b>{{towns.London.moneyers_aethelred|int}}</b><span>moneyers named on London coins of Æthelred II</span></div>
+  <div><b class="b">{{circulation.all.median_km|int}} km</b><span>median distance from mint to where a single coin was lost</span></div>
+  <div><b class="r">{{destiny.top10_in1377|int}} of 10</b><span>top mints of c.1000 still among the 40 largest towns in 1377</span></div>
+</div>
+
+<p class="lede">Lydford, on the western edge of Dartmoor in Devon, is a village today: {{towns.Lydford.pop2021|int}} people live in its parish. A thousand years ago it was a mint town. Its surviving coins name {{towns.Lydford.moneyers_late_as|words}} different moneyers between the reigns of Æthelred II and Edward the Confessor, {{towns.Lydford.records_total|int}} of its pennies are in the database I used, and Domesday Book counts {{towns.Lydford.burgesses1086|int}} burgesses there in 1086. Then the coins stop, and the town never grew.</p>
+<p>Late Anglo-Saxon England had a remarkably organised coinage. After King Edgar's reform, around 973, every penny named the king, the moneyer who struck it and the town where it was struck, and the design was changed every few years. Because each coin names its town, the coins are a census of sorts: a list of the places that mattered enough to have a mint. So they make a natural "before" picture for a question I keep coming back to on this blog. Does a place's importance last?</p>
+<p>To answer it I gathered {{counts.records_unique|int}} coin records from the Fitzwilliam Museum's database of early medieval coins, kept {{counts.window_certain_ew|int}} from the English and Welsh mints between Edgar's reform and the death of Stephen in 1154 whose mint is certain, and followed each mint town forward to 1377, 1801 and 2021. The short answer: the great mints mostly stayed great, the tiny ones mostly stayed tiny, and the cities of the Industrial Revolution never struck a coin in this period.</p>
+
+<h2><span class="n">01 · The map</span>England's mint towns, reign by reign</h2>
+<p>Each gold disc is a mint with surviving coins from the chosen reign, sized by the number of different moneyers named on them, the usual measure of how much a mint struck. Drag the slider through the twelve reigns from Edgar's reform to Stephen. Tap a mint to see its moneyers in every reign, how big it was in 1377, 1801 and 2021, and where its coins were found.</p>
+<div class="figure bleed">
+  <div class="slider">
+    <button class="btn" id="play" aria-label="Play through the reigns">▶</button>
+    <input type="range" id="reign" min="0" max="11" step="1" value="2" aria-label="Reign">
+  </div>
+  <div class="ticks" id="ticks"></div>
+  <div class="reign" id="reignLab"></div>
+  <div class="controls" style="margin-top:8px">
+    <button class="btn" id="bFinds" aria-pressed="false">Single finds of this reign</button>
+    <button class="btn" id="bGhost" aria-pressed="true">Mints of other reigns</button>
+  </div>
+  <div class="mapgrid">
+    <div>
+      <div id="map" role="application" aria-label="Map of English mint towns by reign"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div class="card empty" id="card">Tap a gold disc, or pick a mint from the list, to see its moneyers reign by reign and what became of the town.</div>
+      <div class="fig-h" style="margin-top:4px" id="listH">Biggest mints in this reign</div>
+      <ol class="toplist" id="mlist"></ol>
+    </div>
+  </div>
+  <div class="src">Coins: Fitzwilliam Museum, Corpus of Early Medieval Coin Finds (EMC) and Sylloge of Coins of the British Isles (SCBI), searched by mint, 27 October 2026. Only records whose mint is a single, certain place are shown. Mints are placed at the OS Open Names point of the town or village of that name today. Single finds are placed at their findspot where the place name could be matched without ambiguity.</div>
+</div>
+
+<h2><span class="n">02 · How many mints?</span>Seventy towns at the peak</h2>
+<p>Edgar's reform coins survive from {{mints_per_reign.edgar|int}} mints in this database, from only {{periods.0.records|int}} coins of a type struck for about two years. Under Æthelred II the number jumps to {{mints_per_reign.aethelred|int}}, and it peaks under Cnut at {{mints_per_reign.cnut|int}}, with {{mints_per_reign.edwardc|int}} under Edward the Confessor. After the Conquest the network shrinks a little, to {{mints_per_reign.william1|int}} under William I and {{mints_per_reign.henry1|int}} under Henry I, before the troubled reign of Stephen brings the count back up to {{mints_per_reign.stephen|int}}, with mints that appear for the first time, such as Castle Rising, Dunwich, Cardiff and Newcastle.</p>
+<div class="figure">
+  <div class="fig-h">Mints with surviving coins, by reign</div>
+  <div class="fig-sub">Bars: mints with at least one certain record. Grey line: coin records per year of reign (right axis).</div>
+  <div class="chart" id="perReign"></div>
+  <div class="src">A mint counts as active if the database holds at least one coin of that reign attributed to it without doubt. Short reigns and rare types undercount: Harold II reigned for nine months.</div>
+</div>
+<p>These are counts of mints with <i>surviving</i> coins, so they are a floor, not a census. Harold II reigned for nine months in 1066, and the database has his coins from {{mints_per_reign.harold2|int}} mints; Wikipedia's history of the English penny gives {{wiki_context.harold2_mints|int}}. The same article puts the total at around {{wiki_context.places_active_about|int}} places in England and Wales over the whole period; in the database I count {{counts.mints_ew_any|int}} that I could name with certainty in at least one reign, many of them active only briefly.</p>
+
+<h2><span class="n">03 · The giants</span>London, York, Lincoln and Winchester</h2>
+<p>Mints were wildly unequal. Under Æthelred II, the reign that straddles the year 1000, London coins name {{towns.London.moneyers_aethelred|int}} different moneyers, York {{towns.York.moneyers_aethelred|int}} and Lincoln {{towns.Lincoln.moneyers_aethelred|int}}. Those three alone account for {{london_york_lincoln_share_aethelred|pct0}} of all the moneyers recorded in that reign across {{n_mints_aethelred|int}} mints, while {{one_moneyer_mints_aethelred|words}} mints have a single named moneyer or none. Winchester, the old West Saxon royal centre, is fourth with {{towns.Winchester.moneyers_aethelred|int}}, and Stamford fifth with {{towns.Stamford.moneyers_aethelred|int}}.</p>
+<div class="figure">
+  <div class="controls"><div class="seg" role="group" aria-label="Reign" id="rankSeg"></div></div>
+  <div class="fig-h">Moneyers per mint</div>
+  <div class="fig-sub">Distinct moneyer names on surviving coins of each mint, top 20.</div>
+  <div class="chart" id="rank"></div>
+  <div class="src">Moneyer names are counted as written in the database, after removing brackets and question marks and ignoring case; spelling variants of one name may count twice, and a moneyer who worked through several types counts once per reign.</div>
+</div>
+<p>Moneyer counts are the standard rough measure of a mint's output, but they are not the same thing as coins struck, and they depend on how many coins happen to survive and be catalogued. Æthelred's and Cnut's pennies are by far the most numerous in the collections ({{periods.2.records|int}} and {{periods.3.records|int}} records), so those reigns are especially well represented.</p>
+
+<h2><span class="n">04 · Where the coins went</span>Local money, travelling far</h2>
+<p>The museum database mixes two kinds of record. Most ({{counts.scbi|int}}) are coins in museum collections, many of them from hoards; a minority ({{counts.emc|int}}) are single finds, coins lost one at a time and recorded with a findspot. Single finds are the better guide to everyday circulation, so for this question I used only them. Of the {{circulation.emc_records_in_window|int}} single finds from certain English and Welsh mints in my period, I could place {{circulation.emc_placed|int}} ({{circulation.emc_placed_share|pct0}}) at a findspot on the Ordnance Survey's map.</p>
+<div class="figure">
+  <div class="fig-h">How far had a single coin travelled from its mint?</div>
+  <div class="fig-sub">Share of {{circulation.emc_placed|int}} single finds by straight-line distance from the mint that struck them.</div>
+  <div class="chart" id="dist"></div>
+  <div class="src">Random mints: the same findspots, each given a mint drawn at random from that reign's national output (weighted by moneyers), averaged over 200 runs.</div>
+</div>
+<p>The median coin was found {{circulation.all.median_km|f1}} km from its mint. Only {{circulation.all.within25|pct0}} were found within 25 km, and {{circulation.all.beyond100|pct0}} more than 100 km away. So money moved. But it did not move at random. If every coin in a purse were a random draw from the national output, the median distance would be about {{circulation.random_mint_median_km|int}} km. And {{circulation.all.nearest_obs|pct0}} of single finds come from the nearest mint that was working at the time, {{circulation.all.nearest_ratio|f1}} times the {{circulation.all.nearest_exp|pct1}} expected if coins mixed freely across the country.</p>
+<p class="pull">Coins travelled, but a penny was still most likely to be lost near the town that struck it.</p>
+<p>The pattern is much the same before and after 1066 (median {{circulation.late_as.median_km|int}} km under the Anglo-Saxon kings and {{circulation.norman.median_km|int}} km under the Normans). Of the four biggest mints, London's coins spread widest: only {{circulation.london.within50|pct0}} of London single finds lie within 50 km of the city, and their median distance is {{circulation.london.median_km|int}} km. At the other end, East Anglian mints such as Thetford and Norwich have many finds close to home, which may partly reflect how many finds are reported from Norfolk and Suffolk.</p>
+<div class="figure">
+  <div class="fig-h">Median distance travelled, by mint</div>
+  <div class="fig-sub">Mints with at least 20 placed single finds. Dot: median km from mint to findspot.</div>
+  <div class="chart" id="perMint"></div>
+</div>
+
+<h2><span class="n">05 · Destiny</span>Were the big mints still big?</h2>
+<p>Now the long view. For each mint town I looked up its place in three later rankings, all from Wikipedia's list of English towns by historical population: the 1377 poll tax (the {{destiny.list1377_n|int}} largest towns), the first census in 1801 (the {{destiny.list1801_n|int}} largest), and its Census 2021 population, which I computed myself from ONS small-area data for the built-up area of the same name.</p>
+<div class="figure">
+  <div class="fig-h">The ten biggest mints of c.1000, then and now</div>
+  <div class="fig-sub">Ranked by moneyers under Æthelred II. Ranks in 1377 and 1801 are from the Wikipedia lists; a dash means the town is not in the list.</div>
+  <div class="tablewrap"><table class="t" id="top10"></table></div>
+  <div class="src">2021: Census 2021 usual residents of the ONS 2022 built-up area of that name (LSOAs by best fit); London is the Greater London region. The 2021 rank is among the {{destiny.n_with_pop2021|int}} mint towns with a population.</div>
+</div>
+<p>The top of the table is remarkably stable. {{destiny.top10_in1377|Words}} of the ten biggest mints of around 1000 were still among the largest towns of England in 1377. London was first in every era. York was second in 1377. Norwich was sixth in 1377 and eighth in 1801. Across all {{destiny.n_aethelred_2021|int}} mint towns of Æthelred's reign with a 2021 population, the rank correlation between moneyers then and residents now is {{destiny.spearman_aethelred_2021|f2}} (Spearman, {{destiny.p_aethelred_2021|p}}); against the 1377 list it is {{destiny.spearman_aethelred_1377|f2}}.</p>
+<p>The 1801 census tells a different story. By then only {{destiny.top10_in1801|words}} of the ten were in the top {{destiny.list1801_n|int}}, and the correlation with the old mint ranking falls to {{destiny.spearman_aethelred_1801|f2}} ({{destiny.p_aethelred_1801|p}}). The Industrial Revolution had arrived. Of the {{destiny.list1801_n|int}} largest towns in 1801, only {{destiny.list1801_mints|int}} had ever struck coins in my period. None of Manchester, Liverpool, Birmingham, Leeds or Sheffield had a mint in this period. Today the picture is the same: of England's 30 largest built-up areas, {{destiny.top30_2021_mints|int}} were mint towns.</p>
+<div class="figure">
+  <div class="fig-h">Moneyers then, residents now</div>
+  <div class="fig-sub">Each dot is a mint town. Across: distinct moneyers 973 to 1066 (log scale). Up: Census 2021 population (log scale). Gold ring: in the 1377 top {{destiny.list1377_n|int}}.</div>
+  <div class="chart" id="scatter"></div>
+  <div class="src">Towns with no Anglo-Saxon moneyer (Norman mints only) sit at the left edge. Villages too small to form a built-up area use their civil parish population.</div>
+</div>
+<p>The winners and losers are the interesting part. Winchester, fourth among the mints, had slipped to {{towns.Winchester.rank1377|int}}th in 1377 and is a city of {{towns.Winchester.pop2021|int}} today. Stamford, fifth, was {{towns.Stamford.rank1377|int}}nd in 1377 and has {{towns.Stamford.pop2021|int}} people now. Thetford, seventh, with {{towns.Thetford.burgesses1086|int}} burgesses in Domesday, is missing from the 1377 list altogether and has {{towns.Thetford.pop2021|int}} residents. Wallingford, twelfth, had {{towns.Wallingford.moneyers_aethelred|int}} moneyers and today has {{towns.Wallingford.pop2021|int}} people. Bristol went the other way: one moneyer in Æthelred's reign, third largest town in 1377, fifth in 1801.</p>
+
+<h2><span class="n">06 · Vanished and grown</span>Lydford, Cadbury and the boom towns</h2>
+<p>{{destiny.n_vanished|Words}} mint towns have fewer than 5,000 people today (or no people at all). Some were once substantial:</p>
+<ul class="chips" id="vanished"></ul>
+<p>Some look like the "emergency" mints that, according to Wikipedia's history of the English penny, were set up under Æthelred II because of Viking raids. Cadbury's coins were struck at the hillfort of Cadbury Castle, beside a village parish of {{towns.Cadbury.pop2021|int}} people today; Cissbury is Cissbury Ring on the South Downs, where no one lives at all. Others were ordinary towns that lost out. Dunwich in Suffolk, a Stephen-era mint that Russell's estimate puts at {{towns.Dunwich.pop1086_russell|int}} people in 1086, has a parish of {{towns.Dunwich.pop2021|int}} today. Torksey, on the Trent, had {{towns.Torksey.burgesses1086|int}} burgesses in Domesday; its parish now has {{towns.Torksey.pop2021|int}} residents. Wilton, in Wiltshire, had {{towns.Wilton.moneyers_late_as|int}} moneyers before 1066 and a built-up area of {{towns.Wilton.pop2021|int}} now. Bedwyn struck coins for Edward the Confessor only, from {{towns.Bedwyn.records_total|words}} surviving records; Great Bedwyn has {{towns.Bedwyn.pop2021|int}} residents. And Horndon on the Hill in Essex is known as a mint from a single coin, which is not in this database at all.</p>
+<p>The reverse journey is rarer. Only {{destiny.n_grew|words}} mint towns that never had more than three moneyers in any reign have grown past 100,000:</p>
+<ul class="chips up" id="grew"></ul>
+<p>All four were late or marginal mints: Reading and Peterborough appear with {{towns.Reading.records_total|words}} coins and {{towns.Peterborough.records_total|words}} coin, Newcastle and Swansea only in the troubled reign of Stephen. The great industrial cities did not grow out of the Anglo-Saxon mint network. They grew beside it.</p>
+<div class="note">
+  <h3>And money today?</h3>
+  <p>Do the old mint towns still have money? A little. Average household income (ONS, financial year ending 2023) is slightly higher in the towns that had ten or more moneyers before 1066 (median £{{destiny.income_by_class.large.median_income|int}}) than in those with two or fewer (£{{destiny.income_by_class.small.median_income|int}}), against an English median of £{{destiny.england_median_msoa_income|int}} per small area. The rank correlation between moneyers and income is {{destiny.spearman_lateas_income|f2}}. That is weak, and it mostly says that big old towns now include places like London, Winchester, Oxford and Cambridge.</p>
+</div>
+
+<h2><span class="n">07 · Limits</span>What this can and cannot show</h2>
+<p><b>The database is not a full census of coins.</b> It holds what has been catalogued: coins in museum collections (SCBI), many of them from hoards, and single finds reported to the EMC. Reigns and mints that happen to be well represented in collections look bigger. Counts of mints and moneyers are floors.</p>
+<p><b>Mint names need care.</b> I counted only records whose mint is a single named place in England or Wales. {{counts.window_uncertain|int}} records in my period have no mint, {{counts.window_probable|int}} have a queried mint ("York?"), {{counts.window_ambiguous|int}} offer two or more possibilities ("Bath or Barnstaple", "Southwark or Sudbury"), and {{counts.window_copy|int}} are copies or imitations. These are all left out and listed in the data. In total {{counts.window_share_certain|pct0}} of records from the period are used. Duplicates returned by more than one mint search ({{counts.duplicates|int}}) were removed by their EMC/SCBI number. I tell EMC from SCBI records by the pattern of the record number, which the presence of findspots supports.</p>
+<p><b>Places are approximate.</b> Mints are placed at today's town or village of the same name; a few need a judgement (Cadbury at South Cadbury, Bedwyn at Great Bedwyn, Salisbury at modern Salisbury rather than Old Sarum), and Newport is left unplaced. Findspots were matched only where the name is unique in Britain, or where it is the only city or town of that name, and "near" findspots are placed at the named place.</p>
+<p><b>Later sizes are rough.</b> The 1377 and 1801 rankings cover only the largest towns, so a town absent from them is "smaller than the list", not zero. Census 2021 populations of built-up areas are summed from small areas by best fit, which is crude for villages. Domesday burgess counts are taken from the parsed entries in my <a href="https://tristan-hotham.github.io/domesday-destiny/">Domesday Destiny</a> study and are missing for many county towns, whose boroughs Domesday describes separately.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Coins.</b> I searched the Fitzwilliam Museum's public EMC/SCBI database by each of its {{counts.mint_values_searched|int}} mint values, which returned {{counts.rows_scraped|int}} rows and {{counts.records_unique|int}} unique records. Reigns come from the ruler field: Edgar's reform type only, then every king from Edward the Martyr to Stephen (Scottish and Northumbrian namesakes removed). A mint's size in a reign is the number of distinct moneyer names on its coins. I publish only counts by mint and reign, and record numbers with links, not the catalogue's descriptions.</p>
+  <p><b>Places.</b> Mints and findspots are matched to OS Open Names; each mint is cross-checked against Wikidata settlements. Distances are straight lines. The nearest-mint test compares the share of finds struck by the nearest working mint with the share expected if each find were a random draw from that reign's national output, weighted by moneyers.</p>
+  <p><b>Destiny.</b> 1086, 1377 and 1801 figures from Wikipedia's <a href="https://en.wikipedia.org/wiki/List_of_towns_and_cities_in_England_by_historical_population">List of towns and cities in England by historical population</a> (Russell's 1086 estimates, the 1377 poll tax, the 1801 census). Census 2021 populations from ONS small areas summed to 2022 built-up areas; incomes from the ONS small-area income estimates for the financial year ending 2023. Rank correlations are Spearman's.</p>
+</div>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/saxon-mints">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23689962">Paper (Zenodo)</a>
+  <a href="https://tristan-hotham.github.io/domesday-destiny/">Is Domesday destiny?</a>
+  <a href="https://tristan-hotham.github.io/viking-silver/">Silver and Names: Viking hoards</a>
+  <a href="https://blog.tristanhotham.com/">More history data posts</a>
+</div>
+
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+  <p>Cite as: Hotham, T. (2026) Minted: the Anglo-Saxon and Norman mint towns of England and what became of them. Zenodo. <a href="https://doi.org/10.5281/zenodo.23689962">https://doi.org/10.5281/zenodo.23689962</a></p>
+  <p>Coins: Fitzwilliam Museum, EMC/SCBI database (Corpus of Early Medieval Coin Finds and Sylloge of Coins of the British Isles), <a href="https://emc.fitzmuseum.cam.ac.uk/">emc.fitzmuseum.cam.ac.uk</a>, searched 27 October 2026; only derived counts and record links are republished. Historical populations: Wikipedia, List of towns and cities in England by historical population (CC BY-SA 4.0). Domesday figures: Hull Domesday Project (CC BY-NC-SA) via my Domesday Destiny study. Census 2021, ONS small-area income estimates and ONS geography: Office for National Statistics, Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026: OS Open Names, Open Government Licence v3.0. Settlement cross-check: Wikidata (CC0). Base map tiles © Esri. Map library: Leaflet.</p>
+  <p>The derived data and text on this page are released under CC BY-NC-SA 4.0, because they include Hull Domesday Project figures. Code is MIT.</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*DATA*/
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => n == null ? "" : Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("focus", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { e.stopPropagation(); s(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); redraws.push(() => go(true)); go(); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const R = D.R, P = D.P, M = P.mints, PER = P.periods;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; const dark = isDark(); r.dataset.theme = dark ? "light" : "dark"; redraws.forEach(f => f()); window.__restyle && window.__restyle(); };
+const SHORT = { "Edgar (reform)": "Edgar", "Edward the Martyr": "Edw. M", "Æthelred II": "Æthelred", "Harold I": "Harold I", "Harthacnut": "Harthacn.", "Edward the Confessor": "Edw. Conf.", "Harold II": "Harold II", "William I": "Will. I", "William II": "Will. II", "Henry I": "Henry I", "Stephen": "Stephen", "Cnut": "Cnut" };
+const ord = n => n + (n % 10 === 1 && n % 100 !== 11 ? "st" : n % 10 === 2 && n % 100 !== 12 ? "nd" : n % 10 === 3 && n % 100 !== 13 ? "rd" : "th");
+
+/* hero mark: a penny with a beaded rim, small cross and four pellets */
+(() => { const g = document.getElementById("heroMark");
+  el("circle", { r: 82, fill: "var(--gold)", opacity: .18 }, g);
+  el("circle", { r: 70, fill: "var(--card)", stroke: "var(--gold)", "stroke-width": 5 }, g);
+  for (let i = 0; i < 48; i++) { const a = i / 48 * Math.PI * 2; el("circle", { cx: Math.cos(a) * 60, cy: Math.sin(a) * 60, r: 2.4, fill: "var(--gold)" }, g); }
+  el("circle", { r: 30, fill: "none", stroke: "var(--blue)", "stroke-width": 2.5 }, g);
+  el("path", { d: "M0 -22V22M-22 0H22", stroke: "var(--blue)", "stroke-width": 7, "stroke-linecap": "round" }, g);
+  [[-11, -11], [11, -11], [-11, 11], [11, 11]].forEach(([x, y]) => el("circle", { cx: x, cy: y, r: 3.5, fill: "var(--gold)" }, g));
+  const t = el("text", { "font-size": 11, "text-anchor": "middle", style: "fill:var(--blue);font-weight:500;letter-spacing:2px" }, g);
+  const tp = el("textPath", { href: "#arcM", startOffset: "50%" }, t); tp.textContent = "+ÆĐELRED REX ANGLOX";
+  el("path", { id: "arcM", d: "M-46 0A46 46 0 1 1 46 0A46 46 0 1 1 -46 0", fill: "none" }, g);
+})();
+
+/* ===== map ===== */
+let cur = 2;
+(() => {
+  const card = document.getElementById("card"), slider = document.getElementById("reign");
+  document.getElementById("ticks").innerHTML = PER.map(p => `<span class="${P.main7.includes(p[0]) ? "k" : ""}">${esc(SHORT[p[1]])}</span>`).join("");
+  if (!window.L) { document.getElementById("map").innerHTML = '<p style="padding:16px;font:400 13px/1.5 var(--mono)">The map library did not load. The charts below still work.</p>'; }
+  const map = window.L ? L.map("map", { preferCanvas: true, scrollWheelZoom: false, zoomSnap: .25, minZoom: 5, maxZoom: 13 }).fitBounds([[50.1, -5.6], [55.2, 1.8]]) : null;
+  const C = {}; const col = v => C[v] || (C[v] = css(v));
+  let tiles, lay = {}, showFinds = false, ghost = true, sel = null;
+  if (map) {
+    map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+    map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+    const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+    tiles = L.tileLayer(tileUrl(), { maxZoom: 13, attribution: 'Tiles &copy; Esri · Coins: Fitzwilliam Museum EMC/SCBI · Places: OS Open Names (OGL)' }).addTo(map);
+    [["finds", 410], ["lines", 405], ["ghost", 415], ["mints", 430]].forEach(([n, z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
+    map.getPane("lines").style.pointerEvents = "none";
+    const rF = L.canvas({ pane: "finds", padding: .3 }), rG = L.canvas({ pane: "ghost", padding: .3 }), rM = L.canvas({ pane: "mints", padding: .3, tolerance: 4 });
+    lay = { finds: L.layerGroup().addTo(map), ghost: L.layerGroup().addTo(map), mints: L.layerGroup().addTo(map), sel: L.layerGroup().addTo(map) };
+    const rad = n => 3 + Math.sqrt(n) * 2.3;
+    window.__draw = () => {
+      ["finds", "ghost", "mints", "sel"].forEach(k => lay[k].clearLayers());
+      if (showFinds) P.finds.forEach(([mi, pi, la, lo]) => { if (pi === cur) L.circleMarker([la, lo], { renderer: rF, radius: 2.4, weight: 0, fillColor: col("--blue"), fillOpacity: .6, interactive: false }).addTo(lay.finds); });
+      M.map((m, i) => i).sort((a, b) => M[b].mon[cur] - M[a].mon[cur]).forEach(i => { const m = M[i]; if (m.la == null) return; const r = m.rec[cur], n = m.mon[cur];
+        if (!r) { if (ghost) L.circleMarker([m.la, m.lo], { renderer: rG, radius: 2.6, weight: 1, color: col("--dot"), fillOpacity: 0, opacity: .7 }).bindTooltip(`${esc(m.m)}: no coins of this reign`).on("click", () => showCard(i)).addTo(lay.ghost); return; }
+        L.circleMarker([m.la, m.lo], { renderer: rM, radius: rad(n), weight: 1.4, color: col("--fg"), fillColor: col("--gold"), fillOpacity: .85 })
+          .bindTooltip(`<b>${esc(m.m)}</b> · ${n} moneyer${n === 1 ? "" : "s"}, ${fmt(r)} coin${r === 1 ? "" : "s"}`, { direction: "top" }).on("click", () => showCard(i)).addTo(lay.mints); });
+      if (sel != null) drawSel();
+    };
+    function drawSel() { const m = M[sel]; if (m.la == null) return;
+      P.finds.forEach(([mi, pi, la, lo]) => { if (mi !== sel) return; const same = pi === cur;
+        L.polyline([[m.la, m.lo], [la, lo]], { pane: "lines", color: col("--blue"), weight: same ? 1.2 : .6, opacity: same ? .55 : .2, interactive: false }).addTo(lay.sel);
+        L.circleMarker([la, lo], { renderer: rF, radius: same ? 3.4 : 2.2, weight: 0, fillColor: col("--blue"), fillOpacity: same ? .9 : .35, interactive: false }).addTo(lay.sel); });
+      L.circleMarker([m.la, m.lo], { renderer: rM, radius: 9, weight: 3, color: col("--blue"), fill: false, interactive: false }).addTo(lay.sel); }
+    L.circleMarker(P.horndon, { pane: "mints", radius: 5, weight: 1.5, color: col("--madder"), dashArray: "2 2", fillOpacity: 0 }).bindPopup("<b>Horndon</b>Horndon on the Hill, Essex. A mint known from a single coin of Edward the Confessor (Wikipedia, Horndon mint), which is not in the database searched here.").addTo(map);
+    window.__restyle = () => { for (const k in C) delete C[k]; tiles.setUrl(tileUrl()); window.__draw(); };
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", window.__restyle);
+  }
+  function spark(m) { const W = 260, H = 64, bw = W / 12; let s = `<svg viewBox="0 0 ${W} ${H + 14}" role="img" aria-label="Moneyers by reign">`; const mx = Math.max(1, ...m.mon);
+    m.mon.forEach((v, i) => { const h = v / mx * H; s += `<rect x="${i * bw + 1}" y="${H - h}" width="${bw - 2}" height="${Math.max(h, m.rec[i] ? 1.5 : 0)}" fill="var(${i === cur ? "--blue" : "--gold"})"/>`; });
+    s += `<text x="0" y="${H + 12}" class="lab s m">973</text><text x="${W}" y="${H + 12}" class="lab s m" text-anchor="end">1154</text><text x="${W / 2}" y="${H + 12}" class="lab s m" text-anchor="middle">peak ${mx}</text></svg>`; return s; }
+  function showCard(i) { sel = i; const m = M[i]; card.className = "card";
+    const nf = P.finds.filter(f => f[0] === i), med = nf.length ? nf.map(f => f[4]).sort((a, b) => a - b)[Math.floor(nf.length / 2)] : null;
+    card.innerHTML = `<b class="t">${esc(m.m)}</b><div style="color:var(--muted)">Moneyers on surviving coins, reign by reign</div>${spark(m)}<dl>` +
+      `<dt>${esc(PER[cur][1])}</dt><dd>${m.mon[cur]} moneyers, ${fmt(m.rec[cur])} coins</dd>` +
+      `<dt>Before 1066</dt><dd>${m.ml} moneyers in all</dd>` +
+      (m.r1086 ? `<dt>1086</dt><dd>c. ${fmt(m.r1086)} people (Russell)</dd>` : "") + (m.bu ? `<dt>Domesday</dt><dd>${fmt(m.bu)} burgesses</dd>` : "") +
+      `<dt>1377</dt><dd>${m.r1377 ? ord(m.r1377) + " largest, " + fmt(m.p1377) + " taxpayers" : "not in the top 41"}</dd>` +
+      `<dt>1801</dt><dd>${m.r1801 ? ord(m.r1801) + " largest, " + fmt(m.p1801) : "not in the top 30"}</dd>` +
+      `<dt>2021</dt><dd style="color:var(--blue);font-weight:500">${m.p21 != null ? fmt(m.p21) + " residents" : (m.src || "no population")}</dd>` +
+      (nf.length ? `<dt>Single finds</dt><dd>${nf.length} placed, median ${Math.round(med)} km away</dd>` : "") + `</dl>` +
+      `<div style="color:var(--muted);font-size:11.5px">${esc(m.src)}</div>`;
+    if (map && m.la != null) window.__draw(); }
+  window.__showCard = showCard;
+  const ml = document.getElementById("mlist");
+  function list() { const rows = M.map((m, i) => [m, i]).filter(([m]) => m.rec[cur] > 0).sort((a, b) => b[0].mon[cur] - a[0].mon[cur] || b[0].rec[cur] - a[0].rec[cur]);
+    document.getElementById("listH").textContent = `${rows.length} mints under ${PER[cur][1]}`;
+    ml.innerHTML = ""; rows.forEach(([m, i], k) => { const li = document.createElement("li"); li.tabIndex = 0; li.innerHTML = `<span class="rk">${k + 1}</span><span class="nm">${esc(m.m)}</span><span class="v">${m.mon[cur]} mon. · ${fmt(m.rec[cur])}</span>`;
+      const go = () => { showCard(i); if (map && m.la != null) map.flyTo([m.la, m.lo], 8, { duration: reduce ? 0 : .7 }); }; li.onclick = go; li.onkeydown = e => { if (e.key === "Enter") go(); }; ml.appendChild(li); }); }
+  function legend() { document.getElementById("legend").innerHTML = `<span><i style="background:var(--gold);outline:1.5px solid var(--fg);outline-offset:-1px"></i>Mint (size = moneyers)</span>` + (ghost ? `<span><i style="border:1.5px solid var(--dot)"></i>Mint in another reign</span>` : "") + (showFinds || sel != null ? `<span><i style="background:var(--blue)"></i>Single find</span>` : "") + `<span><i style="border:1.5px dashed var(--madder)"></i>Horndon (one coin, not in the data)</span>`; }
+  function setReign(k) { cur = k; slider.value = k; const p = PER[k]; const tot = M.reduce((s, m) => s + m.mon[k], 0), n = M.filter(m => m.rec[k] > 0).length;
+    document.getElementById("reignLab").innerHTML = `${esc(p[1])} <small>${p[2] === p[3] ? p[2] : p[2] + " to " + p[3]} · ${n} mints · ${fmt(tot)} moneyers · ${fmt(M.reduce((s, m) => s + m.rec[k], 0))} coins</small>`;
+    list(); legend(); if (map) window.__draw(); if (sel != null) showCard(sel); }
+  slider.oninput = e => setReign(+e.target.value);
+  let timer = null; const play = document.getElementById("play");
+  play.onclick = () => { if (timer) { clearInterval(timer); timer = null; play.textContent = "▶"; return; } play.textContent = "❚❚"; timer = setInterval(() => { setReign((cur + 1) % 12); }, reduce ? 2500 : 1300); };
+  document.getElementById("bFinds").onclick = e => { showFinds = !showFinds; e.target.setAttribute("aria-pressed", showFinds); legend(); map && window.__draw(); };
+  document.getElementById("bGhost").onclick = e => { ghost = !ghost; e.target.setAttribute("aria-pressed", ghost); legend(); map && window.__draw(); };
+  window.__setReign = setReign; window.__select = n => { const i = M.findIndex(m => m.m === n); if (i >= 0) { showCard(i); map && map.setView([M[i].la, M[i].lo], 8, { animate: false }); } return i >= 0; };
+  setReign(2);
+})();
+
+/* ===== mints per reign ===== */
+resp(document.getElementById("perReign"), (W, nar) => {
+  const Pr = R.periods, m = { l: 34, r: 40, t: 22, b: 70 }, Ht = 300, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Number of mints with surviving coins in each reign" }, document.getElementById("perReign"));
+  const bw = (W - m.l - m.r) / Pr.length, Y = v => Ht - m.b - v / 80 * (Ht - m.t - m.b);
+  const rate = Pr.map(p => p.records / Math.max(p.end - p.start, 1)), rmax = Math.max(...rate) * 1.1, Y2 = v => Ht - m.b - v / rmax * (Ht - m.t - m.b);
+  [0, 20, 40, 60, 80].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); });
+  Pr.forEach((p, i) => { const x = m.l + i * bw, k = P.main7.includes(p.key);
+    const b = el("rect", { x: x + 3, y: Y(p.mints), width: bw - 6, height: Y(0) - Y(p.mints), fill: k ? "var(--gold)" : "var(--goldl)", opacity: k ? 1 : .75 }, svg);
+    hover(b, `<b>${p.label}</b> (${p.start === p.end ? p.start : p.start + " to " + p.end})<br>${p.mints} mints · ${fmt(p.moneyers)} moneyers · ${fmt(p.records)} coins`);
+    lbl(svg, x + bw / 2, Y(p.mints) - 5, p.mints, "lab s b", "middle");
+    const rot = bw < 74; const t = lbl(svg, x + bw / 2 + (rot ? 4 : 0), Ht - m.b + 14, SHORT[p.label], "lab s", rot ? "end" : "middle"); if (rot) t.setAttribute("transform", `rotate(-40 ${x + bw / 2 + 4} ${Ht - m.b + 14})`); });
+  const _ = 0; const pts = rate.map((v, i) => `${m.l + i * bw + bw / 2},${Y2(v)}`).join(" ");
+  el("polyline", { points: pts, fill: "none", stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "4 3" }, svg);
+  rate.forEach((v, i) => el("circle", { cx: m.l + i * bw + bw / 2, cy: Y2(v), r: 2.5, fill: "var(--muted)" }, svg));
+  lbl(svg, W - m.r + 4, Y2(rmax / 1.1) + 4, fmt(rmax / 1.1), "lab m s"); lbl(svg, W - m.r + 4, Y2(0) + 4, "0", "lab m s");
+  lbl(svg, m.l, 12, "mints", "lab m s"); lbl(svg, W, 12, "coins per year", "lab m s", "end");
+});
+
+/* ===== moneyer ranking ===== */
+(() => { let k = "aethelred"; const seg = document.getElementById("rankSeg"), box = document.getElementById("rank");
+  seg.innerHTML = P.main7.map(x => `<button class="btn" data-k="${x}" aria-pressed="${x === k}">${esc(SHORT[PER.find(p => p[0] === x)[1]])}</button>`).join("");
+  let draw = () => {};
+  seg.querySelectorAll("button").forEach(b => b.onclick = () => { k = b.dataset.k; seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.k === k)); draw(); });
+  resp(box, (W0, nar0) => { draw = () => { box.innerHTML = ""; render(box.clientWidth, box.clientWidth < 560); }; render(W0, nar0); });
+  function render(W, nar) { const pi = PER.findIndex(p => p[0] === k);
+    const V = M.filter(m => m.rec[pi] > 0).sort((a, b) => b.mon[pi] - a.mon[pi] || b.rec[pi] - a.rec[pi]).slice(0, 20);
+    const rowH = 21, mm = { l: nar ? 96 : 120, r: 40, t: 4, b: 26 }, Ht = V.length * rowH + mm.t + mm.b, max = Math.max(...V.map(v => v.mon[pi]));
+    const svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Moneyers per mint" }, box), X = v => mm.l + v / max * (W - mm.l - mm.r);
+    const step = max > 60 ? 20 : max > 25 ? 10 : 5; for (let t = 0; t <= max; t += step) { el("line", { x1: X(t), x2: X(t), y1: mm.t, y2: Ht - mm.b, stroke: "var(--rule)" }, svg); lbl(svg, X(t), Ht - 8, t, "lab m s", "middle"); }
+    V.forEach((m, i) => { const y = mm.t + i * rowH; lbl(svg, mm.l - 8, y + 15, m.m, "lab s", "end");
+      const b = el("rect", { x: X(0), y: y + 4, width: X(m.mon[pi]) - X(0), height: rowH - 8, fill: m.p21 != null && m.p21 < 5000 ? "var(--madder)" : "var(--gold)", opacity: .9 }, svg);
+      hover(b, `<b>${esc(m.m)}</b><br>${m.mon[pi]} moneyers, ${fmt(m.rec[pi])} coins<br>2021: ${m.p21 != null ? fmt(m.p21) : "no population"}`);
+      lbl(svg, X(m.mon[pi]) + 5, y + 15, m.mon[pi], "lab s b"); });
+  }
+})();
+
+/* ===== distance bands ===== */
+resp(document.getElementById("dist"), (W, nar) => {
+  const B = R.circulation.bands, m = { l: 40, r: 10, t: 34, b: 40 }, Ht = 260, svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Distance from mint to findspot" }, document.getElementById("dist"));
+  const max = .25, bw = (W - m.l - m.r) / B.length, Y = v => Ht - m.b - v / max * (Ht - m.t - m.b);
+  [0, .05, .1, .15, .2, .25].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, pc(t), "lab m s", "end"); });
+  B.forEach((b, i) => { const x = m.l + i * bw; const r = el("rect", { x: x + 3, y: Y(b.share), width: bw - 6, height: Y(0) - Y(b.share), fill: "var(--blue)", opacity: .85 }, svg);
+    hover(r, `<b>${b.lo} to ${b.hi === 1000 ? "more" : b.hi} km</b><br>${pc(b.share, 1)} of placed single finds`);
+    lbl(svg, x + bw / 2, Ht - m.b + 15, b.hi === 1000 ? "300+" : (nar ? b.hi : b.lo + " to " + b.hi), "lab s", "middle"); });
+  lbl(svg, (W + m.l) / 2, Ht - 6, nar ? "km from mint (band upper limit)" : "km from mint to findspot", "lab m s", "middle");
+  const edges = [0, 10, 25, 50, 100, 150, 200, 300, 600];
+  const xAt = km => { for (let i = 0; i < 8; i++) if (km <= edges[i + 1]) return m.l + (i + (km - edges[i]) / (edges[i + 1] - edges[i])) * bw; return W - m.r; };
+  [[R.circulation.all.median_km, "--gold", "median"], [R.circulation.random_mint_median_km, "--muted", "random mints"]].forEach(([v, c, t], j) => {
+    el("line", { x1: xAt(v), x2: xAt(v), y1: m.t - 8 + j * 12, y2: Ht - m.b, stroke: `var(${c})`, "stroke-width": 2, "stroke-dasharray": j ? "4 3" : "" }, svg);
+    lbl(svg, xAt(v) + 4, m.t - 12 + j * 12, `${t} ${Math.round(v)} km`, "lab s b").setAttribute("style", `fill:var(${c})`); });
+});
+
+/* ===== per-mint distance ===== */
+resp(document.getElementById("perMint"), (W, nar) => {
+  const V = R.circulation.per_mint, rowH = 20, m = { l: nar ? 104 : 124, r: 16, t: 6, b: 30 }, Ht = V.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Median distance travelled by mint" }, document.getElementById("perMint")), X = v => m.l + v / 200 * (W - m.l - m.r);
+  [0, 50, 100, 150, 200].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: Ht - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(t), Ht - 10, t + " km", "lab m s", "middle"); });
+  V.forEach(([n, k, med, w50], i) => { const y = m.t + i * rowH + rowH / 2; lbl(svg, m.l - 8, y + 4, n, "lab s", "end");
+    el("line", { x1: X(0), x2: X(med), y1: y, y2: y, stroke: "var(--blue)", opacity: .35, "stroke-width": 2 }, svg);
+    const c = el("circle", { cx: X(med), cy: y, r: 3 + Math.sqrt(k) / 3, fill: n === "London" ? "var(--gold)" : "var(--blue)", stroke: "var(--bg)", "stroke-width": 1 }, svg);
+    hover(c, `<b>${esc(n)}</b><br>${k} placed single finds<br>median ${Math.round(med)} km · ${pc(w50)} within 50 km`); });
+});
+
+/* ===== top 10 table ===== */
+document.getElementById("top10").innerHTML = `<thead><tr><th>Mint</th><th class="num">Moneyers c.1000</th><th class="num">1377 rank</th><th class="num">1801 rank</th><th class="num">2021 residents</th><th class="num">2021 rank</th></tr></thead><tbody>` +
+  R.destiny.top10.map(t => `<tr><td>${esc(t.mint)}</td><td class="num g">${t.moneyers}</td><td class="num ${t.rank1377 ? "" : "z"}">${t.rank1377 ?? "-"}</td><td class="num ${t.rank1801 ? "" : "z"}">${t.rank1801 ?? "-"}</td><td class="num">${fmt(t.pop2021)}</td><td class="num">${t.rank2021}</td></tr>`).join("") + "</tbody>";
+
+/* ===== scatter ===== */
+resp(document.getElementById("scatter"), (W, nar) => {
+  const V = M.filter(m => m.p21 != null && m.p21 > 0), m = { l: 58, r: 14, t: 12, b: 42 }, Ht = nar ? 380 : 460;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${Ht}`, role: "img", "aria-label": "Moneyers before 1066 against population in 2021" }, document.getElementById("scatter"));
+  const X = v => m.l + Math.log10(v + 1) / Math.log10(201) * (W - m.l - m.r), Y = v => Ht - m.b - (Math.log10(v) - 2) / (Math.log10(1e7) - 2) * (Ht - m.t - m.b);
+  [0, 1, 3, 10, 30, 100, 200].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: Ht - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(t), Ht - m.b + 15, t, "lab m s", "middle"); });
+  [100, 1e3, 1e4, 1e5, 1e6, 1e7].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t >= 1e6 ? t / 1e6 + "m" : t >= 1e3 ? t / 1e3 + "k" : t, "lab m s", "end"); });
+  lbl(svg, (W + m.l) / 2, Ht - 6, "moneyers 973 to 1066", "lab m s", "middle");
+  const lab = new Set(["London", "York", "Lincoln", "Winchester", "Stamford", "Thetford", "Wallingford", "Lydford", "Ilchester", "Wilton", "Bristol", "Reading", "Newcastle", "Dunwich", "Torksey", "Norwich", "Cadbury", "Peterborough"]);
+  V.forEach(t => { const x = X(t.ml), y = Y(t.p21);
+    const c = el("circle", { cx: x, cy: y, r: 5, fill: t.p21 < 5000 ? "var(--madder)" : "var(--blue)", opacity: .8, stroke: t.r1377 ? "var(--gold)" : "none", "stroke-width": 2.5 }, svg);
+    hover(c, `<b>${esc(t.m)}</b><br>${t.ml} moneyers before 1066<br>2021: ${fmt(t.p21)}<br>1377: ${t.r1377 ? ord(t.r1377) : "not in top 41"}`);
+    const dy = { Peterborough: 13, Stamford: 11, Thetford: -3, Reading: -4 }[t.m] || 4;
+    if (lab.has(t.m) && (!nar || ["London", "Lydford", "Bristol", "Thetford", "Reading", "Dunwich", "Winchester"].includes(t.m))) lbl(svg, x + (t.m === "London" ? -8 : 8), y + dy, t.m, "lab s", t.m === "London" ? "end" : "start"); });
+});
+
+/* ===== chips ===== */
+document.getElementById("vanished").innerHTML = R.destiny.vanished.filter(v => v.moneyers_peak >= 3 || v.burgesses1086 >= 25 || ["Cadbury", "Cissbury", "Bedwyn"].includes(v.mint)).map(v => `<li><b>${esc(v.mint)}</b> · peak ${v.moneyers_peak} moneyer${v.moneyers_peak === 1 ? "" : "s"} · ${v.pop2021 != null ? fmt(v.pop2021) + " now" : "no one now"}</li>`).join("");
+document.getElementById("grew").innerHTML = R.destiny.grew.map(v => `<li><b>${esc(v.mint)}</b> · ${v.moneyers_peak} moneyer${v.moneyers_peak === 1 ? "" : "s"} (from ${esc(v.first)}) · ${fmt(v.pop2021)} now</li>`).join("");
+</script>
+</body>
+</html>
