@@ -470,5 +470,6 @@ resp(document.getElementById("scatter"), (W, nar) => {
 document.getElementById("vanished").innerHTML = R.destiny.vanished.filter(v => v.moneyers_peak >= 3 || v.burgesses1086 >= 25 || ["Cadbury", "Cissbury", "Bedwyn"].includes(v.mint)).map(v => `<li><b>${esc(v.mint)}</b> · peak ${v.moneyers_peak} moneyer${v.moneyers_peak === 1 ? "" : "s"} · ${v.pop2021 != null ? fmt(v.pop2021) + " now" : "no one now"}</li>`).join("");
 document.getElementById("grew").innerHTML = R.destiny.grew.map(v => `<li><b>${esc(v.mint)}</b> · ${v.moneyers_peak} moneyer${v.moneyers_peak === 1 ? "" : "s"} (from ${esc(v.first)}) · ${fmt(v.pop2021)} now</li>`).join("");
 </script>
+<script src="https://tristan-hotham.github.io/assets/site-nav.js" defer></script>
 </body>
 </html>
